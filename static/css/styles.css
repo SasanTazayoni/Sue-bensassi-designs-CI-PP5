@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pavanam&display=swap');
 
+:root {
+    --color-primary: rgb(108, 117, 125);
+    --color-secondary: rgba(0, 0, 0, 0.3);
+    --color-tertiary: rgba(0, 0, 0, 0.1);
+    --color-accent: rgba(182, 211, 229, 0.5);
+    --color-text: rgba(0, 0, 0, 1);
+}
+
 *,
 *::after,
 *::before {
@@ -23,10 +31,10 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Pavanam', Arial, Helvetica, sans-serif;
 }
 
-hr {
+.divider {
     border: none;
-    height: 1.5px;
-    background-color: rgba(0,0,0,0.3);
+    height: 2px;
+    background-color: var(--color-tertiary);
 }
 
 /* Navbar */
@@ -37,15 +45,15 @@ hr {
 }
 
 @keyframes darken {
-    0% { transform: scale(1); color: rgba(0,0,0,0.3); }
-    25% { transform: scale(1); color: rgba(0,0,0,1); }
-    50% { transform: scale(1); color: rgba(0,0,0,0.3); }
-    75% { transform: scale(1); color: rgba(0,0,0,1); }
-    100% { transform: scale(1); color: rgba(0,0,0,0.3); }
+    0% { transform: scale(1); color: var(--color-secondary); }
+    25% { transform: scale(1); color: var(--color-text); }
+    50% { transform: scale(1); color: var(--color-secondary); }
+    75% { transform: scale(1); color: var(--color-text); }
+    100% { transform: scale(1); color: var(--color-secondary); }
 }
 
 .search-btn i {
-    color: rgba(0,0,0,0.3);
+    color: var(--color-secondary);
 }
   
 .search-btn:hover i {
@@ -53,7 +61,7 @@ hr {
 }
 
 .account-link, .shopping-link {
-    color: rgb(108, 117, 125);
+    color: var(--color-primary);
     transition: color 0.3s;
 }
 
@@ -83,6 +91,7 @@ hr {
 .hero-image {
     background-image: url('../../media/hero-image.png');
     background-size: cover;
+    background-position: center;
     height: 75vh;
 }
 
@@ -94,7 +103,7 @@ hr {
 
 .hero-title {
     line-height: 0.8;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
     font-weight: bold;
 }
 
@@ -102,7 +111,43 @@ hr {
     font-size: 50%;
 }
 
+.hero-btn-container {
+    margin-top: 60px;
+}
+
 .btn-hero {
     width: 120px;
     margin: 0 5px;
+}
+
+.section-header {
+    background-color: var(--color-accent);
+    border-radius: 5px;
+}
+
+.section-header > h2 {
+    font-weight: bold;
+    letter-spacing: 2.5px;
+    padding: 20px 0;
+}
+
+.card-container {
+    margin-top: 40px;
+}
+
+.showcase-card {
+    border: solid 1px var(--color-tertiary);
+}
+
+.middle-card {
+    background: var(--color-accent);
+}
+
+.middle-card h3 {
+    font-weight: bold;
+    border-bottom: solid 3px var(--color-secondary);
+}
+
+.middle-card p {
+    font-size: 120%;
 }
