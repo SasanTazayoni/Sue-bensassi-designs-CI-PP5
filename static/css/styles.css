@@ -25,6 +25,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Navbar */
 
+.logo {
+    padding: 10px;
+    height: 100px;
+}
+
 @keyframes darken {
     0% { transform: scale(1); color: rgba(0,0,0,0.3); }
     25% { transform: scale(1); color: rgba(0,0,0,1); }
@@ -64,7 +69,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Home page */
 
 .hero-container {
-    padding-top: 120px;
+    margin-top: 120px;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .hero-image {
