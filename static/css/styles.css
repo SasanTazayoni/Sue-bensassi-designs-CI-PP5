@@ -23,6 +23,12 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Pavanam', Arial, Helvetica, sans-serif;
 }
 
+hr {
+    border: none;
+    height: 1.5px;
+    background-color: rgba(0,0,0,0.3);
+}
+
 /* Navbar */
 
 .logo {
