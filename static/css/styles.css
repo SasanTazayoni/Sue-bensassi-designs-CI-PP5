@@ -80,6 +80,11 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.5rem;
 }
 
+.navbar.scrolled {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
 /* Home page */
 
 .hero-container {
