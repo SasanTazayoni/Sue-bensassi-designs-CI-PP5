@@ -3,25 +3,75 @@
 
 {% block content %}
 
-<div class="container hero-container">
+<!-- Hero -->
+<section class="container hero-container">
     <div class="row">
         <div class="col-6 hero-image"></div>
-        <div class="col-6 px-4 hero-background text-center">
-            <h1 class="hero-title pb-3 pt-5">Home Accessories and Gifts <br> <span class="small-font">(for Children and Adults)</span></h1>
-            <h2>Don't see a design you like?</h2>
-            <p class="pb-3">We can make it for you! <br> Just request free fabric swatches or supply your own.</p>
-            <h2 class="mt-20">Looking for a specific size?</h2>
-            <p class="pb-3">We can adjust that too.</p>
-            <div class="btn-container pb-3">
+        <div class="col-6 hero-background d-flex flex-column text-center">
+            <h1 class="hero-title pb-3 pt-5 px-4">Home Accessories and Gifts <br> <span class="small-font">(for Children and Adults)</span></h1>
+            <h2 class="px-4">Don't see a design you like?</h2>
+            <p class="pb-3 px-4">We can make it for you! <br> Just request free fabric swatches or supply your own.</p>
+            <h2 class="px-4">Looking for a specific size?</h2>
+            <p class="pb-3 px-4 mb-10">We can adjust that too.</p>
+            <div class="hero-btn-container pb-3">
                 <button class="btn btn-hero btn-secondary btn-lg px-2">Shop</button>
                 <button class="btn btn-hero btn-secondary btn-lg px-2">Contact</button>
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <div class="container">
-    <hr class="my-5">
+    <hr class="divider my-5">
+</div>
+
+<!-- Filing chest showcase -->
+<section class="container">
+    <header class="section-header text-center">
+        <h2>GET ORGANISED!</h2>
+    </header>
+    <div class="row card-container">
+        <div class="col-md-4 mb-4">
+            <div class="card showcase-card h-100">
+                <img src="../../media/elephant-filing-chest.jpg" class="card-img-top" alt="A brown filing chest with an elephant image">
+                <div class="card-body">
+                    <p class="card-text">
+                        This filing chest ottoman is covered in the classic, ever popular Andrew Martin <strong>JEHAN</strong> elephant fabric. 
+                        Just one of the fabrics from our extensive range. Shown here with round wood feet.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card showcase-card middle-card h-100">
+                <div class="card-body text-center">
+                    <h3 class="card-title">Home Office Solutions</h3>
+                    <br>
+                    <p class="card-text">This filing chest/ottoman is all you need to organise your paperwork!</p>
+                    <br>
+                    <p class="card-text">
+                        Order one with castors and you can move it with ease to any room of the house!
+                        Made to order in your choice of fabric.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card showcase-card h-100">
+                <img src="../../media/chequered-filing-chest.jpg" class="card-img-top" alt="A green and white chequered filing chest">
+                <div class="card-body">
+                    <p class="card-text">
+                        Stylish and modern, this filing chest/ottoman is upholstered in Ian Mankin <strong>SUFFOLK CHECK</strong> fabric.
+                        Available in various colourways. Shown here with wooden feet but can be supplied with castors.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <hr class="divider my-5">
 </div>
 
 {% endblock %}
