@@ -102,6 +102,26 @@
     {% block content %}
     {% endblock %}
 
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 dark-bg d-flex justify-between">
+      <div class="text-center">
+        <p class="m-0 pl-3">
+            {% block copyright %}
+            &copy; Sue Bensassi Designs 2024<br>
+            Website designed and created by Sasan Tazayoni
+            <a href="https://github.com/SasanTazayoni" target="_blank" rel="noopener" class="github-link pl-2"
+                aria-label="Github profile link">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            {% endblock copyright %}
+        </p>
+      </div>
+      <div class="text-center ml-auto pr-3 my-auto">
+        <a href="#" class="footer-link mx-2">Delivery</a>
+        <a href="#" class="footer-link mx-2">About</a>
+        <a href="#" class="footer-link mx-2">Terms and Conditions</a>
+      </div>
+    </footer>
     
   </body>
 </html>
