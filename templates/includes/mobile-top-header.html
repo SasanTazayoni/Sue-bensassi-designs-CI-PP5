@@ -1,7 +1,7 @@
 <li class="list-inline-item">
-    <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <a class="text-black link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
-            <div><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="nav-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
             <p class="my-0">Search</p>
         </div>
     </a>
@@ -11,7 +11,7 @@
                 <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
                 <div class="input-group-append">
                     <button class="form-control form-control btn btn-black border border-black rounded-0" type="submit">
-                        <span class="icon">
+                        <span class="nav-icon">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </span>
                     </button>
@@ -21,9 +21,9 @@
     </div>
 </li>
 <li class="list-inline-item dropdown">
-    <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <a class="text-black link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
-            <div><i class="fa-solid fa-user"></i></div>
+            <div class="nav-icon"><i class="fa-solid fa-user"></i></div>
             <p class="my-0">My Account</p>
         </div>
     </a>
@@ -41,9 +41,9 @@
     </div>
 </li>
 <li class="list-inline-item">
-    <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="#">
+    <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} link d-block d-lg-none" href="#">
         <div class="text-center">
-            <div><i class="fas fa-cart-shopping"></i></div>
+            <div class="nav-icon"><i class="fas fa-cart-shopping"></i></div>
             <p class="my-0">
                 {% if grand_total %}
                     £{{ grand_total|floatformat:2 }}

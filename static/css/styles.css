@@ -61,12 +61,12 @@ h1, h2, h3, h4, h5, h6 {
     animation: darken 2s ease infinite;
 }
 
-.account-link, .shopping-link {
+.link {
     color: var(--color-primary);
     transition: color 0.3s;
 }
 
-.account-link:hover, .shopping-link:hover {
+.link:hover {
     color: #000;
 }
 
@@ -86,7 +86,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: color 0.3s;
 }
 
-.nav-lin:hover {
+.nav-link:hover {
     color: var(--color-text);
 }
 
