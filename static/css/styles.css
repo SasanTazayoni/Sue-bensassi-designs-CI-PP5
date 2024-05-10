@@ -81,9 +81,20 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.5rem;
 }
 
+.nav-link {
+    margin: 0 10px;
+}
+
 .navbar.scrolled {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1199px) {
+    .nav-link {
+        margin: 0 5px;
+        font-size: 90%;
+    }
 }
 
 /* Footer */
