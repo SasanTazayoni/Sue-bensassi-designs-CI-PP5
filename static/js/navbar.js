@@ -16,11 +16,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const navbarHeight = document.querySelector('header').offsetHeight + 5; // Add 5 pixels
 
         // Get the container element with the data attribute
-        const container = document.querySelector('[data-top-block]');
+        const topContainer = document.querySelector('[data-top-block]');
         
         // If container exists, update its margin-top
-        if (container) {
-            container.style.marginTop = navbarHeight + 'px';
+        if (topContainer) {
+            topContainer.style.marginTop = navbarHeight + 'px';
         }
     }
 
