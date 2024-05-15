@@ -310,3 +310,15 @@ footer a:hover {
 .scroll-up-link.show-link {
     opacity: 1;
 }
+
+/* All products page */
+
+.page-header {
+    font-weight: bold;
+}
+
+.product-card img {
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
