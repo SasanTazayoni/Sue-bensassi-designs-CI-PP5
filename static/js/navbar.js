@@ -1,28 +1,19 @@
-window.onscroll = function() {scrollFunction()};
-    
-function scrollFunction() {
-    const navbar = document.querySelector('.navbar');
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        navbar.classList.add("scrolled");
-    } else {
-        navbar.classList.remove("scrolled");
-    }
-}
-
 document.addEventListener('DOMContentLoaded', function() {
-    // Function to update margin-top of hero container
+    // Function to update margin-top of the top container
     function updateMarginTop() {
         // Get the height of the navbar
         const navbarHeight = document.querySelector('header').offsetHeight + 5; // Add 5 pixels
 
-        // Set the margin-top of the hero container
-        const heroContainer = document.querySelector('.hero-container');
-        if (heroContainer) {
-            heroContainer.style.marginTop = navbarHeight + 'px';
+        // Get the container element with the data attribute
+        const container = document.querySelector('[data-top-block]');
+        
+        // If container exists, update its margin-top
+        if (container) {
+            container.style.marginTop = navbarHeight + 'px';
         }
     }
 
-    // Initial update
+    // Initial update when the page is loaded
     updateMarginTop();
 
     // Update when window is resized
