@@ -7,7 +7,13 @@
     <div class="container-fluid top-container" data-top-block>
         <div class="row">
             <div class="col text-center mt-3">
-                <h1 class="page-header">All Products</h1>
+                <h1 class="page-header">
+                    {% if search_term %}
+                        Searched for '{{ search_term }}'
+                    {% else %}
+                        Products
+                    {% endif %}
+                </h1>
             </div>
         </div>
         <div class="row">
