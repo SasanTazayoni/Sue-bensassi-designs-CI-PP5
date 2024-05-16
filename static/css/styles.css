@@ -313,6 +313,10 @@ footer a:hover {
 
 /* All products page */
 
+.top-container {
+    min-height: 90vh;
+}
+
 .page-header {
     font-weight: bold;
 }
