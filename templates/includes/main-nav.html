@@ -16,28 +16,28 @@
                 Notice boards
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="notice-boards-link">
-                <a href="#" class="dropdown-item">Florals</a>
-                <a href="#" class="dropdown-item">Spots and checks</a>
-                <a href="#" class="dropdown-item">Linen</a>
-                <a href="#" class="dropdown-item">For children</a>
-                <a href="#" class="dropdown-item">Other designs</a>
-                <a href="#" class="dropdown-item">All notice boards</a>
+                <a href="{% url 'products' %}?category=floral_notice_boards" class="dropdown-item">Florals</a>
+                <a href="{% url 'products' %}?category=spots_and_checks_notice_boards" class="dropdown-item">Spots and checks</a>
+                <a href="{% url 'products' %}?category=linen_notice_boards" class="dropdown-item">Linen</a>
+                <a href="{% url 'products' %}?category=childrens_notice_boards" class="dropdown-item">For children</a>
+                <a href="{% url 'products' %}?category=other_notice_boards" class="dropdown-item">Other designs</a>
+                <a href="{% url 'products' %}?category=floral_notice_boards,spots_and_checks_notice_boards,linen_notice_boards,childrens_notice_boards,other_notice_boards" class="dropdown-item">All notice boards</a>
             </div>
         </li>
         <li class="nav-item">
-            <a class="font-weight-bold nav-link text-black" href="#">Photo frames</a>
+            <a class="font-weight-bold nav-link text-black" href="{% url 'products' %}?category=photo_frames">Photo frames</a>
         </li>
         <li class="nav-item">
-            <a class="font-weight-bold nav-link text-black" href="#">Memo blocks</a>
+            <a class="font-weight-bold nav-link text-black" href="{% url 'products' %}?category=memo_blocks">Memo blocks</a>
         </li>
         <li class="nav-item">
-            <a class="font-weight-bold nav-link text-black" href="#">Key Holders</a>
+            <a class="font-weight-bold nav-link text-black" href="{% url 'products' %}?category=key_holders">Key Holders</a>
         </li>
         <li class="nav-item">
-            <a class="font-weight-bold nav-link text-black" href="#">Filing Chest</a>
+            <a class="font-weight-bold nav-link text-black" href="{% url 'products' %}?category=filing_chests">Filing Chest</a>
         </li>
         <li class="nav-item">
-            <a class="font-weight-bold nav-link text-black" href="#">Photo Albums</a>
+            <a class="font-weight-bold nav-link text-black" href="{% url 'products' %}?category=photo_albums">Photo Albums</a>
         </li>
     </ul>
 </div>
