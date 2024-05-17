@@ -8,11 +8,7 @@
         <div class="row">
             <div class="col text-center mt-3">
                 <h1 class="page-header">
-                    {% if search_term %}
-                        Searched for '{{ search_term }}'
-                    {% else %}
-                        Products
-                    {% endif %}
+                    Products
                 </h1>
                 {% for c in current_categories %}
                     {% if 'notice_boards' in c.name %}
