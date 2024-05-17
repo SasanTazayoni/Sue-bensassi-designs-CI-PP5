@@ -321,6 +321,10 @@ footer a:hover {
     font-weight: bold;
 }
 
+.product-card {
+    min-height: 520px;
+}
+
 .product-card img {
     height: 360px;
     object-fit: cover;
