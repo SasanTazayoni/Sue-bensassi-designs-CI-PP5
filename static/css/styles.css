@@ -311,7 +311,7 @@ footer a:hover {
     opacity: 1;
 }
 
-/* All products page */
+/* Products page */
 
 .top-container {
     min-height: 90vh;
@@ -319,6 +319,11 @@ footer a:hover {
 
 .page-header {
     font-weight: bold;
+}
+
+a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
 }
 
 .product-card {
