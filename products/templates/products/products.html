@@ -9,13 +9,14 @@
     <div class="container-fluid top-container" data-top-block>
         <div class="row">
             <div class="col text-center mt-3">
-                <h1 class="page-header">
+                <h1 class="page-header mb-2">
                     Products
                 </h1>
                 {% for c in current_categories %}
                     {% if 'notice_boards' in c.name %}
-                        <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
-                            <span class="p-2 mt-2 badge badge-white rounded-0 border border-dark">{{ c.display_name }}</span>
+                        <a class="button button-small btn-secondary btn-lg" href="{% url 'products' %}?category={{ c.name }}">
+                            <i></i><i></i>
+                            <span>{{ c.display_name }}</span>
                         </a>
                     {% endif %}
                 {% endfor %}
@@ -27,7 +28,7 @@
                     <div class="col-12 col-md-6 order-md-first">
                         <p class="text-muted mt-3 text-center text-md-left">
                             {% if search_term or current_categories or current_sorting != 'None_None' %}
-                                <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
+                                <span class="small"><a href="{% url 'products' %}">Back to Products</a> | </span>
                             {% endif %}
                             {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
                         </p>

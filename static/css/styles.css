@@ -171,8 +171,8 @@ footer a:hover {
     margin-top: 20px;
 }
 
-.btn-hero {
-    width: 120px;
+.button {
+    width: 140px;
     height: 50px;
     margin: 0 5px;
     position: relative;
@@ -180,22 +180,19 @@ footer a:hover {
     display: inline-block;
 }
 
-.btn-hero i {
+.button i {
     position: absolute;
     inset: -2px;
     display: block;
     border-radius: 5px;
+    background: linear-gradient(var(--x), rgba(255, 255, 255, 0.1), var(--color-secondary), var(--color-secondary), rgba(255, 255, 255, 0.1));
 }
 
-.btn-hero i, .btn-hero i:nth-child(2) {
-    background: linear-gradient(var(--x), rgba(255, 255, 255, 0.2), var(--color-secondary), var(--color-secondary), rgba(255, 255, 255, 0.2));
-}
-
-.btn-hero i:nth-child(2) {
+.button i:nth-child(2) {
     filter: blur(10px);
 }
 
-.btn-hero span {
+.button span {
     position: absolute;
     top: 0;
     left: 0;
@@ -210,7 +207,7 @@ footer a:hover {
     overflow: hidden;
 }
 
-.btn-hero span::before {
+.button span::before {
     content: '';
     position: absolute;
     top: 0;
@@ -321,9 +318,8 @@ footer a:hover {
     font-weight: bold;
 }
 
-a.category-badge > span.badge:hover {
-    background: #212529 !important;
-    color: #fff !important;
+.button-small {
+    font-size: 16px;
 }
 
 .product-card {
