@@ -20,6 +20,7 @@ def add_to_cart(request, item_id):
     if item_id in list(cart.keys()):
         if product.stock >= cart[item_id] + quantity:
             cart[item_id] += quantity
+            messages.success(request, f'{quantity} {product.name} added to your cart.')
         else:
             messages.error(
                 request, f'Error {product.name} has only {product.stock} units \
@@ -27,6 +28,7 @@ def add_to_cart(request, item_id):
             )
     else:
         cart[item_id] = quantity
+        messages.success(request, f'{quantity} {product.name} added to your cart.')
 
     request.session['cart'] = cart
     return redirect(redirect_url)

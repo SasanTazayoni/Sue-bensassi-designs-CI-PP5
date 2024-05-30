@@ -22,6 +22,7 @@
       <script src="{% static 'js/navbar.js' %}" defer></script>
       <script src="{% static 'js/buttons.js' %}" defer></script>
       <script src="{% static 'js/scrollToTop.js' %}" defer></script>
+      <script src="{% static 'js/toasts.js' %}" defer></script>
     {% endblock %}
 
     {% block extra_js %}
@@ -102,14 +103,23 @@
     </header>
 
     <!-- Displaying messages -->
-    <div data-alert>
+    {% if messages %}
+      <div class="message-container">
         {% for message in messages %}
-        <div class="alert alert-dismissible fade show text-center {% if message.tags == 'error' %}alert-danger{% elif message.tags == 'success' %}alert-success{% elif message.tags == 'info' %}alert-info{% elif message.tags == 'warning' %}alert-warning{% endif %}"
-            role="alert">
-            {{ message | safe }}
-        </div>
+          {% with message.level as level %}
+            {% if level == 40 %}
+              {% include 'includes/toasts/toast_error.html' %}
+            {% elif level == 30 %}
+              {% include 'includes/toasts/toast_warning.html' %}
+            {% elif level == 25 %}
+              {% include 'includes/toasts/toast_success.html' %}
+            {% else %}
+              {% include 'includes/toasts/toast_info.html' %}
+            {% endif %}
+          {% endwith %}
         {% endfor %}
-    </div>
+      </div>
+    {% endif %}
 
     {% block page_header %}
     {% endblock %}
