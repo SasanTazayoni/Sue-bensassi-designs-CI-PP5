@@ -45,20 +45,11 @@ h1, h2, h3, h4, h5, h6 {
     height: 100px;
 }
 
-@keyframes darken {
-    0% { transform: scale(1); color: var(--color-secondary); }
-    25% { transform: scale(1); color: var(--color-text); }
-    50% { transform: scale(1); color: var(--color-secondary); }
-    75% { transform: scale(1); color: var(--color-text); }
-    100% { transform: scale(1); color: var(--color-secondary); }
-}
-
-.search-btn i {
-    color: var(--color-secondary);
-}
-  
-.search-btn:hover i {
-    animation: darken 2s ease infinite;
+#search-button span,
+#search-button i,
+#search-button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 .link {
