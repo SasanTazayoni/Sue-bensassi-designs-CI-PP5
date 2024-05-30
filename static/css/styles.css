@@ -360,6 +360,10 @@ footer a:hover {
     cursor: default;
 }
 
+.update-link, .remove-item {
+    cursor: pointer;
+}
+
 /* Toasts */
 
 .message-container {
