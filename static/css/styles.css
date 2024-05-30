@@ -163,6 +163,10 @@ footer a:hover {
     align-items: center;
 }
 
+.hero-container .btn-container {
+    justify-content: center;
+}
+
 .button {
     width: 140px;
     height: 50px;
