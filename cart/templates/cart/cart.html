@@ -1,10 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_js %}
+    <script src="{% static 'js/shoppingCartQuantities.js' %}" defer></script>
+{% endblock %}
+
 {% block extra_title %}- Cart{% endblock %}
 
 {% block content %}
-
 <main>
     <div class="container mb-2 top-container" data-top-block>
         <div class="row">
@@ -17,72 +20,98 @@
         <div class="row">
             <div class="col">
                 {% if cart_items %}
-                    <div class="table-responsive rounded">
-                        <table class="table table-sm table-borderless">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Product Info</th>
-                                    <th scope="col"></th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Quantity</th>
-                                    <th scope="col">Subtotal</th>
-                                </tr>
+                <div class="table-responsive rounded">
+                    <table class="table table-sm table-borderless">
+                        <thead>
+                            <tr>
+                                <th scope="col">Product Info</th>
+                                <th scope="col"></th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Subtotal</th>
+                            </tr>
 
-                                {% for item in cart_items %}
-                                <tr>
-                                    <td class="p-3 w-25">
-                                        <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" class="img-fluid rounded">
-                                    </td>
-                                    <td class="py-3">
-                                        <p class="my-0">{{ item.product.name }}</p>
-                                    </td>
-                                    <td class="py-3">
-                                        <p class="my-0">{{ item.product.price }}</p>
-                                    </td>
-                                    <td class="py-3 w-25">
-                                        <p class="my-0">{{ item.quantity }}</p>
-                                    </td>
-                                    <td class="py-3">
-                                        <p class="my-0">{{ item.product.name }}</p>
-                                    </td>
-                                </tr>
-                                {% endfor %}
-                                <tr>
-                                    <td colspan="5" class="pt-5 text-right">
-                                        <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="5" class="text-right">
-                                        <a href="{% url 'products' %}" class="btn btn-lg">
-                                            <span>
-                                                <i class="fas fa-chevron-left"></i>
-                                            </span>
-                                            <span class="text-uppercase">Keep Shopping</span>
-                                        </a>
-                                        <a href="" class="btn btn-lg">
-                                            <span class="text-uppercase">Secure Checkout</span>
-                                            <span>
-                                                <i class="fas fa-lock"></i>
-                                            </span>
-                                        </a>
-                                    </td>
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
+                            {% for item in cart_items %}
+                            <tr>
+                                <td class="p-3 w-25">
+                                    <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}"
+                                        class="img-fluid rounded">
+                                </td>
+                                <td class="py-3">
+                                    <p class="my-0">{{ item.product.name }}</p>
+                                </td>
+                                <td class="py-3">
+                                    <p class="my-0">{{ item.product.price }}</p>
+                                </td>
+                                <td class="py-3 w-25">
+                                    <form class="form update-form" action="{% url 'adjust_cart' item.item_id %}" method="POST" data-form>
+                                        {% csrf_token %}
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <button class="button button-square btn-secondary" data-decrement>
+                                                        <i></i><i></i>
+                                                        <span><i class="fas fa-minus fa-sm"></i></span>
+                                                    </button>
+                                                </div>
+                                                <input type="number" class="form-control form control-sm"
+                                                    name="quantity" value="{{ item.quantity }}" min="1"
+                                                    max="{{ item.product.stock }}" data-product="{{ item.item_id }}">
+                                                <div class="input-group-append">
+                                                    <button class="button button-square btn-secondary" data-increment>
+                                                        <i></i><i></i>
+                                                        <span><i class="fas fa-plus fa-sm"></i></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="update-link text-info" data-update><small>Update</small></a>
+                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"
+                                            data-remove><small>Remove</small></a>
+                                    </form>
+                                </td>
+                                <td class="py-3">
+                                    <p class="my-0">{{ item.product.price }}</p>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                            <tr>
+                                <td colspan="5" class="pt-5 text-right">
+                                    <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="text-right">
+                                    <a href="{% url 'products' %}" class="btn btn-lg">
+                                        <span class="text-uppercase">Keep Shopping</span>
+                                    </a>
+                                    <a href="" class="btn btn-lg">
+                                        <span class="text-uppercase">Secure Checkout</span>
+                                        <span>
+                                            <i class="fas fa-lock"></i>
+                                        </span>
+                                    </a>
+                                </td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
                 {% else %}
-                    <p class="lead mb-5">Your cart is empty.</p>
-                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="text-uppercase">Keep Shopping</span>
-                    </a>
+                <p class="lead mb-5">Your cart is empty.</p>
+                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Keep Shopping</span>
+                </a>
                 {% endif %}
             </div>
         </div>
     </div>
-</main>
 
+    <!-- Back to top button -->
+    <a href="#" class="scroll-up-link" aria-label="Scroll to top button" data-scroll-up="Back to top">
+        <i class="fa-regular fa-circle-up"></i>
+    </a>
+</main>
 {% endblock %}
