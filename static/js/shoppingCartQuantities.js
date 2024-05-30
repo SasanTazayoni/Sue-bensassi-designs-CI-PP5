@@ -1,33 +1,20 @@
 const decrementButtons = document.querySelectorAll('[data-decrement]');
 const incrementButtons = document.querySelectorAll('[data-increment]');
 const updateLinks = document.querySelectorAll('[data-update]');
+let newValue = 0;
 
-const handleUpdate = (button) => {
-    const form = button.closest('.update-form');
-    const productId = form.querySelector('input[data-product]').getAttribute('data-product');
-    const quantityInput = document.querySelector(`input[data-product="${productId}"]`);
-    const value = quantityInput.getAttribute('value');
-    console.log(value);
-};
+const initialiseButtonState = () => {
+    decrementButtons.forEach(button => {
+        const productId = button.closest('.update-form').querySelector('input[data-product]').getAttribute('data-product');
+        const quantityInput = document.querySelector(`input[data-product="${productId}"]`);
+        updateButtonState(quantityInput);
+    });
 
-const updateButtonState = (quantityInput) => {
-    const currentValue = parseInt(quantityInput.value);
-    const minValue = parseInt(quantityInput.min);
-    const maxValue = parseInt(quantityInput.max);
-    const decrementButton = quantityInput.parentNode.querySelector('[data-decrement]');
-    const incrementButton = quantityInput.parentNode.querySelector('[data-increment]');
-
-    if (currentValue === minValue) {
-        decrementButton.classList.add('disabled');
-    } else {
-        decrementButton.classList.remove('disabled');
-    }
-
-    if (currentValue === maxValue) {
-        incrementButton.classList.add('disabled');
-    } else {
-        incrementButton.classList.remove('disabled');
-    }
+    incrementButtons.forEach(button => {
+        const productId = button.closest('.update-form').querySelector('input[data-product]').getAttribute('data-product');
+        const quantityInput = document.querySelector(`input[data-product="${productId}"]`);
+        updateButtonState(quantityInput);
+    });
 };
 
 decrementButtons.forEach(button => {
@@ -60,6 +47,26 @@ incrementButtons.forEach(button => {
     });
 });
 
+const updateButtonState = (quantityInput) => {
+    const currentValue = parseInt(quantityInput.value);
+    const minValue = parseInt(quantityInput.min);
+    const maxValue = parseInt(quantityInput.max);
+    const decrementButton = quantityInput.parentNode.querySelector('[data-decrement]');
+    const incrementButton = quantityInput.parentNode.querySelector('[data-increment]');
+
+    if (currentValue === minValue) {
+        decrementButton.classList.add('disabled');
+    } else {
+        decrementButton.classList.remove('disabled');
+    }
+
+    if (currentValue === maxValue) {
+        incrementButton.classList.add('disabled');
+    } else {
+        incrementButton.classList.remove('disabled');
+    }
+};
+
 updateLinks.forEach(link => {
     link.addEventListener('click', e => {
         e.preventDefault();
@@ -67,18 +74,19 @@ updateLinks.forEach(link => {
     });
 });
 
-const initialiseButtonState = () => {
-    decrementButtons.forEach(button => {
-        const productId = button.closest('.update-form').querySelector('input[data-product]').getAttribute('data-product');
-        const quantityInput = document.querySelector(`input[data-product="${productId}"]`);
-        updateButtonState(quantityInput);
-    });
+const handleUpdate = (button) => {
+    const form = button.closest('.update-form');
+    const productId = form.querySelector('input[data-product]').getAttribute('data-product');
+    const quantityInput = document.querySelector(`input[data-product="${productId}"]`);
+    const value = parseInt(quantityInput.getAttribute('value'));
+    newValue = parseInt(quantityInput.value);
 
-    incrementButtons.forEach(button => {
-        const productId = button.closest('.update-form').querySelector('input[data-product]').getAttribute('data-product');
-        const quantityInput = document.querySelector(`input[data-product="${productId}"]`);
-        updateButtonState(quantityInput);
-    });
+    if (newValue !== value) {
+        quantityInput.setAttribute('value', newValue);
+        form.submit();
+    } else {
+        console.log("Value hasn't changed, not submitting the form.");
+    }
 };
 
 initialiseButtonState();

@@ -40,15 +40,15 @@ def adjust_cart(request, item_id):
     cart = request.session.get('cart', {})
 
     if quantity > 0:
-        if product.stock >= cart[item_id] + quantity:
+        if quantity <= product.stock:
             cart[item_id] = quantity
+            messages.success(request, f'{product.name} quantity updated to {quantity}.')
         else:
-            messages.error(
-                request, f'Error {product.name} has only {product.stock} units \
-                    left, you currently have {cart[item_id]} in your cart.'
-            )
+            messages.error(request, f'Error: {product.name} has only {product.stock} units left.')
     else:
-        cart.pop[item_id]
+        if item_id in cart:
+            del cart[item_id]
+            messages.success(request, f'{product.name} removed from your cart.')
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
