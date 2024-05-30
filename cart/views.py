@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.contrib import messages
 from products.models import Product
 
@@ -46,9 +46,28 @@ def adjust_cart(request, item_id):
         else:
             messages.error(request, f'Error: {product.name} has only {product.stock} units left.')
     else:
-        if item_id in cart:
-            del cart[item_id]
-            messages.success(request, f'{product.name} removed from your cart.')
+        messages.error(request, 'Quantity must be greater than zero.')
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
+
+
+def remove_from_cart(request, item_id):
+    """ Remove the specified product from the cart. """
+
+    try:
+        product = get_object_or_404(Product, pk=item_id)
+        cart = request.session.get('cart', {})
+
+        if item_id in cart:
+            del cart[item_id]
+            messages.success(request, f'{product.name} removed from your cart.')
+        else:
+            messages.error(request, f'{product.name} is not in your cart.')
+
+        request.session['cart'] = cart
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        messages.error(request, f'Error removing item: {e}')
+        return HttpResponse(status=500)
