@@ -167,6 +167,11 @@ footer a:hover {
     font-size: 50%;
 }
 
+.btn-container {
+    display: flex;
+    align-items: center;
+}
+
 .button {
     width: 140px;
     height: 50px;
@@ -330,4 +335,32 @@ footer a:hover {
     height: 360px;
     object-fit: cover;
     object-position: center;
+}
+
+.button-square {
+    font-size: 12px;
+    width: 38px;
+    height: 38px;
+}
+
+.button-square span > i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button[data-decrement] span, .button[data-decrement] i {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.button[data-increment] span, .button[data-increment] i {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.button[data-decrement].disabled, .button[data-increment].disabled {
+    opacity: 0.3;
+    pointer-events: none;
+    cursor: default;
 }
