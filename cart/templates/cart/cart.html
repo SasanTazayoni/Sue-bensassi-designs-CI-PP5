@@ -114,17 +114,20 @@
         <i class="fa-regular fa-circle-up"></i>
     </a>
 </main>
-<script>
-    // Remove item and reload on click
-    $('.remove-item').click(function(e) {
-        const csrfToken = "{{ csrf_token }}";
-        const itemId = $(this).attr('id').split('remove_')[1];
-        const url = `/cart/remove/${itemId}/`;
-        const data = { 'csrfmiddlewaretoken': csrfToken };
+{% endblock %}
 
-        $.post(url, data).done(function() {
-            location.reload();
+{% block postloadjs %}
+    <script>
+        // Remove item and reload on click
+        $('.remove-item').click(function (e) {
+            const csrfToken = "{{ csrf_token }}";
+            const itemId = $(this).attr('id').split('remove_')[1];
+            const url = `/cart/remove/${itemId}/`;
+            const data = { 'csrfmiddlewaretoken': csrfToken };
+
+            $.post(url, data).done(function () {
+                location.reload();
+            });
         });
-    });
-</script>
+    </script>
 {% endblock %}
