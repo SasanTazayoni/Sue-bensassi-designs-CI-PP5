@@ -2,12 +2,13 @@
 {% load static %}
 
 {% block extra_js %}
-    <script src="{% static 'js/shoppingCartQuantities.js' %}" defer></script>
+<script src="{% static 'js/shoppingCartQuantities.js' %}" defer></script>
 {% endblock %}
 
 {% block extra_title %}- Cart{% endblock %}
 
 {% block content %}
+
 <main>
     <div class="container mb-2 top-container" data-top-block>
         <div class="row">
@@ -44,7 +45,8 @@
                                     <p class="my-0">{{ item.product.price }}</p>
                                 </td>
                                 <td class="py-3 w-25">
-                                    <form class="form update-form" action="{% url 'adjust_cart' item.item_id %}" method="POST" data-form>
+                                    <form class="form update-form" action="{% url 'adjust_cart' item.item_id %}"
+                                        method="POST" data-form>
                                         {% csrf_token %}
                                         <div class="form-group">
                                             <div class="input-group">
@@ -65,9 +67,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <a class="update-link text-info" data-update><small>Update</small></a>
-                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"
-                                            data-remove><small>Remove</small></a>
+                                        <a class="update-link text-info" data-update><strong>Update</strong></a>
+                                        <a class="remove-item text-danger float-right"
+                                            id="remove_{{ item.item_id }}"><strong>Remove</strong></a>
                                     </form>
                                 </td>
                                 <td class="py-3">
@@ -114,4 +116,17 @@
         <i class="fa-regular fa-circle-up"></i>
     </a>
 </main>
+<script>
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        const csrfToken = "{{ csrf_token }}";
+        const itemId = $(this).attr('id').split('remove_')[1];
+        const url = `/cart/remove/${itemId}/`;
+        const data = { 'csrfmiddlewaretoken': csrfToken };
+
+        $.post(url, data).done(function() {
+            location.reload();
+        });
+    });
+</script>
 {% endblock %}
