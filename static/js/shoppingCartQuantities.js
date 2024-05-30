@@ -3,6 +3,7 @@ const incrementButtons = document.querySelectorAll('[data-increment]');
 const updateLinks = document.querySelectorAll('[data-update]');
 let newValue = 0;
 
+// Set button initial state
 const initialiseButtonState = () => {
     decrementButtons.forEach(button => {
         const productId = button.closest('.update-form').querySelector('input[data-product]').getAttribute('data-product');
@@ -17,6 +18,7 @@ const initialiseButtonState = () => {
     });
 };
 
+// Decrease quantity input
 decrementButtons.forEach(button => {
     button.addEventListener('click', e => {
         e.preventDefault();
@@ -32,6 +34,7 @@ decrementButtons.forEach(button => {
     });
 });
 
+// Increase quantity input
 incrementButtons.forEach(button => {
     button.addEventListener('click', e => {
         e.preventDefault();
@@ -47,6 +50,7 @@ incrementButtons.forEach(button => {
     });
 });
 
+// Disable button if minimum/maximum quantity reached
 const updateButtonState = (quantityInput) => {
     const currentValue = parseInt(quantityInput.value);
     const minValue = parseInt(quantityInput.min);
@@ -74,6 +78,7 @@ updateLinks.forEach(link => {
     });
 });
 
+// Handle form submission and update cart quantity of the specified item
 const handleUpdate = (button) => {
     const form = button.closest('.update-form');
     const productId = form.querySelector('input[data-product]').getAttribute('data-product');
