@@ -8,6 +8,37 @@
         </button>
     </div>
     <div class="toast-body bg-white">
-        {{ message }}
+        <div class="row">
+            <div class="col">
+                {{ message }}
+                <hr class="divider">
+            </div>
+        </div>
+        {% if grand_total %}
+            <p>Your cart ({{ product_count }})</p>
+            <div class="cart-notification-wrapper">
+                {% for item in cart_items %}
+                <div class="row">
+                    <div class="col-3 my-1">
+                        <img src="{{ item.product.image.url }}" alt="{{ item.product }}" class="w-100">
+                    </div>
+                    <div class="col-9 my-1">
+                        <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                        <p class="my-0 small text-muted">Quantity: {{ item.quantity }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="row">
+                <div class="col">
+                    <a href="{% url 'view_cart' %}" class="btn btn-black btn-block">
+                        <span class="text-uppercase">Go To Secure Checkout</span>
+                        <span>
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        {% endif %}
     </div>
 </div>
