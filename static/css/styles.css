@@ -167,10 +167,6 @@ footer a:hover {
     font-size: 50%;
 }
 
-.btn-container {
-    margin-top: 40px;
-}
-
 .button {
     width: 140px;
     height: 50px;
@@ -312,6 +308,10 @@ footer a:hover {
 
 .top-container {
     min-height: 90vh;
+}
+
+#home-page .hero-container {
+    min-height: auto;
 }
 
 .page-header {
