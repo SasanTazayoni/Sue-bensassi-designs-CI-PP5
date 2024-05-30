@@ -161,9 +161,10 @@ footer a:hover {
 .btn-container {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
-.hero-container .btn-container {
+.hero-container {
     justify-content: center;
 }
 
