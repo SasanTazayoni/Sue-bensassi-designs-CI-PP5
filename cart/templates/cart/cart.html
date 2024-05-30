@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load cart_tools %}
 
 {% block extra_js %}
-<script src="{% static 'js/shoppingCartQuantities.js' %}" defer></script>
+    <script src="{% static 'js/shoppingCartQuantities.js' %}" defer></script>
 {% endblock %}
 
 {% block extra_title %}- Cart{% endblock %}
@@ -73,7 +74,7 @@
                                     </form>
                                 </td>
                                 <td class="py-3">
-                                    <p class="my-0">{{ item.product.price }}</p>
+                                    <p class="my-0">{{ item.product.price | calc_subtotal:item.quantity }}</p>
                                 </td>
                             </tr>
                             {% endfor %}
