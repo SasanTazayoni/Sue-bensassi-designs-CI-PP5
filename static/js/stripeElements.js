@@ -1,6 +1,7 @@
 /*
     Core logic/payment flow for this comes from here:
     https://stripe.com/docs/payments/accept-a-payment
+
     CSS from here: 
     https://stripe.com/docs/stripe-js
 */
@@ -28,3 +29,45 @@ const style = {
 
 const card = elements.create('card', {style: style});
 card.mount('#card-element');
+
+// Handle realtime validation errors on the card element
+card.addEventListener('change', function(e) {
+    const errorDiv = document.getElementById('card-errors');
+    if (e.error) {
+        let html = `<span class="error" role="alert"><i class="fas fa-times">
+            </i></span><span>${e.error.message}</span>`;
+        $(errorDiv).html(html);
+    } else {
+        errorDiv.textContent = '';
+    }
+});
+
+// Handle form submit
+const form = document.getElementById('payment-form');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    card.update({ 'disabled': true });
+    $('#submit-button').attr('disabled', true);
+    stripe.confirmCardPayment(clientSecret, {
+        payment_method: {
+            card: card,
+        }
+    }).then(function(result) {
+        if (result.error) {
+            const errorDiv = document.getElementById('card-errors');
+            let html = `
+                <span class="error" role="alert">
+                <i class="fas fa-times"></i>
+                </span>
+                <span>${result.error.message}</span>`;
+            $(errorDiv).html(html);
+            card.update({ 'disabled': false });
+            $('#submit-button').attr('disabled', false);
+        } else {
+            if (result.paymentIntent.status === 'succeeded') {
+                form.submit();
+            }
+        }
+    });
+});

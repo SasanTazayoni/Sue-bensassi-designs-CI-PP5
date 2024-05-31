@@ -425,3 +425,7 @@ footer a:hover {
 .stripe-style-input::placeholder {
     color: #aab7c4;
 }
+
+.error {
+    margin-right: 10px;
+}
