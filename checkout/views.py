@@ -56,6 +56,8 @@ def checkout(request):
             for item_id, item_data in cart.items():
                 try:
                     product = Product.objects.get(id=item_id)
+                    product.stock -= item_data
+                    product.save()
                     order_line_item = OrderLineItem(
                         order=order,
                         product=product,
