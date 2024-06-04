@@ -1,36 +1,68 @@
-{% extends "account/base_entrance.html" %}
-{% load allauth i18n %}
-{% block head_title %}
-    {% trans "Signup" %}
-{% endblock head_title %}
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block extra_title %}- Sign Up Form{% endblock extra_title %}
+
 {% block content %}
-    {% element h1 %}
-        {% trans "Sign Up" %}
-    {% endelement %}
-    {% setvar link %}
-        <a href="{{ login_url }}">
-        {% endsetvar %}
-        {% setvar end_link %}
-        </a>
-    {% endsetvar %}
-    <p>{% blocktranslate %}Already have an account? Then please {{ link }}sign in{{ end_link }}.{% endblocktranslate %}</p>
-    {% if not SOCIALACCOUNT_ONLY %}
-        {% url 'account_signup' as action_url %}
-        {% element form form=form method="post" action=action_url tags="entrance,signup" %}
-            {% slot body %}
+<main class="background">
+    <div class="container top-container d-flex justify-content-center align-items-center" data-top-block>
+        <!-- Registration form -->
+        <div class="card form-container my-2">
+            <header class="text-center">
+                <h1>Register</h1>
+            </header>
+            <form action="{% url 'account_signup' %}" method="POST" class="d-flex justify-content-center align-items-center flex-column form">
                 {% csrf_token %}
-                {% element fields form=form unlabeled=True %}
-                {% endelement %}
-                {{ redirect_field }}
-            {% endslot %}
-            {% slot actions %}
-                {% element button tags="prominent,signup" type="submit" %}
-                    {% trans "Sign Up" %}
-                {% endelement %}
-            {% endslot %}
-        {% endelement %}
-    {% endif %}
-    {% if SOCIALACCOUNT_ENABLED %}
-        {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
-    {% endif %}
+                <div class="form-field">
+                    <label for="id_username">Username:</label>
+                    <input id="id_username" type="text" name="username" placeholder="Enter username">
+                    {% for error in form.username.errors %}
+                    <p class="error-text">{{ error }}</p>
+                    {% endfor %}
+                </div>
+                <div class="form-field">
+                    <label for="id_email">Email:</label>
+                    <input id="id_email" type="text" name="email" placeholder="Enter email address">
+                    {% for error in form.email.errors %}
+                    <p class="error-text">{{ error }}</p>
+                    {% endfor %}
+                </div>
+                <div class="form-field">
+                    <label for="id_email2">Confirm Email:</label>
+                    <input id="id_email2" type="text" name="email2" placeholder="Confirm email address">
+                    {% for error in form.email2.errors %}
+                    <p class="error-text">{{ error }}</p>
+                    {% endfor %}
+                </div>
+                <div class="form-field">
+                    <label for="id_password1">Password:</label>
+                    <input id="id_password1" type="password" name="password1" placeholder="Enter password">
+                    {% for error in form.password1.errors %}
+                    <p class="error-text">{{ error }}</p>
+                    {% endfor %}
+                </div>
+                <div class="form-field">
+                    <label for="id_password2">Password (again):</label>
+                    <input id="id_password2" type="password" name="password2" placeholder="Enter password again">
+                    {% for error in form.password2.errors %}
+                    <p class="error-text">{{ error }}</p>
+                    {% endfor %}
+                </div>
+                <div class="btn-container">
+                    <button class="button btn-secondary btn-lg px-2" type="submit">
+                        <i></i><i></i>
+                        <span>Sign up</span>
+                    </button>
+                    <button class="button btn-secondary btn-lg px-2" type="reset">
+                        <i></i><i></i>
+                        <span>Reset</span>
+                    </button>
+                </div>
+            </form>
+            <!-- Link to login page -->
+            <p class="login-text">Already have an account? <a href="{% url 'account_login' %}" aria-label="Log in here" class="login-link">Log in here</a></p>
+        </div>
+    </div>
+</main>
 {% endblock content %}
