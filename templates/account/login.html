@@ -17,7 +17,7 @@
             <form action="{% url 'account_login' %}" method="POST" class="d-flex justify-content-center align-items-center flex-column form">
                 {% csrf_token %}
                 <div class="form-field">
-                    <label for="id_login">Username:</label>
+                    <label for="id_login">Email:</label>
                     <input id="id_login" type="text" name="login" placeholder="Enter username">
                 </div>
                 <div class="form-field">
