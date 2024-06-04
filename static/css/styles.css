@@ -647,14 +647,12 @@ footer a:hover {
     text-align: center;
 }
 
-.signup-link, .login-link, .pw-reset {
+.link {
     color: rgb(88, 189, 252);
     transition: color 0.3s;
 }
 
-.signup-link:hover,
-.login-link:hover,
-.pw-reset:hover {
+.link:hover {
     filter: drop-shadow(0 0 0.5px rgb(20, 160, 247));
 }
 
