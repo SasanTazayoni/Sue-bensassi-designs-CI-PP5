@@ -49,7 +49,7 @@
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
           <form method="GET" action="{% url 'products' %}">
             <div class="input-group w-100">
-              <input class="form-control border border-black" type="text" name="q" placeholder="Search for a product">
+              <input class="form-control" type="text" name="q" placeholder="Search for a product">
               <div class="input-group-append">
                 <button class="form-control button button-square btn-secondary" id="search-button" type="submit">
                   <span class="nav-icon">
@@ -63,7 +63,7 @@
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
           <ul class="list-inline list-unstyled text-center text-lg-right my-0">
             <li class="list-inline-item">
-              <a href="{% url 'home' %}" class="text-decoration-none link">
+              <a href="{% url 'home' %}" class="text-decoration-none navbar-link">
                 <div class="text-center">
                   <div class="nav-icon"><i class="fa-solid fa-house-chimney"></i></div>
                   <p class="my-0">Go Home</p>
@@ -71,7 +71,7 @@
               </a>
             </li>
             <li class="list-inline-item dropdown mr-3">
-              <a href="#" class="text-decoration-none link" id="account-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a href="#" class="text-decoration-none navbar-link" id="account-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="text-center">
                   <div class="nav-icon"><i class="fa-solid fa-user"></i></div>
                   <p class="my-0">My Account</p>
@@ -91,7 +91,7 @@
               </div>
             </li>
             <li class="list-inline-item mr-3">
-              <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} text-decoration-none link" href="{% url 'view_cart' %}">
+              <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} text-decoration-none navbar-link" href="{% url 'view_cart' %}">
                 <div class="text-center">
                   <div class="nav-icon"><i class="fas fa-cart-shopping"></i></div>
                   <p class="my-0">
@@ -158,9 +158,9 @@
         </p>
       </div>
       <div class="text-center ml-auto pr-3 my-auto">
-        <a href="#" class="footer-link mx-2">Delivery</a>
-        <a href="#" class="footer-link mx-2">About</a>
-        <a href="#" class="footer-link mx-2">Terms and Conditions</a>
+        <a href="#" class="mx-2">Delivery</a>
+        <a href="#" class="mx-2">About</a>
+        <a href="#" class="mx-2">Terms and Conditions</a>
       </div>
     </footer>
 
