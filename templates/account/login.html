@@ -1,48 +1,48 @@
-{% extends "account/base_entrance.html" %}
+{% extends "base.html" %}
 {% load i18n %}
-{% load allauth account %}
-{% block head_title %}
-    {% trans "Sign In" %}
-{% endblock head_title %}
+{% load static %}
+
+{% block extra_title %}- Login{% endblock extra_title %}
+
 {% block content %}
-    {% element h1 %}
-        {% trans "Sign In" %}
-    {% endelement %}
-    {% if not SOCIALACCOUNT_ONLY %}
-        {% setvar link %}
-            <a href="{{ signup_url }}">
-            {% endsetvar %}
-            {% setvar end_link %}
-            </a>
-        {% endsetvar %}
-        <p>
-            {% blocktranslate %}If you have not created an account yet, then please {{ link }}sign up{{ end_link }} first.{% endblocktranslate %}
-        </p>
-        {% url 'account_login' as login_url %}
-        {% element form form=form method="post" action=login_url tags="entrance,login" %}
-            {% slot body %}
+
+<main class="background">
+    <div class="container top-container d-flex justify-content-center align-items-center" data-top-block>
+        <!-- Login form -->
+        <div class="card form-container">
+            <header class="text-center">
+                <h1>Account Login</h1>
+            </header>
+            <form action="{% url 'account_login' %}" method="POST" class="d-flex justify-content-center align-items-center flex-column form">
                 {% csrf_token %}
-                {% element fields form=form unlabeled=True %}
-                {% endelement %}
-                {{ redirect_field }}
-            {% endslot %}
-            {% slot actions %}
-                {% element button type="submit" tags="prominent,login" %}
-                    {% trans "Sign In" %}
-                {% endelement %}
-            {% endslot %}
-        {% endelement %}
-    {% endif %}
-    {% if LOGIN_BY_CODE_ENABLED %}
-        {% element hr %}
-        {% endelement %}
-        {% element h2 %}
-            {% element button href=request_login_code_url tags="prominent,login,secondary" %}
-                {% trans "Mail me a sign-in code" %}
-            {% endelement %}
-        {% endelement %}
-    {% endif %}
-    {% if SOCIALACCOUNT_ENABLED %}
-        {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
-    {% endif %}
+                <div class="form-field">
+                    <label for="id_login">Username:</label>
+                    <input id="id_login" type="text" name="login" placeholder="Enter username">
+                </div>
+                <div class="form-field">
+                    <label for="id_password">Password:</label>
+                    <input id="id_password" type="password" name="password" placeholder="Enter password">
+                    {% if form.errors %}
+                        <p class="error-text">Invalid username or password. Please try again.</p>
+                    {% endif %}
+                </div>
+                <!-- Forgot password link -->
+                <a href="{% url 'account_reset_password' %}" class="pw-reset">Forgot your password?</a>
+                <div class="btn-container">
+                    <button class="button btn-secondary btn-lg px-2" type="submit">
+                        <i></i><i></i>
+                        <span>Log in</span>
+                    </button>
+                    <button class="button btn-secondary btn-lg px-2" type="reset">
+                        <i></i><i></i>
+                        <span>Reset</span>
+                    </button>
+                </div>
+                <!-- Link to registration page -->
+                <p class="signup-text">Don't have an account? <a href="{% url 'account_signup' %}" aria-label="Sign up here" class="signup-link">Sign up here</a></p>
+            </form>
+        </div>
+    </div>
+</main>
+
 {% endblock content %}
