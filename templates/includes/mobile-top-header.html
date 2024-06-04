@@ -1,9 +1,9 @@
 <ul class="d-flex align-right">
-    <li class="list-inline-item mx-2">
-        <a class="text-black link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <li class="list-inline-item">
+        <a class="text-black text-decoration-none navbar-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
                 <div class="nav-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-                <p class="my-0">Search</p>
+                <p class="my-0 nav-icon-text">Search</p>
             </div>
         </a>
         <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
@@ -21,11 +21,19 @@
             </form>
         </div>
     </li>
-    <li class="list-inline-item dropdown mx-2">
-        <a class="text-black link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <li class="list-inline-item">
+        <a href="{% url 'home' %}" class="text-black text-decoration-none d-block d-lg-none navbar-link">
+            <div class="text-center">
+            <div class="nav-icon"><i class="fa-solid fa-house-chimney"></i></div>
+            <p class="my-0 nav-icon-text">Go Home</p>
+            </div>
+        </a>
+    </li>
+    <li class="list-inline-item dropdown">
+        <a class="text-black d-block d-lg-none text-decoration-none navbar-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
                 <div class="nav-icon"><i class="fa-solid fa-user"></i></div>
-                <p class="my-0">My Account</p>
+                <p class="my-0 nav-icon-text">My Account</p>
             </div>
         </a>
         <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -41,11 +49,11 @@
             {% endif %}
         </div>
     </li>
-    <li class="list-inline-item mx-2">
-        <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} link d-block d-lg-none" href="{% url 'view_cart' %}">
+    <li class="list-inline-item">
+        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} d-block d-lg-none text-decoration-none navbar-link" href="{% url 'view_cart' %}">
             <div class="text-center">
                 <div class="nav-icon"><i class="fas fa-cart-shopping"></i></div>
-                <p class="my-0">
+                <p class="my-0 nav-icon-text cart">
                     {% if grand_total %}
                         £{{ grand_total|floatformat:2 }}
                     {% else %}

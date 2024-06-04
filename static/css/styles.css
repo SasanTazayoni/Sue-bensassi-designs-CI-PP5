@@ -228,6 +228,10 @@ label {
     font-size: 1.5rem;
 }
 
+.nav-icon-text {
+    font-size: 16px;
+}
+
 .nav-link {
     margin: 0 10px;
     transition: color 0.3s;
@@ -246,6 +250,39 @@ label {
     .nav-link {
         margin: 0 5px;
         font-size: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-icon > i {
+        align-items: center;
+        display: inline-flex;
+        justify-content: center;
+        font-size: 18px;
+    }
+    
+    .nav-icon-text {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .nav-icon > i {
+        margin: 0 10px;
+    }
+
+    .nav-icon-text {
+        display: none;
+    }
+
+    .cart {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 324px) {
+    .nav-icon > i {
+        margin: 0 5px;
     }
 }
 
