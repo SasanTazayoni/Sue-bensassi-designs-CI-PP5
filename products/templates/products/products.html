@@ -15,7 +15,7 @@
                 <div class="btn-container">
                     {% for c in current_categories %}
                         {% if 'notice_boards' in c.name %}
-                            <a class="button button-small btn-secondary btn-lg" href="{% url 'products' %}?category={{ c.name }}">
+                            <a class="button btn-secondary btn-lg" href="{% url 'products' %}?category={{ c.name }}">
                                 <i></i><i></i>
                                 <span>{{ c.display_name }}</span>
                             </a>
