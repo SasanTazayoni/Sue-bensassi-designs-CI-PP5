@@ -329,14 +329,14 @@ footer a:hover {
 }
 
 .hero-image {
-    background-image: url('../../media/hero-image.png');
+    background-image: url('../images/hero-image.png');
     background-size: cover;
     background-position: center;
     height: 75vh;
 }
 
 .hero-background {
-    background-image: url('../../media/hero-background.jpg');
+    background-image: url('../images/hero-background.jpg');
     background-size: cover;
     height: 75vh;
 }
