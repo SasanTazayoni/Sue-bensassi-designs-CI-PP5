@@ -2,169 +2,194 @@
 
 <!doctype html>
 <html lang="en">
-  <head>
-    {% block meta %}
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    {% endblock %}
+<head>
+  {% block meta %}
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  {% endblock %}
 
-    {% block favicon %}
-      <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
-      <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
-      <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
-      <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}">
-    {% endblock %}
+  {% block favicon %}
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}">
+  {% endblock %}
 
-    {% block css %}
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-      <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    {% endblock %}
+  {% block css %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  {% endblock %}
 
-    {% block js %}
-      <script src="https://kit.fontawesome.com/8e27f7937b.js" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-      <script src="https://js.stripe.com/v3/"></script>
-      <script src="{% static 'js/navbar.js' %}" defer></script>
-      <script src="{% static 'js/buttons.js' %}" defer></script>
-      <script src="{% static 'js/scrollToTop.js' %}" defer></script>
-      <script src="{% static 'js/toasts.js' %}" defer></script>
-    {% endblock %}
+  {% block js %}
+    <script src="https://kit.fontawesome.com/8e27f7937b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="{% static 'js/navbar.js' %}" defer></script>
+    <script src="{% static 'js/buttons.js' %}" defer></script>
+    <script src="{% static 'js/scrollToTop.js' %}" defer></script>
+    <script src="{% static 'js/toasts.js' %}" defer></script>
+    <script src="{% static 'js/logoutModal.js' %}" defer></script>
+  {% endblock %}
 
-    {% block extra_js %}
-    {% endblock %}
+  {% block extra_js %}
+  {% endblock %}
 
-    <title>Sue Bensassi Designs {% block extra_title %}{% endblock %}</title>
-  </head>
-  <body>
-    <header class="container-fluid fixed-top" data-navbar>
-      <div class="row bg-white d-none d-lg-flex">
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-          <a href="{% url 'home' %}">
-            <img class="logo" src="{% static 'images/logo.png' %}" alt="Logo for Sue Bensassi Designs">
-          </a>
-        </div>
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-          <form method="GET" action="{% url 'products' %}">
-            <div class="input-group w-100">
-              <input class="form-control" type="text" name="q" placeholder="Search for a product">
-              <div class="input-group-append">
-                <button class="form-control button button-square btn-secondary" id="search-button" type="submit">
-                  <span class="nav-icon">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                  </span>
-                </button>
-              </div>
+  <title>Sue Bensassi Designs {% block extra_title %}{% endblock %}</title>
+</head>
+<body>
+  <header class="container-fluid fixed-top" data-navbar>
+    <div class="row bg-white d-none d-lg-flex">
+      <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+        <a href="{% url 'home' %}">
+          <img class="logo" src="{% static 'images/logo.png' %}" alt="Logo for Sue Bensassi Designs">
+        </a>
+      </div>
+      <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+        <form method="GET" action="{% url 'products' %}">
+          <div class="input-group w-100">
+            <input class="form-control" type="text" name="q" placeholder="Search for a product">
+            <div class="input-group-append">
+              <button class="form-control button button-square btn-secondary" id="search-button" type="submit">
+                <span class="nav-icon">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+              </button>
             </div>
-          </form>
-        </div>
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-          <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-            <li class="list-inline-item">
-              <a href="{% url 'home' %}" class="text-decoration-none navbar-link">
-                <div class="text-center">
-                  <div class="nav-icon"><i class="fa-solid fa-house-chimney"></i></div>
-                  <p class="my-0">Go Home</p>
-                </div>
-              </a>
-            </li>
-            <li class="list-inline-item dropdown mr-3">
-              <a href="#" class="text-decoration-none navbar-link" id="account-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <div class="text-center">
-                  <div class="nav-icon"><i class="fa-solid fa-user"></i></div>
-                  <p class="my-0">My Account</p>
-                </div>
-              </a>
-               <div class="dropdown-menu border" aria-labelledby="user-options">
-                  {% if request.user.is_authenticated %}
-                      {% if request.user.is_superuser %}
-                          <a href="" class="dropdown-item">Item Management</a>
-                      {% endif %}
-                      <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                      <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                  {% else %}
-                      <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                      <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                  {% endif %}
+          </div>
+        </form>
+      </div>
+      <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+        <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+          <li class="list-inline-item">
+            <a href="{% url 'home' %}" class="text-decoration-none navbar-link">
+              <div class="text-center">
+                <div class="nav-icon"><i class="fa-solid fa-house-chimney"></i></div>
+                <p class="my-0">Go Home</p>
               </div>
-            </li>
-            <li class="list-inline-item mr-3">
-              <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} text-decoration-none navbar-link" href="{% url 'view_cart' %}">
-                <div class="text-center">
-                  <div class="nav-icon"><i class="fas fa-cart-shopping"></i></div>
-                  <p class="my-0">
-                      {% if grand_total %}
-                          £{{ grand_total|floatformat:2 }}
-                      {% else %}
-                          £0.00
-                      {% endif %}
-                  </p>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="row bg-white">
-        <nav class="navbar navbar-expand-lg navbar-light w-100">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          {% include 'includes/mobile-top-header.html' %}
-          {% include 'includes/main-nav.html' %}
-        </nav>
-      </div>
-    </header>
-
-    <!-- Displaying messages -->
-    {% if messages %}
-      <div class="message-container">
-        {% for message in messages %}
-          {% with message.level as level %}
-            {% if level == 40 %}
-              {% include 'includes/toasts/toast_error.html' %}
-            {% elif level == 30 %}
-              {% include 'includes/toasts/toast_warning.html' %}
-            {% elif level == 25 %}
-              {% include 'includes/toasts/toast_success.html' %}
-            {% else %}
-              {% include 'includes/toasts/toast_info.html' %}
-            {% endif %}
-          {% endwith %}
-        {% endfor %}
-      </div>
-    {% endif %}
-
-    {% block page_header %}
-    {% endblock %}
-
-    {% block content %}
-    {% endblock %}
-
-    <!-- Footer -->
-    <footer class="footer mt-auto py-3 dark-bg d-flex justify-between text-white">
-      <div class="text-center">
-        <p class="m-0 pl-3">
-            {% block copyright %}
-            &copy; Sue Bensassi Designs 2024<br>
-            Website designed and created by Sasan Tazayoni
-            <a href="https://github.com/SasanTazayoni" target="_blank" rel="noopener" class="github-link pl-2"
-                aria-label="Github profile link">
-                <i class="fa-brands fa-github"></i>
             </a>
-            {% endblock copyright %}
-        </p>
+          </li>
+          <li class="list-inline-item dropdown mr-3">
+            <a href="#" class="text-decoration-none navbar-link" id="account-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div class="text-center">
+                <div class="nav-icon"><i class="fa-solid fa-user"></i></div>
+                <p class="my-0">My Account</p>
+              </div>
+            </a>
+              <div class="dropdown-menu border" aria-labelledby="user-options">
+                {% if request.user.is_authenticated %}
+                    {% if request.user.is_superuser %}
+                        <a href="" class="dropdown-item">Item Management</a>
+                    {% endif %}
+                    <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                    <a href="{% url 'account_logout' %}" class="dropdown-item" id="logout-link">Logout</a>
+                {% else %}
+                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                {% endif %}
+            </div>
+          </li>
+          <li class="list-inline-item mr-3">
+            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} text-decoration-none navbar-link" href="{% url 'view_cart' %}">
+              <div class="text-center">
+                <div class="nav-icon"><i class="fas fa-cart-shopping"></i></div>
+                <p class="my-0">
+                    {% if grand_total %}
+                        £{{ grand_total|floatformat:2 }}
+                    {% else %}
+                        £0.00
+                    {% endif %}
+                </p>
+              </div>
+            </a>
+          </li>
+        </ul>
       </div>
-      <div class="text-center ml-auto pr-3 my-auto">
-        <a href="#" class="mx-2">Delivery</a>
-        <a href="#" class="mx-2">About</a>
-        <a href="#" class="mx-2">Terms and Conditions</a>
-      </div>
-    </footer>
+    </div>
+    <div class="row bg-white">
+      <nav class="navbar navbar-expand-lg navbar-light w-100">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        {% include 'includes/mobile-top-header.html' %}
+        {% include 'includes/main-nav.html' %}
+      </nav>
+    </div>
+  </header>
 
-    {% block postloadjs %}
-    {% endblock %}
-  </body>
+  <!-- Displaying messages -->
+  {% if messages %}
+    <div class="message-container">
+      {% for message in messages %}
+        {% with message.level as level %}
+          {% if level == 40 %}
+            {% include 'includes/toasts/toast_error.html' %}
+          {% elif level == 30 %}
+            {% include 'includes/toasts/toast_warning.html' %}
+          {% elif level == 25 %}
+            {% include 'includes/toasts/toast_success.html' %}
+          {% else %}
+            {% include 'includes/toasts/toast_info.html' %}
+          {% endif %}
+        {% endwith %}
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <!-- Logout Confirmation Modal -->
+  <div class="modal fade" id="logoutConfirmationModal" tabindex="-1" aria-labelledby="logoutConfirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-center">
+                <h2 class="modal-title" id="logoutConfirmationModalLabel">Confirm Logout</h2>
+            </div>
+            <div class="modal-body d-flex justify-content-center">
+                Are you sure you want to log out?
+            </div>
+            <div class="modal-footer d-flex justify-content-center align-items-center">
+              <a href="{% url 'account_logout' %}" class="button button-small btn-secondary btn-lg px-2">
+                <i></i><i></i>
+                <span>Yes</span>
+              </a>
+              <button type="button" class="button button-small btn-secondary btn-lg px-2" data-dismiss="modal">
+                <i></i><i></i>
+                <span>No</span>
+              </button>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  {% block page_header %}
+  {% endblock %}
+
+  {% block content %}
+  {% endblock %}
+
+  <!-- Footer -->
+  <footer class="footer mt-auto py-3 dark-bg d-flex justify-between text-white">
+    <div class="text-center">
+      <p class="m-0 pl-3">
+          {% block copyright %}
+          &copy; Sue Bensassi Designs 2024<br>
+          Website designed and created by Sasan Tazayoni
+          <a href="https://github.com/SasanTazayoni" target="_blank" rel="noopener" class="github-link pl-2"
+              aria-label="Github profile link">
+              <i class="fa-brands fa-github"></i>
+          </a>
+          {% endblock copyright %}
+      </p>
+    </div>
+    <div class="text-center ml-auto pr-3 my-auto">
+      <a href="#" class="mx-2">Delivery</a>
+      <a href="#" class="mx-2">About</a>
+      <a href="#" class="mx-2">Terms and Conditions</a>
+    </div>
+  </footer>
+
+  {% block postloadjs %}
+  {% endblock %}
+</body>
 </html>
