@@ -12,13 +12,33 @@
             <div class="col-6 hero-image"></div>
             <div class="col-6 hero-background d-flex flex-column text-center">
                 <h1 class="hero-title pb-3 pt-5 px-4">Sue Bensassi Designs</h1>
-                <h2 class="pt-5 px-4">Home Accessories and Gifts</h2>
-                <p class="pb-3 px-4">For Children and Adults</p>
-                <h2 class="px-4">Don't see a design you like?</h2>
-                <p class="pb-3 px-4">We can make it for you! <br> Just request free fabric swatches or supply your own.</p>
-                <h2 class="px-4">Looking for a specific size?</h2>
-                <p class="pb-3 px-4 mb-8">We can adjust that too.</p>
-                <div class="btn-container pb-3">
+                <div>
+                    <h2 class="hero-subtitle">Home Accessories and Gifts</h2>
+                    <p class="pb-3 px-4 m-0">For Children and Adults</p>
+                    <h2 class="hero-subtitle">Don't see a design you like?</h2>
+                    <p class="pb-3 px-4 m-0">We can make it for you! <br> Just request free fabric swatches or supply your own.</p>
+                    <h2 class="hero-subtitle">Looking for a specific size?</h2>
+                    <p class="pb-3 px-4">We can adjust that too.</p>
+                </div>
+                <div class="btn-container pb-5">
+                    <a href="{% url 'products' %}" class="button btn-secondary btn-lg px-2">
+                        <i></i><i></i>
+                        <span>Shop</span>
+                    </a>
+                    <a href="#" class="button btn-secondary btn-lg px-2">
+                        <i></i><i></i>
+                        <span>Contact</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="top-container mobile-hero-container" data-top-block>
+        <div class="mobile-hero-background">
+            <div class="hero-content">
+                <h1 class="text-center">Sue Bensassi Designs</h1>
+                <div class="btn-container">
                     <a href="{% url 'products' %}" class="button btn-secondary btn-lg px-2">
                         <i></i><i></i>
                         <span>Shop</span>
