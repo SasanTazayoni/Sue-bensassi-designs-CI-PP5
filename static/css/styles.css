@@ -803,3 +803,10 @@ footer a:hover {
         margin: 0 3px 10px 3px;
     }
 }
+
+/* Profile */
+
+.order-history {
+    max-height: 360px;
+    overflow-y: auto;
+}
