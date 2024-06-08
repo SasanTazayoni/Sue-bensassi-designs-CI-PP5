@@ -7,7 +7,6 @@ from checkout.models import Order
 
 def profile(request):
     """ Display the user's profile. """
-
     profile = get_object_or_404(UserProfile, user=request.user)
 
     if request.method == 'POST':
@@ -15,8 +14,11 @@ def profile(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Profile updated.')
+        else:
+            messages.error(request, 'There was an error with the form. Please check the information provided.')
+    else:
+        form = UserProfileForm(instance=profile)
 
-    form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
 
     template = 'profiles/profile.html'
