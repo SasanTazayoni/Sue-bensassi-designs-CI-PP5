@@ -1,0 +1,19 @@
+Hello Sue,
+
+You have received a new order at Sue Bensassi Designs. The details of the order are as follows:
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+Customer Name: {{ order.full_name }}
+Grand Total: £{{ order.grand_total }}
+
+Shipping Address:
+{{ order.street_address1 }}
+{% if order.street_address2 %}{{ order.street_address2 }}{% endif %}
+{{ order.town_or_city }}, {{ order.postcode }}
+
+Customer Phone Number: {{ order.phone_number }}
+
+Best regards,
+
+Sue Bensassi Designs Order Management System
