@@ -86,13 +86,13 @@
                         <div class="modal fade" id="deleteModal{{ product.id }}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel{{ product.id }}" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered" role="document">
                                 <div class="modal-content">
-                                    <div class="modal-header">
+                                    <div class="modal-header text-center justify-content-center">
                                         <h2 class="modal-title" id="deleteModalLabel{{ product.id }}">Confirm Deletion</h2>
                                     </div>
                                     <div class="modal-body">
                                         Are you sure you want to remove this item from the store?
                                     </div>
-                                    <div class="modal-footer">
+                                    <div class="modal-footer justify-content-center">
                                         <a class="button button-small btn-secondary btn-lg px-2" href="{% url 'delete_product' product.id %}">
                                             <i></i><i></i>
                                             <span>Yes</span>
