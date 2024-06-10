@@ -72,7 +72,7 @@
                                             </div>
                                         </div>
                                         <a class="update-link text-info" data-update><strong>Update</strong></a>
-                                        <a class="remove-item text-danger float-right"
+                                        <a class="remove-link text-danger float-right"
                                             id="remove_{{ item.item_id }}"><strong>Remove</strong></a>
                                     </form>
                                 </td>
@@ -122,7 +122,7 @@
 {% block postloadjs %}
     <script>
         // Remove item and reload on click
-        $('.remove-item').click(function (e) {
+        $('.remove-link').click(function (e) {
             const csrfToken = "{{ csrf_token }}";
             const itemId = $(this).attr('id').split('remove_')[1];
             const url = `/cart/remove/${itemId}/`;

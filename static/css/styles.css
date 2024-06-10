@@ -647,8 +647,10 @@ footer a:hover {
     cursor: default;
 }
 
-.update-link, .remove-item {
+.update-link, .remove-link {
     cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
 }
 
 /* Toasts */
