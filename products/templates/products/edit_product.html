@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}- Product Management{% endblock %}
+
+{% block content %}
+
+<main>
+    <div class="container top-container" data-top-block>
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h1 class="mb-4 text-center">Product Management</h1>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <h2 class="text-muted">Edit a Product</h2>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        {% if field.name != 'image' %}
+                            {{ field | as_crispy_field }}
+                        {% else %}
+                            {{ field }}
+                        {% endif %}
+                    {% endfor %}
+                    <div class="text-right">
+                        <a class="btn btn-outline-black" href="{% url 'products' %}">Cancel</a>
+                        <button class="btn btn-black" type="submit">Update Product</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to top button -->
+    <a href="#" class="scroll-up-link" aria-label="Scroll to top button" data-scroll-up="Back to top">
+        <i class="fa-regular fa-circle-up"></i>
+    </a>
+</main>
+{% endblock %}
