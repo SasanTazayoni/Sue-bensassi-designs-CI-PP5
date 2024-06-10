@@ -1,3 +1,5 @@
+{% load static %}
+
 <div class="toast custom-toast" data-autohide="false">
     <div class="toast-header bg-success text-white">
         <strong class="mr-auto">Success!</strong>
@@ -18,7 +20,11 @@
                 {% for item in cart_items %}
                 <div class="row">
                     <div class="col-3 my-1">
-                        <img src="{{ item.product.image.url }}" alt="{{ item.product }}" class="w-100">
+                        {% if item.product.image %}
+                            <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                        {% else %}
+                            <img class="w-100" src="{% static 'images/noimage.png' %}" alt="{{ item.product.name }}">
+                        {% endif %}
                     </div>
                     <div class="col-9 my-1">
                         <p class="my-0"><strong>{{ item.product.name }}</strong></p>
