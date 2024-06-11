@@ -32,7 +32,7 @@
                             {% if search_term or current_categories or current_sorting != 'None_None' %}
                                 <span class="small"><a href="{% url 'products' %}">Back to Products</a> | </span>
                             {% endif %}
-                            {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                            {{ products.paginator.count }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
                         </p>
                     </div>
                 </div>
@@ -107,6 +107,29 @@
                         </div>
                     {% endfor %}
                 </div>
+
+                <!-- Pagination Controls -->
+                {% if products.paginator.num_pages > 1 %}
+                    <div class="row mt-4">
+                        <div class="col">
+                            <nav aria-label="Product Pagination">
+                                <ul class="pagination justify-content-center">
+                                    {% for num in products.paginator.page_range %}
+                                        {% if products.number == num %}
+                                            <li class="page-item active" aria-current="page">
+                                                <span class="page-link">{{ num }}</span>
+                                            </li>
+                                        {% else %}
+                                            <li class="page-item">
+                                                <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                                            </li>
+                                        {% endif %}
+                                    {% endfor %}
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                {% endif %}
             </div>
         </div>
     </div>

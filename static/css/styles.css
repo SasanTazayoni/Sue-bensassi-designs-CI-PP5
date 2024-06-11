@@ -653,6 +653,42 @@ footer a:hover {
     font-weight: 600;
 }
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination .page-item {
+    margin: 0 3px;
+}
+
+.pagination .page-link {
+    color: #000;
+    background: radial-gradient(circle, var(--color-secondary), var(--color-tertiary));
+    border: 2px solid var(--color-tertiary);
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.pagination .page-item.active .page-link {
+    background: radial-gradient(circle, black 5%, var(--color-primary) 85%);
+    border-color: var(--color-accent);
+}
+
+.pagination .page-link:hover {
+    background: radial-gradient(circle, var(--color-primary) 5%, var(--color-secondary) 85%);
+    border-color: rgb(182, 211, 229);
+    color: #fff;
+}
+
 /* Toasts */
 
 .message-container {
@@ -672,7 +708,7 @@ footer a:hover {
     overflow-y: auto;
 }
 
-/* Checkout */
+/* Checkout page */
 
 .StripeElement,
 .stripe-style-input {
@@ -730,7 +766,7 @@ footer a:hover {
     height: 100%;
 }
 
-/* Authentication */
+/* Authentication pages */
 
 .background {
     background-image: url('../images/background.jpg');
@@ -806,7 +842,7 @@ footer a:hover {
     }
 }
 
-/* Profile */
+/* Profile page */
 
 .order-history {
     max-height: 360px;
