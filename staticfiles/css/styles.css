@@ -3,7 +3,7 @@
 :root {
     --color-primary: rgb(108, 117, 125);
     --color-secondary: rgba(0, 0, 0, 0.3);
-    --color-tertiary: rgba(0, 0, 0, 0.1);
+    --color-tertiary: rgb(230, 230, 230);
     --color-accent: rgba(182, 211, 229, 0.5);
     --color-text: rgba(0, 0, 0, 1);
     --x: 45deg;
@@ -44,6 +44,10 @@ h1, h2, h3, h4, h5, h6 {
     h1 {
         font-size: 32px;
     }
+
+    h2 {
+        font-size: 28px;
+    }
 }
 
 @media screen and (max-width: 428px) {
@@ -55,6 +59,10 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 376px) {
     h1 {
         font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
     }
 }
 
@@ -68,6 +76,11 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 5px;
     display: inline-block;
     font-size: 16px;
+}
+
+.button-small {
+    width: 80px;
+    height: 40px;
 }
 
 .button i {
@@ -113,21 +126,27 @@ h1, h2, h3, h4, h5, h6 {
         width: 120px;
         height: 40px;
     }
+
+    .button-small {
+        width: 80px;
+    }
 }
 
 @media screen and (max-width: 376px) {
     .button {
         width: 100px;
-        height: 40px;
         font-size: 14px;
         margin: 0 3px;
+    }
+
+    .button-small {
+        width: 80px;
     }
 }
 
 @media screen and (max-width: 324px) {
     .button {
         width: 80px;
-        height: 30px;
         font-size: 12px;
     }
 }
@@ -266,7 +285,7 @@ label {
     }
 }
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 428px) {
     .nav-icon > i {
         margin: 0 10px;
     }
@@ -274,7 +293,7 @@ label {
     .nav-icon-text {
         display: none;
     }
-
+    
     .cart {
         display: block;
     }
@@ -290,6 +309,9 @@ label {
 
 footer {
     background-color: var(--color-primary);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
 }
 
 .github-link > i {
@@ -307,7 +329,7 @@ footer {
         color: #fff;
     }
     40% {
-        color: var(--color-tertiary);
+        color: rgba(0, 0, 0, 0.1);
     }
 }
 
@@ -321,11 +343,48 @@ footer a:hover {
     color: rgba(182, 211, 229, 0.8);
 }
 
+.footer-link {
+    margin: 0 8px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        flex-direction: column-reverse;
+    }
+
+    .footer-links {
+        padding-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 428px) {
+    .github-link > i {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .footer-links a:nth-child(3) {
+        display: block;
+        margin: 0;
+        margin-top: 5px;
+    }
+
+    .footer-link {
+        margin: 0 4px;
+    }
+}
+
 /* Home page */
 
 .hero-container {
     border-radius: 10px;
     overflow: hidden;
+}
+
+.mobile-hero-container {
+    display: none;
 }
 
 .hero-image {
@@ -339,12 +398,18 @@ footer a:hover {
     background-image: url('../images/hero-background.jpg');
     background-size: cover;
     height: 75vh;
+    justify-content: space-between;
 }
 
 .hero-title {
-    line-height: 0.8;
-    margin-bottom: 20px;
+    line-height: 1;
+    margin-bottom: 30px;
     font-weight: bold;
+}
+
+.hero-subtitle {
+    padding: 24px;
+    padding-bottom: 0;
 }
 
 .small-font {
@@ -406,6 +471,10 @@ footer a:hover {
     padding: 10px 0;
 }
 
+.hero-background > p {
+    font-style: italic;
+}
+
 .sample {
     font-size: 20px;
     border-bottom-left-radius: 0;
@@ -456,9 +525,73 @@ footer a:hover {
     opacity: 1;
 }
 
+.modal-content {
+    border: 4px solid var(--color-tertiary);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 992px) {
+    .hero-subtitle {
+        padding: 0;
+        font-size: 28px;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-container {
+        display: none;
+    }
+
+    .mobile-hero-container {
+        background-image: url('../images/hero-image.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+
+    .mobile-hero-container .hero-content {
+        background: rgba(0, 0, 0, 0.3);
+        padding: 20px;
+        border-radius: 10px;
+        color: #fff;
+    }
+
+    .scroll-up-link {
+        right: 2rem;
+        bottom: 2rem;
+        font-size: 32px;
+    }
+}
+
 @media screen and (max-width: 428px) {
     .btn-container {
         margin-top: 12px;
+    }
+
+    .scroll-up-link {
+        right: 1.5rem;
+        bottom: 1.5rem;
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .modal-header, .modal-body {
+        padding: 0.5rem;
+    }
+
+    .modal-footer {
+        padding: 0.375rem;
+    }
+
+    .mobile-hero-container .hero-content {
+        padding: 15px;
     }
 }
 
@@ -514,8 +647,46 @@ footer a:hover {
     cursor: default;
 }
 
-.update-link, .remove-item {
+.update-link, .remove-link {
     cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination .page-item {
+    margin: 0 3px;
+}
+
+.pagination .page-link {
+    color: #000;
+    background: radial-gradient(circle, var(--color-secondary), var(--color-tertiary));
+    border: 2px solid var(--color-tertiary);
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.pagination .page-item.active .page-link {
+    background: radial-gradient(circle, black 5%, var(--color-primary) 85%);
+    border-color: var(--color-accent);
+}
+
+.pagination .page-link:hover {
+    background: radial-gradient(circle, var(--color-primary) 5%, var(--color-secondary) 85%);
+    border-color: rgb(182, 211, 229);
+    color: #fff;
 }
 
 /* Toasts */
@@ -537,7 +708,7 @@ footer a:hover {
     overflow-y: auto;
 }
 
-/* Checkout */
+/* Checkout page */
 
 .StripeElement,
 .stripe-style-input {
@@ -595,7 +766,7 @@ footer a:hover {
     height: 100%;
 }
 
-/* Authentication */
+/* Authentication pages */
 
 .background {
     background-image: url('../images/background.jpg');
@@ -669,4 +840,11 @@ footer a:hover {
     .error-text {
         margin: 0 3px 10px 3px;
     }
+}
+
+/* Profile page */
+
+.order-history {
+    max-height: 360px;
+    overflow-y: auto;
 }
