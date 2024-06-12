@@ -8,6 +8,7 @@
 {% block extra_title %}- {{ product.name }}{% endblock %}
 
 {% block content %}
+<main class="plain-background">
     <div class="container-fluid top-container" data-top-block>
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
@@ -34,7 +35,11 @@
                             </a>
                         </p>
                     {% endif %}
-                    <p class="text-left">{{ product.stock }}</p>
+                    {% if product.stock == 0 %}
+                        <strong class="text-danger d-block stock">Out of Stock</strong>
+                    {% else %}
+                        <strong class="d-block">Remaining: {{ product.stock }}</strong>
+                    {% endif %}
                     {% if product.rating %}
                         <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                     {% else %}
@@ -47,43 +52,52 @@
                         </small>
                     {% endif %}
                     <p class="mt-3">{{ product.description }}</p>
-                    <form action="{% url 'add_to_cart' product.id %}" class="form" method="POST">
-                        {% csrf_token %}
-                        <div class="form-row">
-                            <div class="col-12">
-                                <p class="mt-3"><strong>Quantity:</strong></p>
-                                <div class="form-group w-50">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <button class="button button-square btn-secondary" data-decrement>
-                                                <i></i><i></i>
-                                                <span><i class="fas fa-minus"></i></span>
-                                            </button>
-                                        </div>
-                                        <input type="number" class="form-control" name="quantity" value="1" min="1" max="{{ product.stock }}"
-                                            data-product="{{ product.id }}">
-                                        <div class="input-group-append">
-                                            <button class="button button-square btn-secondary" data-increment>
-                                                <i></i><i></i>
-                                                <span><i class="fas fa-plus"></i></span>
-                                            </button>
+                    {% if product.stock != 0 %}
+                        <form action="{% url 'add_to_cart' product.id %}" class="form" method="POST">
+                            {% csrf_token %}
+                            <div class="form-row">
+                                <div class="col-12">
+                                    <p class="mt-3"><strong>Quantity:</strong></p>
+                                    <div class="form-group w-50">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <button class="button button-square btn-secondary" data-decrement>
+                                                    <i></i><i></i>
+                                                    <span><i class="fas fa-minus"></i></span>
+                                                </button>
+                                            </div>
+                                            <input type="number" class="form-control" name="quantity" value="1" min="1" max="{{ product.stock }}"
+                                                data-product="{{ product.id }}">
+                                            <div class="input-group-append">
+                                                <button class="button button-square btn-secondary" data-increment>
+                                                    <i></i><i></i>
+                                                    <span><i class="fas fa-plus"></i></span>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-12 btn-container mt-3" id="left-align">
+                                    <a href="{% url 'products' %}" class="button btn-secondary">
+                                        <i></i><i></i>
+                                        <span>Keep Shopping</span>
+                                    </a>
+                                    <button class="button btn-secondary">
+                                        <i></i><i></i>
+                                        <span>Add to Cart</span>
+                                    </button>
+                                </div>
                             </div>
-                            <div class="col-12 btn-container mt-3" id="left-align">
-                                <a href="{% url 'products' %}" class="button btn-secondary">
-                                    <i></i><i></i>
-                                    <span>Keep Shopping</span>
-                                </a>
-                                <button class="button btn-secondary">
-                                    <i></i><i></i>
-                                    <span>Add to Cart</span>
-                                </button>
-                            </div>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        </form>
+                    {% else %}
+                        <div class="col-12 btn-container mt-3 text-center">
+                            <a href="{% url 'products' %}" class="button btn-secondary">
+                                <i></i><i></i>
+                                <span>Keep Shopping</span>
+                            </a>
                         </div>
-                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                    </form>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -112,4 +126,5 @@
             </div>
         </div>
     </div>
+</main>
 {% endblock %}

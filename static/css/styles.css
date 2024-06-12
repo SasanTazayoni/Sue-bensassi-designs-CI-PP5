@@ -647,6 +647,19 @@ footer a:hover {
     object-position: center;
 }
 
+.out-of-stock .card-img-top,
+.out-of-stock button {
+    opacity: 0.3;
+}
+
+.out-of-stock button {
+    pointer-events: none;
+}
+
+.stock {
+    font-size: 24px;
+}
+
 .pagination {
     display: flex;
     justify-content: center;
