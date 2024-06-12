@@ -510,8 +510,8 @@ footer a:hover {
 }
 
 .large-logo {
-    padding: 10px;
     width: 200px;
+    border-radius: 50%;
 }
 
 .scroll-up-link {
@@ -647,44 +647,6 @@ footer a:hover {
     object-position: center;
 }
 
-.button-square {
-    font-size: 12px;
-    width: 38px;
-    height: 38px;
-}
-
-.button-square span > i {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.button[data-decrement] span,
-.button[data-decrement] i,
-.button-square.btn-secondary[data-decrement] {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-
-.button[data-increment] span,
-.button[data-increment] i,
-.button-square.btn-secondary[data-increment] {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
-.button[data-decrement].disabled, .button[data-increment].disabled {
-    opacity: 0.3;
-    pointer-events: none;
-    cursor: default;
-}
-
-.update-link, .remove-link {
-    cursor: pointer;
-    transition: all 0.3s;
-    font-weight: 600;
-}
-
 .pagination {
     display: flex;
     justify-content: center;
@@ -765,6 +727,44 @@ footer a:hover {
 
 .quantity-input-group {
     max-width: 240px;
+}
+
+.button-square {
+    font-size: 12px;
+    width: 38px;
+    height: 38px;
+}
+
+.button-square span > i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button[data-decrement] span,
+.button[data-decrement] i,
+.button-square.btn-secondary[data-decrement] {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.button[data-increment] span,
+.button[data-increment] i,
+.button-square.btn-secondary[data-increment] {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.button[data-decrement].disabled, .button[data-increment].disabled {
+    opacity: 0.3;
+    pointer-events: none;
+    cursor: default;
+}
+
+.update-link, .remove-link {
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
 }
 
 .StripeElement,
