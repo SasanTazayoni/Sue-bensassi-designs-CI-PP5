@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 .divider {
     border: none;
     height: 2px;
-    background-color: var(--color-tertiary);
+    background-color: rgb(210, 210, 210);
     width: 100%;
 }
 
@@ -81,6 +81,11 @@ h1, h2, h3, h4, h5, h6 {
 .button-small {
     width: 80px;
     height: 40px;
+}
+
+.button-long {
+    width: 200px;
+    margin: 0 10px;
 }
 
 .button i {
@@ -130,17 +135,30 @@ h1, h2, h3, h4, h5, h6 {
     .button-small {
         width: 80px;
     }
+
+    .button-long {
+        width: 160px;
+    }
+}
+
+@media screen and (max-width: 428px) {
+    .button-long {
+        margin: 5px 10px;
+    }
 }
 
 @media screen and (max-width: 376px) {
     .button {
         width: 100px;
         font-size: 14px;
-        margin: 0 3px;
     }
 
     .button-small {
         width: 80px;
+    }
+
+    .button-long {
+        width: 160px;
     }
 }
 
@@ -148,6 +166,10 @@ h1, h2, h3, h4, h5, h6 {
     .button {
         width: 80px;
         font-size: 12px;
+    }
+
+    .button-long {
+        width: 140px;
     }
 }
 
@@ -531,7 +553,7 @@ footer a:hover {
     border-radius: 10px;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
     .hero-subtitle {
         padding: 0;
         font-size: 28px;
@@ -631,12 +653,16 @@ footer a:hover {
     justify-content: center;
 }
 
-.button[data-decrement] span, .button[data-decrement] i {
+.button[data-decrement] span,
+.button[data-decrement] i,
+.button-square.btn-secondary[data-decrement] {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
 
-.button[data-increment] span, .button[data-increment] i {
+.button[data-increment] span,
+.button[data-increment] i,
+.button-square.btn-secondary[data-increment] {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
@@ -708,7 +734,32 @@ footer a:hover {
     overflow-y: auto;
 }
 
-/* Checkout page */
+/* Checkout/Checkout success/Shopping cart pages */
+
+.shopping-cart {
+    height: 400px;
+    width: 600px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 30px;
+}
+
+.cart-card {
+    border: solid 2px var(--color-tertiary);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cart-sub-header {
+    background-color: var(--color-tertiary);
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.quantity-input-group {
+    max-width: 240px;
+}
 
 .StripeElement,
 .stripe-style-input {
@@ -764,6 +815,25 @@ footer a:hover {
     justify-content: center;
     margin: 0;
     height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .shopping-cart {
+        height: auto;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 428px) {
+    .shopping-cart {
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 324px) {
+    .grand-total {
+        font-size: 24px;
+    }
 }
 
 /* Authentication pages */
