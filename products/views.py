@@ -69,9 +69,7 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    """
-    A view to show the details of a product.
-    """
+    """ A view to show the details of a product. """
 
     product = get_object_or_404(Product, pk=product_id)
 
