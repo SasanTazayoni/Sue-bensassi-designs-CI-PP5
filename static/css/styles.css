@@ -400,6 +400,10 @@ footer a:hover {
 
 /* Home page */
 
+.plain-background {
+    background-color: rgb(250, 247, 247);
+}
+
 .hero-container {
     border-radius: 10px;
     overflow: hidden;
@@ -469,7 +473,9 @@ footer a:hover {
 }
 
 .showcase-card {
-    border: solid 1px var(--color-tertiary);
+    border: solid 2px var(--color-tertiary);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .middle-card {
