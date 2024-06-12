@@ -106,12 +106,12 @@
 
             <div class="row text-center pb-5 btn-container">
                 <!-- keep shopping -->
-                <a href="{% url 'products' %}" class="button btn-secondary px-2 button-long btn-lg">
+                <a href="{% url 'products' %}" class="button btn-secondary button-long">
                     <i></i><i></i>
                     <span>Keep Shopping</span>
                 </a>
                 <!-- proceed to checkout -->
-                <a href="{% url 'checkout' %}" class="button btn-secondary px-2 button-long btn-lg">
+                <a href="{% url 'checkout' %}" class="button btn-secondary button-long">
                     <i></i><i></i>
                     <span>Checkout</span>
                 </a>
@@ -121,7 +121,7 @@
             <div class="container d-flex justify-content-center align-items-center flex-column">
                 <p class="lead mb-3">Your cart is empty.</p>
                 <img class="shopping-cart mb-2" src="{% static 'images/empty-cart.jpg' %}" alt="An empty shopping cart">
-                <a href="{% url 'products' %}" class="button btn-secondary px-2 button-long btn-lg d-block">
+                <a href="{% url 'products' %}" class="button btn-secondary button-long d-block">
                     <i></i><i></i>
                     <span>Keep Shopping</span>
                 </a>
