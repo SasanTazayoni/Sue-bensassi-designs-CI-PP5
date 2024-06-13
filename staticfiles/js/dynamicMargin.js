@@ -1,3 +1,5 @@
+/* jshint esversion: 11 */
+
 document.addEventListener('DOMContentLoaded', function() {
     function updateMarginTop() {
         // Get the height of the navbar

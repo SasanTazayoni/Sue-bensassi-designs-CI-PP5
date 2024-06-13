@@ -1,3 +1,5 @@
+/* jshint esversion: 11 */
+
 document.addEventListener('DOMContentLoaded', () => {
     const decrementBtn = document.querySelector('[data-decrement]');
     const incrementBtn = document.querySelector('[data-increment]');

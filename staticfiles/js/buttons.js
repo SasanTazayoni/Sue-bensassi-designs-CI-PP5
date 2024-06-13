@@ -1,3 +1,5 @@
+/* jshint esversion: 11 */
+
 const btns = document.querySelectorAll('.button');
 
 btns.forEach(btn => {

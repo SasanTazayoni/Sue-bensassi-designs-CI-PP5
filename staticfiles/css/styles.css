@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 .divider {
     border: none;
     height: 2px;
-    background-color: var(--color-tertiary);
+    background-color: rgb(210, 210, 210);
     width: 100%;
 }
 
@@ -81,6 +81,11 @@ h1, h2, h3, h4, h5, h6 {
 .button-small {
     width: 80px;
     height: 40px;
+}
+
+.button-long {
+    width: 200px;
+    margin: 0 10px;
 }
 
 .button i {
@@ -130,17 +135,30 @@ h1, h2, h3, h4, h5, h6 {
     .button-small {
         width: 80px;
     }
+
+    .button-long {
+        width: 160px;
+    }
+}
+
+@media screen and (max-width: 428px) {
+    .button-long {
+        margin: 5px 10px;
+    }
 }
 
 @media screen and (max-width: 376px) {
     .button {
         width: 100px;
         font-size: 14px;
-        margin: 0 3px;
     }
 
     .button-small {
         width: 80px;
+    }
+
+    .button-long {
+        width: 160px;
     }
 }
 
@@ -148,6 +166,10 @@ h1, h2, h3, h4, h5, h6 {
     .button {
         width: 80px;
         font-size: 12px;
+    }
+
+    .button-long {
+        width: 140px;
     }
 }
 
@@ -378,6 +400,10 @@ footer a:hover {
 
 /* Home page */
 
+.plain-background {
+    background-color: rgb(250, 247, 247);
+}
+
 .hero-container {
     border-radius: 10px;
     overflow: hidden;
@@ -447,7 +473,9 @@ footer a:hover {
 }
 
 .showcase-card {
-    border: solid 1px var(--color-tertiary);
+    border: solid 2px var(--color-tertiary);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .middle-card {
@@ -482,8 +510,8 @@ footer a:hover {
 }
 
 .large-logo {
-    padding: 10px;
     width: 200px;
+    border-radius: 50%;
 }
 
 .scroll-up-link {
@@ -531,7 +559,7 @@ footer a:hover {
     border-radius: 10px;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
     .hero-subtitle {
         padding: 0;
         font-size: 28px;
@@ -619,38 +647,17 @@ footer a:hover {
     object-position: center;
 }
 
-.button-square {
-    font-size: 12px;
-    width: 38px;
-    height: 38px;
-}
-
-.button-square span > i {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.button[data-decrement] span, .button[data-decrement] i {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-
-.button[data-increment] span, .button[data-increment] i {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
-.button[data-decrement].disabled, .button[data-increment].disabled {
+.out-of-stock .card-img-top,
+.out-of-stock button {
     opacity: 0.3;
-    pointer-events: none;
-    cursor: default;
 }
 
-.update-link, .remove-link {
-    cursor: pointer;
-    transition: all 0.3s;
-    font-weight: 600;
+.out-of-stock button {
+    pointer-events: none;
+}
+
+.stock {
+    font-size: 24px;
 }
 
 .pagination {
@@ -703,12 +710,75 @@ footer a:hover {
 }
 
 .cart-notification-wrapper {
-    height: 100px;
+    height: 200px;
     overflow-x: hidden;
     overflow-y: auto;
 }
 
-/* Checkout page */
+/* Checkout/Checkout success/Shopping cart pages */
+
+.shopping-cart {
+    height: 400px;
+    width: 600px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 30px;
+}
+
+.cart-card {
+    border: solid 2px var(--color-tertiary);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cart-sub-header {
+    background-color: var(--color-tertiary);
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.quantity-input-group {
+    max-width: 240px;
+}
+
+.button-square {
+    font-size: 12px;
+    width: 38px;
+    height: 38px;
+}
+
+.button-square span > i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button[data-decrement] span,
+.button[data-decrement] i,
+.button-square.btn-secondary[data-decrement] {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.button[data-increment] span,
+.button[data-increment] i,
+.button-square.btn-secondary[data-increment] {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.button[data-decrement].disabled, .button[data-increment].disabled {
+    opacity: 0.3;
+    pointer-events: none;
+    cursor: default;
+}
+
+.update-link, .remove-link {
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+}
 
 .StripeElement,
 .stripe-style-input {
@@ -764,6 +834,25 @@ footer a:hover {
     justify-content: center;
     margin: 0;
     height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .shopping-cart {
+        height: auto;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 428px) {
+    .shopping-cart {
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 324px) {
+    .grand-total {
+        font-size: 24px;
+    }
 }
 
 /* Authentication pages */
@@ -847,4 +936,57 @@ footer a:hover {
 .order-history {
     max-height: 360px;
     overflow-y: auto;
+}
+
+/* Product form */
+
+.product-form {
+    width: 600px;
+    margin: 20px 0;
+    padding: 30px;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-primary);
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px 20px;
+    transition: all 0.3s;
+    margin: 5px 0;
+    display: inline-block;
+}
+
+.btn-file input[id="new-image"] {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.btn-file:hover,
+.btn-file:focus {
+    background-color: #000;
+    color: #fff;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #dc3545;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    border-radius: 0;
+}
+
+#filename {
+    margin: 5px 0;
 }

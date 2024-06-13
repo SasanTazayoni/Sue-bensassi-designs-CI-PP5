@@ -1,3 +1,5 @@
+/* jshint esversion: 11 */
+
 const navbar = document.querySelector('[data-navbar]');
 const scrollToTop = document.querySelector('[data-scroll-up]');
 
