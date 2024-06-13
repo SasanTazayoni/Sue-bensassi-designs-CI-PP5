@@ -282,6 +282,25 @@ label {
     color: var(--color-text);
 }
 
+.dropdown-item {
+    position: relative;
+}
+
+.dropdown-item::after {
+    content: '';
+    display: block;
+    width: 80%;
+    border-bottom: 1px solid var(--color-tertiary);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dropdown-item:last-child::after {
+    content: none;
+}
+
 .navbar.scrolled {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
