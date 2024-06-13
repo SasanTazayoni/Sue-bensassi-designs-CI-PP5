@@ -85,7 +85,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .button-long {
     width: 200px;
-    margin: 0 10px;
+    margin: 0 5px;
 }
 
 .button i {
@@ -143,7 +143,9 @@ h1, h2, h3, h4, h5, h6 {
 
 @media screen and (max-width: 428px) {
     .button-long {
-        margin: 5px 10px;
+        margin: 5px;
+        font-size: 14px;
+        width: 140px;
     }
 }
 
@@ -158,7 +160,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .button-long {
-        width: 160px;
+        width: 140px;
     }
 }
 
@@ -466,6 +468,7 @@ footer a:hover {
     align-items: center;
     justify-content: center;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 #left-align {
@@ -815,6 +818,25 @@ footer a:hover {
     font-weight: 600;
 }
 
+.order-instructions {
+    font-weight: 600;
+}
+
+.checkout-form {
+    border: 4px solid var(--color-tertiary);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.fieldset-label {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.subtotal-small-screen {
+    display: none;
+}
+
 .StripeElement,
 .stripe-style-input {
     box-sizing: border-box;
@@ -836,7 +858,8 @@ footer a:hover {
 }
 
 .StripeElement--invalid {
-    border-color: #fa755a;
+    border: 2px solid #fa755a;
+    box-shadow: 0 0 5px 0 #fa755a;
 }
 
 .StripeElement--webkit-autofill {
@@ -893,12 +916,34 @@ footer a:hover {
         border-radius: 10px;
     }
 
+    .checkout-form {
+        padding: 12px;
+    }
+
     .order-summary-form {
         padding: 12px;
     }
 
     .order-summary-subheader {
         font-size: 16px;
+    }
+
+    .subtotal-large-screen {
+        display: none;
+    }
+
+    .subtotal-small-screen {
+        display: block;
+    }
+
+    .small-grid {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }
+
+    .large-grid {
+        flex: 0 0 66.66%;
+        max-width: 66.66%;
     }
 }
 
