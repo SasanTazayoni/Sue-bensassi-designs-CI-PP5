@@ -715,6 +715,21 @@ footer a:hover {
     overflow-y: auto;
 }
 
+@media screen and (max-width: 428px) {
+    .message-container {
+        top: 75px;
+    }
+
+    .custom-toast {
+        max-width: 250px;
+    }
+
+    .custom-toast .toast-body {
+        word-wrap: break-word;
+        white-space: normal;
+    }
+}
+
 /* Checkout/Checkout success/Shopping cart pages */
 
 .shopping-cart {
