@@ -530,7 +530,8 @@ footer a:hover {
 
 .large-logo {
     width: 200px;
-    border-radius: 50%;
+    border-radius: 20px;
+    margin-bottom: 20px;
 }
 
 .scroll-up-link {
