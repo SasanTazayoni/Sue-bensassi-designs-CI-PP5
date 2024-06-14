@@ -9,95 +9,98 @@
 
 {% block content %}
 <main class="plain-background">
-    <div class="container-fluid top-container" data-top-block>
+    <div class="container top-container" data-top-block>
         <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-                <div class="image-container my-5">
-                    {% if product.image %}
-                        <a href="{{ product.image.url }}" target="_blank" rel="noopener">
-                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                        </a>
-                    {% else %}
-                        <a href="">
-                            <img class="card-img-top img-fluid" src="{% static 'images/noimage.png' %}" alt="{{ product.name }}">
-                        </a>
-                    {% endif %}
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="product-details-container mb-5 mt-md-5">
-                    <p class="mb-0">{{ product.name }}</p>
-                    <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
-                    {% if product.category %}
-                        <p class="small mt-1 mb-0">
-                            <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                                <i class="fas fa-tag mr-1"></i>{{ product.category.display_name }}
+            <div class="card product-detail-form d-flex flex-row flex-wrap my-5 mx-1">
+                <div class="col-md-6 col-12 d-flex justify-content-center align-items-center">
+                    <div class="image-container">
+                        {% if product.image %}
+                            <a href="{{ product.image.url }}" target="_blank" rel="noopener">
+                                <img class="card-img" src="{{ product.image.url }}" alt="{{ product.name }}">
                             </a>
-                        </p>
-                    {% endif %}
-                    {% if product.stock == 0 %}
-                        <strong class="text-danger d-block stock">Out of Stock</strong>
-                    {% else %}
-                        <strong class="d-block">Remaining: {{ product.stock }}</strong>
-                    {% endif %}
-                    {% if product.rating %}
-                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                    {% else %}
-                        <small class="text-muted">No Rating</small>
-                    {% endif %}
-                    {% if request.user.is_superuser %}
-                        <small class="ml-3">
-                            <a class="text-info update-link" href="{% url 'edit_product' product.id %}">Edit</a> | 
-                            <a class="text-danger remove-link" href="#" data-toggle="modal" data-target="#deleteModal{{ product.id }}">Delete</a>
-                        </small>
-                    {% endif %}
-                    <p class="mt-3">{{ product.description }}</p>
-                    {% if product.stock != 0 %}
-                        <form action="{% url 'add_to_cart' product.id %}" class="form" method="POST">
-                            {% csrf_token %}
-                            <div class="form-row">
-                                <div class="col-12">
-                                    <p class="mt-3"><strong>Quantity:</strong></p>
-                                    <div class="form-group w-50">
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <button class="button button-square btn-secondary" data-decrement>
-                                                    <i></i><i></i>
-                                                    <span><i class="fas fa-minus"></i></span>
-                                                </button>
-                                            </div>
-                                            <input type="number" class="form-control" name="quantity" value="1" min="1" max="{{ product.stock }}"
-                                                data-product="{{ product.id }}">
-                                            <div class="input-group-append">
-                                                <button class="button button-square btn-secondary" data-increment>
-                                                    <i></i><i></i>
-                                                    <span><i class="fas fa-plus"></i></span>
-                                                </button>
+                        {% else %}
+                            <a href="{% url 'product_detail' product.id %}">
+                                <img class="card-img" src="{% static 'images/noimage.png' %}" alt="{{ product.name }}">
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="product-details-container">
+                        <h1>{{ product.name }}</h1>
+                        <hr class="divider">
+                        <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+                        {% if product.category %}
+                            <p class="small mt-1 mb-0">
+                                <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                                    <i class="fas fa-tag mr-1"></i>{{ product.category.display_name }}
+                                </a>
+                            </p>
+                        {% endif %}
+                        {% if product.stock == 0 %}
+                            <strong class="text-danger d-block stock">Out of Stock</strong>
+                        {% else %}
+                            <strong class="d-block">Remaining: {{ product.stock }}</strong>
+                        {% endif %}
+                        {% if product.rating %}
+                            <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                        {% else %}
+                            <small class="text-muted">No Rating</small>
+                        {% endif %}
+                        {% if request.user.is_superuser %}
+                            <small class="ml-3">
+                                <a class="text-info update-link" href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                <a class="text-danger remove-link" href="#" data-toggle="modal" data-target="#deleteModal{{ product.id }}">Delete</a>
+                            </small>
+                        {% endif %}
+                        <p class="mt-3">{{ product.description }}</p>
+                        {% if product.stock != 0 %}
+                            <form action="{% url 'add_to_cart' product.id %}" class="form" method="POST">
+                                {% csrf_token %}
+                                <div class="form-row">
+                                    <div class="col-12 text-center">
+                                        <p class="mt-3"><strong>Quantity:</strong></p>
+                                        <div class="form-group quantity-update">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <button class="button button-square btn-secondary" data-decrement>
+                                                        <i></i><i></i>
+                                                        <span><i class="fas fa-minus"></i></span>
+                                                    </button>
+                                                </div>
+                                                <input type="number" class="form-control" name="quantity" value="1" min="1" max="{{ product.stock }}"
+                                                    data-product="{{ product.id }}">
+                                                <div class="input-group-append">
+                                                    <button class="button button-square btn-secondary" data-increment>
+                                                        <i></i><i></i>
+                                                        <span><i class="fas fa-plus"></i></span>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="col-12 btn-container mt-4 text-center">
+                                        <a href="{% url 'products' %}" class="button button-long btn-secondary my-1">
+                                            <i></i><i></i>
+                                            <span>Keep Shopping</span>
+                                        </a>
+                                        <button class="button button-long btn-secondary my-1">
+                                            <i></i><i></i>
+                                            <span>Add to Cart</span>
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="col-12 btn-container mt-3" id="left-align">
-                                    <a href="{% url 'products' %}" class="button btn-secondary">
-                                        <i></i><i></i>
-                                        <span>Keep Shopping</span>
-                                    </a>
-                                    <button class="button btn-secondary">
-                                        <i></i><i></i>
-                                        <span>Add to Cart</span>
-                                    </button>
-                                </div>
+                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            </form>
+                        {% else %}
+                            <div class="col-12 btn-container mt-3 text-center">
+                                <a href="{% url 'products' %}" class="button button-long btn-secondary my-1">
+                                    <i></i><i></i>
+                                    <span>Keep Shopping</span>
+                                </a>
                             </div>
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                        </form>
-                    {% else %}
-                        <div class="col-12 btn-container mt-3 text-center">
-                            <a href="{% url 'products' %}" class="button btn-secondary">
-                                <i></i><i></i>
-                                <span>Keep Shopping</span>
-                            </a>
-                        </div>
-                    {% endif %}
+                        {% endif %}
+                    </div>
                 </div>
             </div>
         </div>
