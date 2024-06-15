@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}- Page Not Found{% endblock %}
+
+{% block content %}
+<main class="background">
+    <div class="container top-container d-flex justify-content-center align-items-center" data-top-block>
+        <div class="card error-card">
+            <h1 class="text-center">
+                Not Available
+            </h1>
+            <hr class="divider">
+            <p>This page does not exist - Unfortunately you have come across the inflatable dart-board page
+                and the store does not sell these particular items therefore this page does not exist.
+            </p>
+        </div>
+        <div class="btn-container mt-2">
+            <a href="{% url 'home' %}" class="button btn-secondary">
+                <i></i><i></i>
+                <span>Home</span>
+            </a>
+            <a href="{% url 'products' %}" class="button btn-secondary">
+                <i></i><i></i>
+                <span>Shop</span>
+            </a>
+        </div>
+    </div>
+</main>
+{% endblock %}
