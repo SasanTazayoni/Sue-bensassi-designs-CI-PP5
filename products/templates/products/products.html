@@ -14,7 +14,7 @@
                 <div class="btn-container">
                     {% for c in current_categories %}
                         {% if 'notice_boards' in c.name %}
-                            <a class="button btn-secondary btn-lg" href="{% url 'products' %}?category={{ c.name }}">
+                            <a class="button btn-secondary" href="{% url 'products' %}?category={{ c.name }}">
                                 <i></i><i></i>
                                 <span>{{ c.display_name }}</span>
                             </a>
@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="product-container col-10 offset-1">
+            <div class="col-10 offset-1">
                 <div class="row mt-1 mb-2">
                     <div class="col-12 col-md-6 order-md-first">
                         <p class="text-muted mt-3 text-center text-md-left">
