@@ -35,10 +35,10 @@
                         </p>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row d-flex justify-content-center">
                     {% for product in products %}
-                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                        <div class="card product-card h-100 border-black {% if product.stock == 0 %}out-of-stock{% endif %}">
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 px-2 product-card-container">
+                        <div class="card product-card h-100  {% if product.stock == 0 %}out-of-stock{% endif %}">
                             <!-- Product Image -->
                             {% if product.image %}
                                 <a href="{% url 'product_detail' product.id %}">
@@ -50,28 +50,30 @@
                                 </a>
                             {% endif %}
                             <!-- Product Details -->
-                            <div class="card-body pb-0">
+                            <div class="card-body">
                                 <p class="mb-0">{{ product.name }}</p>
                             </div>
-                            <div class="card-footer bg-white pt-0 border-0 text-left">
+                            <div class="card-footer pt-0 text-left">
                                 <div class="row">
                                     <div class="col">
                                         <!-- Price, Stock, and Rating -->
-                                        {% if product.category %}
-                                            <p class="small mt-1 mb-0">
-                                                <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                                                    <i class="fas fa-tag mr-1"></i>{{ product.category.display_name }}
-                                                </a>
-                                            </p>
-                                        {% endif %}
-                                        <p class="lead mb-0 text-left font-weight-bold">
+                                        <div class="category-rating-container">
+                                            {% if product.category %}
+                                                <p class="small m-0">
+                                                    <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                                                        <i class="fas fa-tag mr-1"></i>{{ product.category.display_name }}
+                                                    </a>
+                                                </p>
+                                            {% endif %}
+                                            {% if product.rating %}
+                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                                            {% else %}
+                                                <small class="text-muted">No Rating</small>
+                                            {% endif %}
+                                        </div>
+                                        <p class="lead my-2 text-left price-stock">
                                             £{{ product.price }} <span class="text-muted">| Stock: {{ product.stock }}</span>
                                         </p>
-                                        {% if product.rating %}
-                                            <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                                        {% else %}
-                                            <small class="text-muted">No Rating</small>
-                                        {% endif %}
                                         <!-- Superuser Actions -->
                                         {% if request.user.is_superuser %}
                                             <small class="ml-3">
