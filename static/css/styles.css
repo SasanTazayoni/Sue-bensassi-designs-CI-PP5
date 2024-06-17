@@ -609,6 +609,10 @@ footer a:hover {
         color: #fff;
     }
 
+    .large-logo {
+        width: 150px;
+    }
+
     .scroll-up-link {
         right: 2rem;
         bottom: 2rem;
@@ -619,6 +623,10 @@ footer a:hover {
 @media screen and (max-width: 428px) {
     .btn-container {
         margin-top: 12px;
+    }
+
+    .large-logo {
+        width: 120px;
     }
 
     .scroll-up-link {
