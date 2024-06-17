@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}- Delivery{% endblock %}
+
+{% block content %}
+<main class="plain-background">
+    <div class="container top-container" data-top-block>
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h1 class="mb-4 text-center">Deliveries</h1>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h2 class="mt-2">Delivery Information</h2>
+                <p>Deliveries are available for UK Mainland, Northern Ireland, Isle of Wight, Isle of Man
+                    and the Scottish Highlands.
+                </p>
+                <p><strong>UK Standard Delivery (2-3 working days)</strong> - FREE</p>
+                <p><strong>Next Day Delivery</strong> - £9.95</p>
+                <p><strong>Made to Order</strong> - Delivery times, costs and available destinations for our Made to
+                    Order products varies from one product to another. Please check the product page for
+                    accurate information.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h2 class="mt-2">Delivery Times</h2>
+                <p>We make every effort to ensure that you receive your delivery swiftly and aim to dispatch your
+                    goods within 24 hours (excluding weekends and UK public holidays), however please note that all
+                    delivery times are estimated and during busy periods dispatch may take longer. <br>
+                    Once your delivery has been dispatched you will receive an email from us. If your delivery is
+                    tracked you will also receive a tracking number so that you can check the progress of your delivery.
+                    To avoid any damage to your purchase some deliveries may be sent in more than one package, each may
+                    have separate delivery dates and tracking information.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h2 class="mt-2">Undeliverable Parcels</h2>
+                <p>If all attempts to deliver your products have failed and your purchase is returned to us, we will
+                    contact you to arrange a new delivery, please note that you will be charged for redelivery.
+                </p>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
