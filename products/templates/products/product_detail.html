@@ -29,7 +29,7 @@
                     <div class="product-details-container">
                         <h1>{{ product.name }}</h1>
                         <hr class="divider">
-                        <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+                        <p class="lead mb-0 text-left"><strong>£{{ product.price }}</strong> + Free Shipping</p>
                         {% if product.category %}
                             <p class="small mt-1 mb-0">
                                 <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
@@ -129,7 +129,7 @@
             </div>
         </div>
     </div>
-
+    
     <!-- Back to top button -->
     <a href="#" class="scroll-up-link" aria-label="Scroll to top button" data-scroll-up="Back to top">
         <i class="fa-regular fa-circle-up"></i>
