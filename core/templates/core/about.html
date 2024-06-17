@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}- About{% endblock %}
+
+{% block content %}
+<main>
+    <div class="container top-container" data-top-block>
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h1 class="mb-4 text-center">About</h1>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <h2 class="text-center mb-3">Welcome to my Store</h2>
+                <p>I am a designer/maker based in West London and have been making home accessories and gifts for many years.</p>
+                <p>All of my products can be bought off the peg or can made to order in other designs and sizes. I have an
+                    extensive range of fabrics to choose from, but I'm also happy to use a customer's own fabric.
+                </p>
+                <p>I have a very flexible approach and work to provide a product the customer will be happy with.</p>
+                <div class="col-12 my-auto text-center">
+                    <img class="about-logo" src="{% static 'images/logo.png' %}" alt="Logo for Sue Bensassi Designs">
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <img src="{% static 'images/chequered-filing-chest.jpg' %}" class="w-100 about-image" alt="White and green chequered filing chest">
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

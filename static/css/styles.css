@@ -642,6 +642,32 @@ footer a:hover {
     }
 }
 
+/* About page */
+
+.about-logo {
+    width: 200px;
+}
+
+.about-image {
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .about-logo {
+        width: 150px;
+    }
+
+    .about-image {
+        margin: 20px 0;
+    }
+}
+
+@media screen and (max-width: 428px) {
+    .about-logo {
+        width: 120px;
+    }
+}
+
 /* Products page/Product detail page */
 
 .top-container {
