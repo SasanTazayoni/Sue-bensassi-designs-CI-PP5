@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}- Internal Server Error{% endblock %}
+
+{% block content %}
+<main class="background">
+    <div class="container top-container d-flex justify-content-center align-items-center" data-top-block>
+        <div class="card error-card">
+            <h1 class="text-center">
+                Internal Server Error
+            </h1>
+            <hr class="divider">
+            <p>Something seems to have gone wrong, let's get you back to the main site!</a>
+            </p>
+            <div class="btn-container mt-2">
+                <a href="{% url 'home' %}" class="button btn-secondary">
+                    <i></i><i></i>
+                    <span>Home</span>
+                </a>
+                <a href="{% url 'products' %}" class="button btn-secondary">
+                    <i></i><i></i>
+                    <span>Shop</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
