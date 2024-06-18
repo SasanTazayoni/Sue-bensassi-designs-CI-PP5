@@ -13,20 +13,28 @@ def newsletter_subscribe(request):
         form = NewsletterForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.info(
+            messages.success(
                 request, 'You have subscribed to our mailing list.'
             )
             return redirect(reverse('home'))
+
         else:
-            messages.error(
-                request, 'Failed to sign up. Please ensure the form is valid.'
-            )
+            errors = form.errors.get('email')
+            if errors:
+                if 'Newsletter subscription with this Email already exists.' in errors:
+                    messages.warning(
+                        request, 'This email has already subscribed to our mailing list.'
+                    )
+                else:
+                    messages.error(
+                        request, 'Failed to sign up. Please ensure the form is valid.'
+                    )
+
     else:
         form = NewsletterForm()
 
     context = {
-        'newsletter_form': form,
+        'form': form,
     }
 
     return redirect(reverse('home'))
-
