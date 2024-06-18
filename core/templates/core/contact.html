@@ -15,35 +15,33 @@
         </div>
         <div class="row">
             <div class="col-12 text-center">
-                <p class="contact-tagline">For assistance, call us at <strong>07951775204</strong> or fill out the form below.</p>
+                <p class="contact-note">For assistance, call us at <strong>07951775204</strong> or fill out the form below.</p>
             </div>
         </div>
         <div class="row d-flex justify-content-center">
             <div class="card contact-form-container">
                 <h2 class="mt-2">Enquiry Form</h2>
                 <hr class="divider">
-                <form action="https://formspree.io/f/moqggoay" method="POST" class="contact-form">
+                <form method="POST" class="contact-form">
+                    {% csrf_token %}
                     <div class="form-fields">
                         <div class="form-field">
-                            <label for="name">Name:</label>
-                            <input id="name" type="text" name="fname" minlength="1"
-                            maxlength="100" required>
+                            <label for="id_name">Name:</label>
+                            {{ form.name }}
                         </div>
                         <div class="form-field">
-                            <label for="email">Email:</label>
-                            <input id="email" type="email" name="email" minlength="5"
-                            maxlength="50" required>
+                            <label for="id_email">Email:</label>
+                            {{ form.email }}
                         </div>
                         <div class="form-field">
-                            <label for="enquiry">Message:</label>
-                            <textarea id="enquiry" name="enquiry" minlength="10"
-                            maxlength="100" required></textarea>
+                            <label for="id_enquiry">Message:</label>
+                            {{ form.enquiry }}
                         </div>
                     </div>
                     <div class="text-center btn-container">
                         <button class="button btn-secondary" type="submit">
                             <i></i><i></i>
-                            <span>Update</span>
+                            <span>Submit</span>
                         </button>
                         <button class="button btn-info" type="reset">
                             <i></i><i></i>
