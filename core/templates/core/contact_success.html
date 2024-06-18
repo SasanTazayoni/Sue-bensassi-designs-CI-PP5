@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}- Contact Success{% endblock %}
+
+{% block content %}
+<main class="background">
+    <div class="container top-container d-flex justify-content-center align-items-center" data-top-block>
+        <div class="card form-container">
+            <h1 class="text-center">Enquiry Sent!</h1>
+            <hr class="divider">
+            <div class="col-12 text-center">
+                <p class="contact-tagline">Thank you for getting in touch! Your enquiry has been sent successfully.
+                    We have forwarded it to our team of highly trained carrier pigeons. Expect a response shortly!
+                </p>
+            </div>
+            <div class="btn-container mt-2">
+                <a href="{% url 'home' %}" class="button btn-secondary">
+                    <i></i><i></i>
+                    <span>Home</span>
+                </a>
+                <a href="{% url 'products' %}" class="button btn-secondary">
+                    <i></i><i></i>
+                    <span>Shop</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
