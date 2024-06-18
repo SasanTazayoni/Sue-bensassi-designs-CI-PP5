@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Newsletter(models.Model):
+class NewsletterSubscription(models.Model):
     email = models.EmailField(
         unique=True, null=False, blank=False
     )

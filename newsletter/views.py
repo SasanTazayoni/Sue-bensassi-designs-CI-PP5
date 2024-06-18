@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
-from .models import Newsletter
+from .models import NewsletterSubscription
 from .forms import NewsletterForm
 
 
