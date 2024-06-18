@@ -23,3 +23,9 @@ def terms(request):
     """ Renders the terms & conditions page. """
 
     return render(request, 'core/terms.html')
+
+
+def contact(request):
+    """ Renders the contact page. """
+
+    return render(request, 'core/contact.html')

@@ -28,6 +28,7 @@ urlpatterns = [
     path('about/', core_views.about, name='about'),
     path('delivery/', core_views.delivery, name='delivery'),
     path('terms/', core_views.terms, name='terms'),
+    path('contact/', core_views.contact, name='contact'),
     path('products/', include('products.urls')),
     path('cart/', include('cart.urls')),
     path('checkout/', include('checkout.urls')),
