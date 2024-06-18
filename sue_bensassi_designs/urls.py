@@ -16,7 +16,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from core import views as core_views
 from django.conf import settings
 from django.conf.urls.static import static
 from .views import handler404
@@ -24,11 +23,7 @@ from .views import handler404
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
-    path('', core_views.home, name='home'),
-    path('about/', core_views.about, name='about'),
-    path('delivery/', core_views.delivery, name='delivery'),
-    path('terms/', core_views.terms, name='terms'),
-    path('contact/', core_views.contact, name='contact'),
+    path('', include('core.urls')),
     path('products/', include('products.urls')),
     path('cart/', include('cart.urls')),
     path('checkout/', include('checkout.urls')),
