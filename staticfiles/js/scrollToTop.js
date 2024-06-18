@@ -7,7 +7,11 @@ if (scrollToTop) {
     window.addEventListener('scroll', () => {
         const scrollHeight = window.scrollY;
         const navHeight = navbar.getBoundingClientRect().height;
-        if (scrollHeight > (navHeight * 2)) {
+        const windowHeight = window.innerHeight;
+        const bodyHeight = document.body.scrollHeight;
+        const distanceFromBottom = bodyHeight - (scrollHeight + windowHeight);
+
+        if (scrollHeight > (navHeight * 2) && distanceFromBottom > 200) {
             scrollToTop.classList.add('show-link');
         } else {
             scrollToTop.classList.remove('show-link');
