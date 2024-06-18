@@ -14,17 +14,17 @@
                 <div>
                     <h2 class="hero-subtitle">Home Accessories and Gifts</h2>
                     <p class="pb-3 px-4 m-0">For Children and Adults</p>
-                    <h2 class="hero-subtitle">Don't see a design you like?</h2>
-                    <p class="pb-3 px-4 m-0">We can make it for you! <br> Just request free fabric swatches or supply your own.</p>
-                    <h2 class="hero-subtitle">Looking for a specific size?</h2>
-                    <p class="pb-3 px-4">We can adjust that too.</p>
+                    <h2 class="hero-subtitle">Customised Designs Available</h2>
+                    <p class="pb-3 px-4 m-0">We can customise the design to your liking! <br> Just request free fabric swatches or supply your own.</p>
+                    <h2 class="hero-subtitle">Adjustable Sizes</h2>
+                    <p class="pb-3 px-4">Our sizes are customisable too.</p>
                 </div>
                 <div class="btn-container pb-5">
                     <a href="{% url 'products' %}" class="button btn-secondary">
                         <i></i><i></i>
                         <span>Shop</span>
                     </a>
-                    <a href="#" class="button btn-secondary">
+                    <a href="{% url 'contact' %}" class="button btn-secondary">
                         <i></i><i></i>
                         <span>Contact</span>
                     </a>
@@ -42,7 +42,7 @@
                         <i></i><i></i>
                         <span>Shop</span>
                     </a>
-                    <a href="#" class="button btn-secondary">
+                    <a href="{% url 'contact' %}" class="button btn-secondary">
                         <i></i><i></i>
                         <span>Contact</span>
                     </a>
@@ -58,7 +58,7 @@
     <!-- Filing chest showcase -->
     <section class="container">
         <header class="section-header text-center">
-            <h2>GET ORGANISED!</h2>
+            <h2>Stylish Home Organisation Solutions</h2>
         </header>
         <div class="row card-container">
             <div class="col-md-4 mb-4">
@@ -77,7 +77,7 @@
             <div class="col-md-4 mb-4">
                 <div class="card showcase-card middle-card h-100">
                     <div class="card-body text-center">
-                        <h3 class="card-title">Home Office Solutions</h3>
+                        <h3 class="card-title">Home Office Accessories</h3>
                         <br>
                         <p>This filing chest/ottoman is all you need to organise your paperwork!</p>
                         <br>
@@ -108,9 +108,10 @@
         <hr class="divider my-5">
     </div>
 
+    <!-- Shop by Category -->
     <section class="container">
         <header class="section-header text-center mb-4">
-            <h2>SHOP BY CATEGORY</h2>
+            <h2>Shop by Category</h2>
         </header>
         <div class="row">
             <div class="col-md-4 mb-4">
@@ -159,7 +160,7 @@
                 <div class="card showcase-card">
                     <h3 class="sub-header text-center sample mb-0">Filing Chests</h3>
                     <a href="{% url 'products' %}?category=filing_chests" target="_blank" rel="noopener">
-                        <img src="{% static 'images/sample-filing-chests.jpg' %}" alt="A filing chest sample" class="img-fluid">
+                        <img src="{% static 'images/sample-filing-chests.jpg' %}" alt="A filing chest example" class="img-fluid">
                     </a>
                 </div>
             </div>
