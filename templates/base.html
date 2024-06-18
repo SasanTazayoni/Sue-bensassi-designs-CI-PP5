@@ -156,11 +156,11 @@
                 Are you sure you want to log out?
             </div>
             <div class="modal-footer d-flex justify-content-center align-items-center">
-              <a href="{% url 'account_logout' %}" class="button button-small btn-secondary btn-lg px-2">
+              <a href="{% url 'account_logout' %}" class="button button-small btn-secondary px-2">
                 <i></i><i></i>
                 <span>Yes</span>
               </a>
-              <button type="button" class="button button-small btn-secondary btn-lg px-2" data-dismiss="modal">
+              <button type="button" class="button button-small btn-secondary px-2" data-dismiss="modal">
                 <i></i><i></i>
                 <span>No</span>
               </button>
@@ -177,12 +177,12 @@
 
   <!-- Footer -->
   <footer class="footer mt-auto py-3 dark-bg text-white">
-    <div class="text-center">
+    <div class="text-center my-auto">
       <p class="m-0 footer-credits">
           {% block copyright %}
           &copy; Sue Bensassi Designs 2024<br>
           Website designed & created by Sasan Tazayoni
-          <a href="https://github.com/SasanTazayoni" target="_blank" rel="noopener" class="github-link pl-2"
+          <a href="https://github.com/SasanTazayoni" target="_blank" rel="noopener" class="github-link pl-2 d-block mt-1"
               aria-label="Github profile link">
               <i class="fa-brands fa-github"></i>
           </a>
@@ -194,6 +194,17 @@
       <a href="{% url 'about' %}" class="footer-link">About</a>
       <a href="{% url 'contact' %}" class="footer-link">Contact</a>
       <a href="{% url 'terms' %}" class="footer-link">Terms & Conditions</a>
+    </div>
+    <div class="newsletter d-flex justify-content-center align-items-center flex-column px-2">
+      <strong class="newsletter-title text-center">Subscribe to our newsletter</strong>
+      <form class="d-flex justify-content-center mt-2" method="POST" action="{% url 'newsletter_subscribe' %}">
+        {% csrf_token %}
+        <input class="form-control" type="email" name="email" placeholder="Your Email" required/>
+        <button class="button button-footer btn-secondary px-2" type="submit">
+          <i></i><i></i>
+          <span>Subscribe</span>
+        </button>
+      </form>
     </div>
   </footer>
 
