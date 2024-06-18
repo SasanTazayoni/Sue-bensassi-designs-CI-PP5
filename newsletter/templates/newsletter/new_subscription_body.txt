@@ -1,0 +1,11 @@
+Hello!
+
+Welcome to our newsletter!
+
+Here you'll be updated with the latest news, trends, and exclusive offers from Sue Bensassi Designs.
+
+If you have any questions or need assistance, please don't hesitate to reach out to us at {{ contact_email }}.
+
+Sincerely,
+
+Sue Bensassi
