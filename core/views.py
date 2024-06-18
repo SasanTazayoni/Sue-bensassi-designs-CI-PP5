@@ -12,7 +12,14 @@ def about(request):
 
     return render(request, 'core/about.html')
 
+
 def delivery(request):
     """ Renders the delivery page. """
 
     return render(request, 'core/delivery.html')
+
+
+def terms(request):
+    """ Renders the terms & conditions page. """
+
+    return render(request, 'core/terms.html')
