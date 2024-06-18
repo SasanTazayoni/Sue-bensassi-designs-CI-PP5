@@ -18,7 +18,7 @@ class StripeWH_Handler:
 
     def _send_confirmation_email(self, order):
         """ Send the user a confirmation email. """
-    
+
         cust_email = order.email
         subject = render_to_string(
             'checkout/confirmation_emails/confirmation_email_subject.txt',
@@ -35,10 +35,10 @@ class StripeWH_Handler:
             settings.DEFAULT_FROM_EMAIL,
             [cust_email]
         )
-    
+
     def _send_purchase_notification_email(self, order):
         """ Send the store owner a purchase notification email. """
-    
+
         owner_email = settings.TEMP_EMAIL
         subject = render_to_string(
             'checkout/confirmation_emails/purchase_notification_email_subject.txt',
@@ -97,8 +97,12 @@ class StripeWH_Handler:
                 profile.default_phone_number = shipping_details.phone
                 profile.default_postcode = shipping_details.address.postal_code
                 profile.default_town_or_city = shipping_details.address.city
-                profile.default_street_address1 = shipping_details.address.line1
-                profile.default_street_address2 = shipping_details.address.line2
+                profile.default_street_address1 = (
+                    shipping_details.address.line1
+                )
+                profile.default_street_address2 = (
+                    shipping_details.address.line2
+                )
                 profile.default_county = shipping_details.address.state
                 profile.save()
 

@@ -1,4 +1,10 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import (
+    render,
+    redirect,
+    reverse,
+    get_object_or_404,
+    HttpResponse
+)
 from django.contrib import messages
 from products.models import Product
 from urllib.parse import urlencode
@@ -22,15 +28,18 @@ def add_to_cart(request, item_id):
     if item_id in cart:
         if product.stock >= cart[item_id] + quantity:
             cart[item_id] += quantity
-            messages.success(request, f'{quantity} {product.name} added to your cart.')
+            messages.success(request, f'{quantity} {product.name} added to \
+                your cart.')
         else:
             messages.error(
-                request, f'Error: {product.name} has only {product.stock} units left. \
-                    You currently have {cart[item_id]} in your cart.'
+                request, f'Error: {product.name} has only {product.stock} \
+                    units left. You currently have {cart[item_id]} in \
+                    your cart.'
             )
     else:
         cart[item_id] = quantity
-        messages.success(request, f'{quantity} {product.name} added to your cart.')
+        messages.success(request, f'{quantity} {product.name} added to \
+            your cart.')
 
     request.session['cart'] = cart
 
@@ -42,7 +51,9 @@ def add_to_cart(request, item_id):
 
 
 def adjust_cart(request, item_id):
-    """ Adjust the quantity of the specified product to the specified amount. """
+    """ 
+    Adjust the quantity of the specified product to the specified amount.
+    """
 
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -51,9 +62,13 @@ def adjust_cart(request, item_id):
     if quantity > 0:
         if quantity <= product.stock:
             cart[item_id] = quantity
-            messages.success(request, f'{product.name} quantity updated to {quantity}.')
+            messages.success(
+                request, f'{product.name} quantity updated to {quantity}.'
+            )
         else:
-            messages.error(request, f'Error: {product.name} has only {product.stock} units left.')
+            messages.error(
+                request, f'Error: {product.name} has only {product.stock} units left.'
+            )
     else:
         messages.error(request, 'Quantity must be greater than zero.')
 
