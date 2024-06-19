@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.core.mail import send_mail
 from django.conf import settings
 from .forms import ContactForm
+from .models import Enquiry
 
 
 def contact(request):
@@ -14,17 +15,25 @@ def contact(request):
             name = form.cleaned_data['name']
             email = form.cleaned_data['email']
             enquiry = form.cleaned_data['enquiry']
+
+            Enquiry.objects.create(name=name, email=email, message=enquiry)
             
             subject = f"New Enquiry from {name}"
             message = f"Name: {name}\nEmail: {email}\n\nMessage:\n{enquiry}"
-            send_mail(
-                subject,
-                message,
-                settings.DEFAULT_FROM_EMAIL,
-                [settings.DEFAULT_FROM_EMAIL],
-            )
-            
-            return redirect('contact_success')
+            try:
+                send_mail(
+                    subject,
+                    message,
+                    settings.DEFAULT_FROM_EMAIL,
+                    [settings.DEFAULT_FROM_EMAIL],
+                )
+                messages.success(request, 'Your enquiry has been sent successfully.')
+                return redirect('contact_success')
+            except Exception as e:
+                messages.error(
+                    request, 'There was an error sending your enquiry. \
+                        Please try again later.'
+                )
     
     else:
         form = ContactForm()
