@@ -1,10 +1,16 @@
 from django.shortcuts import render
+from random import choice
+from products.models import FakeItem
 
 
-def handler404(request, exception):
-    """ Error Handler 404 - Page not found. """
+def handle_404(request, exception):
+    """ Custom view to handle 404 errors. """
 
-    return render(request, "errors/404.html", status=404)
+    random_fake_item = FakeItem.objects.order_by('?').first()
+    context = {
+        'random_fake_item': random_fake_item,
+    }
+    return render(request, '404.html', context=context)
 
 
 def handler500(request):
