@@ -8,57 +8,33 @@ from django.contrib import messages
 from django.conf import settings
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
+from django.views.decorators.http import require_POST
 from .models import NewsletterSubscription
 from .forms import NewsletterForm
 
 
+@require_POST
 def newsletter_subscribe(request):
     """ 
     A view to handle new sign ups to the newsletter mailing list.
     """
 
-    if request.method == 'POST':
-        form = NewsletterForm(request.POST)
-        if form.is_valid():
-            new_subscription = form.save()
-            messages.success(
-                request, 'You have subscribed to our mailing list.'
-            )
+    email = request.POST.get("email")
+    if not email:
+        messages.warning(
+            request, 'An email address is required to subscribe.'
+        )
+        return redirect(reverse('home'))
 
-            user_email = new_subscription.email
-            subject = render_to_string(
-                'newsletter/new_subscription_subject.txt')
-            body = render_to_string(
-                'newsletter/new_subscription_body.txt',
-                {'contact_email': settings.DEFAULT_FROM_EMAIL}
-            )
-
-            send_mail(
-                subject,
-                body,
-                settings.DEFAULT_FROM_EMAIL,
-                [user_email]
-            )
-
-            return redirect(reverse('home'))
-
-        else:
-            errors = form.errors.get('email')
-            if errors:
-                if 'Newsletter subscription with this Email already exists.' in errors:
-                    messages.warning(
-                        request, 'This email has already subscribed to our mailing list.'
-                    )
-                else:
-                    messages.error(
-                        request, 'Failed to sign up. Please ensure the form is valid.'
-                    )
+    if not NewsletterSubscription.objects.filter(email=email).exists():
+        NewsletterSubscription.objects.create(email=email)
+        messages.success(
+            request, 'You have subscribed to our mailing list.'
+        )
 
     else:
-        form = NewsletterForm()
-
-    context = {
-        'form': form,
-    }
+        messages.warning(
+            request, 'This email is already subscribed.'
+        )
 
     return redirect(reverse('home'))
