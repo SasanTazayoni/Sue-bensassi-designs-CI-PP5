@@ -2,6 +2,10 @@ from django.db import models
 
 
 class Enquiry(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Enquiries'
+
     name = models.CharField(max_length=100)
     email = models.EmailField(max_length=50)
     message = models.TextField(max_length=1000)
