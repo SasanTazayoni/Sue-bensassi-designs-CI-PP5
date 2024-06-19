@@ -10,7 +10,7 @@ def handler404(request, exception):
     context = {
         'random_fake_item': random_fake_item,
     }
-    return render(request, '404.html', context=context)
+    return render(request, 'errors/404.html', context=context)
 
 
 def handler500(request):
