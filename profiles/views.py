@@ -29,7 +29,6 @@ def profile(request):
     context = {
         'form': form,
         'orders': orders,
-        'on_profile_page': True,
     }
 
     return render(request, template, context)
@@ -40,7 +39,7 @@ def order_history(request, order_number):
 
     order = get_object_or_404(Order, order_number=order_number)
 
-    messages.info(request, (
+    messages.warning(request, (
         f'This is a past confirmation for order number {order_number}. '
         'A confirmation email was sent on the order date.'
     ))

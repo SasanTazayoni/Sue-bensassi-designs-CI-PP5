@@ -28,7 +28,7 @@ def add_to_cart(request, item_id):
     if item_id in cart:
         if product.stock >= cart[item_id] + quantity:
             cart[item_id] += quantity
-            messages.success(request, f'{quantity} {product.name} added to \
+            messages.info(request, f'{quantity} {product.name} added to \
                 your cart.')
         else:
             messages.error(
@@ -38,7 +38,7 @@ def add_to_cart(request, item_id):
             )
     else:
         cart[item_id] = quantity
-        messages.success(request, f'{quantity} {product.name} added to \
+        messages.info(request, f'{quantity} {product.name} added to \
             your cart.')
 
     request.session['cart'] = cart
@@ -62,7 +62,7 @@ def adjust_cart(request, item_id):
     if quantity > 0:
         if quantity <= product.stock:
             cart[item_id] = quantity
-            messages.success(
+            messages.info(
                 request, f'{product.name} quantity updated to {quantity}.'
             )
         else:
@@ -85,7 +85,7 @@ def remove_from_cart(request, item_id):
 
         if item_id in cart:
             del cart[item_id]
-            messages.success(request, f'{product.name} removed from your cart.')
+            messages.info(request, f'{product.name} removed from your cart.')
         else:
             messages.error(request, f'{product.name} is not in your cart.')
 

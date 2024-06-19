@@ -1,5 +1,3 @@
-{% load static %}
-
 <div class="toast custom-toast" data-autohide="false">
     <div class="toast-header bg-success text-white">
         <strong class="mr-auto">Success!</strong>
@@ -8,39 +6,6 @@
         </button>
     </div>
     <div class="toast-body bg-white">
-        <div class="row">
-            <div class="col">
-                {{ message }}
-                <hr class="divider">
-            </div>
-        </div>
-        {% if grand_total and not on_profile_page %}
-            <p>Your cart ({{ product_count }})</p>
-            <div class="cart-notification-wrapper">
-                {% for item in cart_items %}
-                <div class="row">
-                    <div class="col-3 my-1">
-                        {% if item.product.image %}
-                            <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
-                        {% else %}
-                            <img class="w-100" src="{% static 'images/noimage.png' %}" alt="{{ item.product.name }}">
-                        {% endif %}
-                    </div>
-                    <div class="col-9 my-1">
-                        <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                        <p class="my-0 small text-muted">Quantity: {{ item.quantity }}</p>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-            <div class="row">
-                <div class="col text-center mt-2">
-                    <a href="{% url 'view_cart' %}" class="button btn-secondary px-2 button-long">
-                        <i></i><i></i>
-                        <span>Secure Checkout</span>
-                    </a>
-                </div>
-            </div>
-        {% endif %}
+        {{ message }}
     </div>
 </div>
