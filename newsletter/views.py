@@ -7,10 +7,11 @@ from django.shortcuts import (
 from django.contrib import messages
 from django.conf import settings
 from django.core.mail import send_mail
+from django.http import JsonResponse
 from django.template.loader import render_to_string
 from django.views.decorators.http import require_POST
 from .models import NewsletterSubscription
-from .forms import NewsletterForm
+# from .forms import NewsletterForm
 
 
 @require_POST
@@ -20,21 +21,24 @@ def newsletter_subscribe(request):
     """
 
     email = request.POST.get("email")
+    # is email provided?
     if not email:
-        messages.warning(
-            request, 'An email address is required to subscribe.'
-        )
-        return redirect(reverse('home'))
+        return JsonResponse({
+            "success": False,
+            "message": "A valid Email is required."
+        })
 
     if not NewsletterSubscription.objects.filter(email=email).exists():
+        # email not already subscribed > proceed
         NewsletterSubscription.objects.create(email=email)
-        messages.success(
-            request, 'You have subscribed to our mailing list.'
-        )
+        return JsonResponse({
+            "success": True,
+            "message": "Thank you for subscribing!",
+        })
 
     else:
-        messages.warning(
-            request, 'This email is already subscribed.'
-        )
-
-    return redirect(reverse('home'))
+        # found existing email subscribed > stop
+        return JsonResponse({
+            "success": False,
+            "message": "This email is already subscribed.",
+        })

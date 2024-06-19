@@ -39,6 +39,7 @@
     <script src="{% static 'js/scrollToTop.js' %}" defer></script>
     <script src="{% static 'js/toasts.js' %}" defer></script>
     <script src="{% static 'js/logoutModal.js' %}" defer></script>
+    <script src="{% static 'js/newsletter.js' %}" defer></script>
   {% endblock %}
 
   {% block extra_js %}
@@ -197,14 +198,16 @@
     </div>
     <div class="newsletter d-flex justify-content-center align-items-center flex-column px-2">
       <strong class="newsletter-title text-center">Subscribe to our newsletter</strong>
-      <form class="d-flex justify-content-center mt-2" method="POST" action="{% url 'newsletter_subscribe' %}">
+      <form id="newsletter-form" class="d-flex justify-content-center mt-2" method="POST" action="{% url 'newsletter_subscribe' %}">
         {% csrf_token %}
-        <input class="form-control" type="email" name="email" placeholder="Your Email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+        <input class="form-control" type="email" name="email" id="newsletter_email" placeholder="Your Email" required>
         <button class="button button-footer btn-secondary px-2" type="submit">
           <i></i><i></i>
           <span>Subscribe</span>
         </button>
       </form>
+      <br>
+      <div id="newsletter-errors" class="text-center my-2"></div>
     </div>
   </footer>
 
