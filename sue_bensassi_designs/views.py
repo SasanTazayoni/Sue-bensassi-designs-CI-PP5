@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from random import choice
 from products.models import FakeItem
 
 
