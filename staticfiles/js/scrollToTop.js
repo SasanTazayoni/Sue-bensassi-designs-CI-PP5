@@ -11,7 +11,7 @@ if (scrollToTop) {
         const bodyHeight = document.body.scrollHeight;
         const distanceFromBottom = bodyHeight - (scrollHeight + windowHeight);
 
-        if (scrollHeight > (navHeight * 2) && distanceFromBottom > 200) {
+        if (scrollHeight > (navHeight * 2) && distanceFromBottom > 250) {
             scrollToTop.classList.add('show-link');
         } else {
             scrollToTop.classList.remove('show-link');
