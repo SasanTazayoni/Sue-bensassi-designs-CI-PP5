@@ -3,7 +3,7 @@ from random import choice
 from products.models import FakeItem
 
 
-def handle_404(request, exception):
+def handler404(request, exception):
     """ Custom view to handle 404 errors. """
 
     random_fake_item = FakeItem.objects.order_by('?').first()
