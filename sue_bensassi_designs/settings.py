@@ -147,7 +147,8 @@ cloudinary.config(
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-if 'DEVELOPMENT' in os.environ:
+if not 'DATABASE_URL' in os.environ:
+    print('connected to local database (SQLite)')
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -155,6 +156,7 @@ if 'DEVELOPMENT' in os.environ:
         }
     }
 else:
+    print('connected to production database (PostgreSQL)')
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
     }
