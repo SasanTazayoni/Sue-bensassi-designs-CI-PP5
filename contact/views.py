@@ -32,10 +32,10 @@ def contact(request):
     context = {
         'form': form,
     }
-    return render(request, 'core/contact.html', context)
+    return render(request, 'contact/contact.html', context)
 
 
 def contact_success(request):
     """ Renders the contact success page. """
 
-    return render(request, 'core/contact_success.html')
+    return render(request, 'contact/contact_success.html')
