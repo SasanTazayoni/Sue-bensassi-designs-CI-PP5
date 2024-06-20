@@ -147,7 +147,7 @@ cloudinary.config(
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-if not 'DATABASE_URL' in os.environ:
+if 'DATABASE_URL' not in os.environ:
     print('connected to local database (SQLite)')
     DATABASES = {
         'default': {
