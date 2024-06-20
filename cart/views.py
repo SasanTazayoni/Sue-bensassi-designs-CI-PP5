@@ -51,7 +51,7 @@ def add_to_cart(request, item_id):
 
 
 def adjust_cart(request, item_id):
-    """ 
+    """
     Adjust the quantity of the specified product to the specified amount.
     """
 
@@ -67,7 +67,8 @@ def adjust_cart(request, item_id):
             )
         else:
             messages.error(
-                request, f'Error: {product.name} has only {product.stock} units left.'
+                request, f'Error: {product.name} has only \
+                    {product.stock} units left.'
             )
     else:
         messages.error(request, 'Quantity must be greater than zero.')
