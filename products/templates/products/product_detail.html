@@ -42,13 +42,8 @@
                         {% else %}
                             <strong class="d-block">Remaining: {{ product.stock }}</strong>
                         {% endif %}
-                        {% if product.rating %}
-                            <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                        {% else %}
-                            <small class="text-muted">No Rating</small>
-                        {% endif %}
                         {% if request.user.is_superuser %}
-                            <small class="ml-3">
+                            <small class="text-left">
                                 <a class="text-info update-link" href="{% url 'edit_product' product.id %}">Edit</a> | 
                                 <a class="text-danger remove-link" href="#" data-toggle="modal" data-target="#deleteModal{{ product.id }}">Delete</a>
                             </small>

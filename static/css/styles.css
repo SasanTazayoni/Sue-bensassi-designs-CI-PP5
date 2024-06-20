@@ -806,12 +806,6 @@ footer a:hover {
     height: max-content;
 }
 
-.category-rating-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .price-stock {
     font-weight: 700;
 }
@@ -958,10 +952,6 @@ footer a:hover {
 
     .product-card img {
         height: 280px;
-    }
-
-    .category-rating-container {
-        display: block;
     }
 }
 
