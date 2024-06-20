@@ -88,19 +88,19 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 | newsletter | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/newsletter/models.py) | ![screenshot](documentation/validation/newsletter/models.png) | Pass: No Errors |
 | newsletter | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/newsletter/urls.py) | ![screenshot](documentation/validation/newsletter/urls.png) | Pass: No Errors |
 | newsletter | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/newsletter/views.py) | ![screenshot](documentation/validation/newsletter/views.png) | Pass: No Errors |
-| products | admin.py | [PEP8 CI]() | ![screenshot](documentation/validation/products/admin.png) | Pass: No Errors |
-| products | forms.py | [PEP8 CI]() | ![screenshot](documentation/validation/products/forms.png) | Pass: No Errors |
-| products | models.py | [PEP8 CI]() | ![screenshot](documentation/validation/products/models.png) | Pass: No Errors |
-| products | urls.py | [PEP8 CI]() | ![screenshot](documentation/validation/products/urls.png) | Pass: No Errors |
-| products | views.py | [PEP8 CI]() | ![screenshot](documentation/validation/products/views.png) | Pass: No Errors |
-| products | widgets.py | [PEP8 CI]() | ![screenshot](documentation/validation/products/widgets.png) | Pass: No Errors |
-| profiles | forms.py | [PEP8 CI]() | ![screenshot](documentation/validation/profiles/forms.png) | Pass: No Errors |
-| profiles | models.py | [PEP8 CI]() | ![screenshot](documentation/validation/profiles/models.png) | Pass: No Errors |
-| profiles | urls.py | [PEP8 CI]() | ![screenshot](documentation/validation/profiles/urls.png) | Pass: No Errors |
-| profiles | views.py | [PEP8 CI]() | ![screenshot](documentation/validation/profiles/views.png) | Pass: No Errors |
-| sue_bensassi_designs | settings.py | [PEP8 CI]() | ![screenshot](documentation/validation/sue_bensassi_designs/settings.png) | Pass: No Errors |
-| sue_bensassi_designs | urls.py | [PEP8 CI]() | ![screenshot](documentation/validation/sue_bensassi_designs/urls.png) | Pass: No Errors |
-| sue_bensassi_designs | views.py | [PEP8 CI]() | ![screenshot](documentation/validation/sue_bensassi_designs/views.png) | Pass: No Errors |
+| products | admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/products/admin.py) | ![screenshot](documentation/validation/products/admin.png) | Pass: No Errors |
+| products | forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/products/forms.py) | ![screenshot](documentation/validation/products/forms.png) | Pass: No Errors |
+| products | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/products/models.py) | ![screenshot](documentation/validation/products/models.png) | Pass: No Errors |
+| products | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/products/urls.py) | ![screenshot](documentation/validation/products/urls.png) | Pass: No Errors |
+| products | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/products/views.py) | ![screenshot](documentation/validation/products/views.png) | Pass: No Errors |
+| products | widgets.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/products/widgets.py) | ![screenshot](documentation/validation/products/widgets.png) | Pass: No Errors |
+| profiles | forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/profiles/forms.py) | ![screenshot](documentation/validation/profiles/forms.png) | Pass: No Errors |
+| profiles | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/profiles/models.py) | ![screenshot](documentation/validation/profiles/models.png) | Pass: No Errors |
+| profiles | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/profiles/urls.py) | ![screenshot](documentation/validation/profiles/urls.png) | Pass: No Errors |
+| profiles | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/profiles/views.py) | ![screenshot](documentation/validation/profiles/views.png) | Pass: No Errors |
+| sue_bensassi_designs | settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/sue_bensassi_designs/settings.py) | ![screenshot](documentation/validation/sue_bensassi_designs/settings.png) | Pass: No Errors |
+| sue_bensassi_designs | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/sue_bensassi_designs/urls.py) | ![screenshot](documentation/validation/sue_bensassi_designs/urls.png) | Pass: No Errors |
+| sue_bensassi_designs | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/sue_bensassi_designs/views.py) | ![screenshot](documentation/validation/sue_bensassi_designs/views.png) | Pass: No Errors |
 
 ## Browser Compatibility
 
