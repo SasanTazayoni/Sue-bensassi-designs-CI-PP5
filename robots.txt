@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /cart/
+Disallow: /checkout/
+Sitemap: https://sue-bensassi-designs-beea48c7d401.herokuapp.com/sitemap.xml
