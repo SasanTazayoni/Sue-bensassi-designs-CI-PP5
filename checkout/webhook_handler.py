@@ -36,16 +36,16 @@ class StripeWH_Handler:
             [cust_email]
         )
 
-    def _send_purchase_notification_email(self, order):
+    def _send_purchase_notification(self, order):
         """ Send the store owner a purchase notification email. """
 
         owner_email = settings.TEMP_EMAIL
         subject = render_to_string(
-            'checkout/confirmation_emails/purchase_notification_email_subject.txt',
+            'checkout/confirmation_emails/purchase_notification_subject.txt',
             {'order': order}
         )
         body = render_to_string(
-            'checkout/confirmation_emails/purchase_notification_email_body.txt',
+            'checkout/confirmation_emails/purchase_notification_body.txt',
             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL}
         )
 
@@ -130,7 +130,7 @@ class StripeWH_Handler:
                 time.sleep(1)
         if order_exists:
             self._send_confirmation_email(order)
-            self._send_purchase_notification_email(order)
+            self._send_purchase_notification(order)
             return HttpResponse(
                 content=f'Webhook received: {event["type"]} \
                 | SUCCESS: Verified order already in database',
@@ -166,7 +166,7 @@ class StripeWH_Handler:
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
                     status=500)
         self._send_confirmation_email(order)
-        self._send_purchase_notification_email(order)
+        self._send_purchase_notification(order)
         return HttpResponse(
             content=f'Webhook received: {event["type"]} \
             | SUCCESS: Created order in webhook',
