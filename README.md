@@ -20,11 +20,18 @@ You can access the live application [here](https://sue-bensassi-designs-beea48c7
 
 ## UX
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑START OF NOTES (to be deleted)
+When designing this website the aim was to create an engaging and intuitive user experience (UX), characterised by a professional aesthetic with neutral colours. The design approach focuses on simplicity and functionality to ensure every visitor enjoys exploring and shopping for bespoke home accessories.
 
-In this section, you will briefly explain your design processes.
+From the moment visitors land on the site they encounter a clean, inviting interface with a warm welcome.
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
+Navigating the site is effortless, with a persistent navigation menu that grants instant access to product categories and essential pages. Transparency is prioritised by prominently displaying the shopping cart and its running total, empowering customers to manage their selections comfortably and confidently throughout their visit.
+
+Customisation lies at the heart of the service. Whether browsing pre-made items or exploring bespoke options, customers can select from a diverse range of fabrics and designs. Emphasis on flexibility allows customers to submit their fabric for a truly personalised touch, ensuring each piece resonates with their unique style and preferences.
+
+The footer includes quick links to essential information pages, enhancing ease of exploration and accessibility to detailed product information.
+
+In conclusion, Sue Bensassi Designs strives to deliver a user experience that is not only aesthetically pleasing but also functional and intuitive. By blending craftsmanship with user-centric design principles, we aim to redefine how customers interact with and enjoy shopping for home accessories online.
+
 
 ### Colour Scheme
 
