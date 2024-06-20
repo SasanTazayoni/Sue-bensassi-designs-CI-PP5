@@ -65,12 +65,42 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 | Directory | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| core | admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/core/admin.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| core | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/core/models.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| core | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/core/views.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-|  | manage.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/manage.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| sue_bensassi_designs | settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/sue_bensassi_designs/settings.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| sue_bensassi_designs | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/sue_bensassi_designs/urls.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| cart | contexts.py | [PEP8 CI]() | ![screenshot](documentation/validation/cart/contexts) | Pass: No Errors |
+| cart | urls.py | [PEP8 CI]() | ![screenshot](documentation/validation/cart/urls) | Pass: No Errors |
+| cart | views.py | [PEP8 CI]() | ![screenshot](documentation/validation/cart/views) | Pass: No Errors |
+| checkout | admin.py | [PEP8 CI]() | ![screenshot](documentation/validation/checkout/admin) | Pass: No Errors |
+| checkout | forms.py | [PEP8 CI]() | ![screenshot](documentation/validation/checkout/forms) | Pass: No Errors |
+| checkout | models.py | [PEP8 CI]() | ![screenshot](documentation/validation/checkout/models) | Pass: No Errors |
+| checkout | signals.py | [PEP8 CI]() | ![screenshot](documentation/validation/checkout/signals) | Pass: No Errors |
+| checkout | urls.py | [PEP8 CI]() | ![screenshot](documentation/validation/checkout/urls) | Pass: No Errors |
+| checkout | views.py | [PEP8 CI]() | ![screenshot](documentation/validation/checkout/views) | Pass: No Errors |
+| checkout | webhook_handler.py | [PEP8 CI]() | ![screenshot](documentation/validation/checkout/webhook_handler) | Pass: No Errors |
+| checkout | webhooks.py | [PEP8 CI]() | ![screenshot](documentation/validation/checkout/webhooks) | Pass: No Errors |
+| contact | admin.py | [PEP8 CI]() | ![screenshot](documentation/validation/contact/admin) | Pass: No Errors |
+| contact | forms.py | [PEP8 CI]() | ![screenshot](documentation/validation/contact/forms) | Pass: No Errors |
+| contact | models.py | [PEP8 CI]() | ![screenshot](documentation/validation/contact/models) | Pass: No Errors |
+| contact | urls.py | [PEP8 CI]() | ![screenshot](documentation/validation/contact/urls) | Pass: No Errors |
+| contact | views.py | [PEP8 CI]() | ![screenshot](documentation/validation/contact/views) | Pass: No Errors |
+| core | urls.py | [PEP8 CI]() | ![screenshot](documentation/validation/core/urls) | Pass: No Errors |
+| core | views.py | [PEP8 CI]() | ![screenshot](documentation/validation/core/views) | Pass: No Errors |
+| newsletter | admin.py | [PEP8 CI]() | ![screenshot](documentation/validation/newsletter/admin) | Pass: No Errors |
+| newsletter | forms.py | [PEP8 CI]() | ![screenshot](documentation/validation/newsletter/forms) | Pass: No Errors |
+| newsletter | models.py | [PEP8 CI]() | ![screenshot](documentation/validation/newsletter/models) | Pass: No Errors |
+| newsletter | urls.py | [PEP8 CI]() | ![screenshot](documentation/validation/newsletter/urls) | Pass: No Errors |
+| newsletter | views.py | [PEP8 CI]() | ![screenshot](documentation/validation/newsletter/views) | Pass: No Errors |
+| products | admin.py | [PEP8 CI]() | ![screenshot](documentation/validation/products/admin) | Pass: No Errors |
+| products | forms.py | [PEP8 CI]() | ![screenshot](documentation/validation/products/forms) | Pass: No Errors |
+| products | models.py | [PEP8 CI]() | ![screenshot](documentation/validation/products/models) | Pass: No Errors |
+| products | urls.py | [PEP8 CI]() | ![screenshot](documentation/validation/products/urls) | Pass: No Errors |
+| products | views.py | [PEP8 CI]() | ![screenshot](documentation/validation/products/views) | Pass: No Errors |
+| products | widgets.py | [PEP8 CI]() | ![screenshot](documentation/validation/products/widgets) | Pass: No Errors |
+| profiles | forms.py | [PEP8 CI]() | ![screenshot](documentation/validation/profiles/forms) | Pass: No Errors |
+| profiles | models.py | [PEP8 CI]() | ![screenshot](documentation/validation/profiles/models) | Pass: No Errors |
+| profiles | urls.py | [PEP8 CI]() | ![screenshot](documentation/validation/profiles/urls) | Pass: No Errors |
+| profiles | views.py | [PEP8 CI]() | ![screenshot](documentation/validation/profiles/views) | Pass: No Errors |
+| sue_bensassi_designs | settings.py | [PEP8 CI]() | ![screenshot](documentation/validation/sue_bensassi_designs/settings) | Pass: No Errors |
+| sue_bensassi_designs | urls.py | [PEP8 CI]() | ![screenshot](documentation/validation/sue_bensassi_designs/urls) | Pass: No Errors |
+| sue_bensassi_designs | views.py | [PEP8 CI]() | ![screenshot](documentation/validation/sue_bensassi_designs/views) | Pass: No Errors |
 
 ## Browser Compatibility
 
