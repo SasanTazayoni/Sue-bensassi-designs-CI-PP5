@@ -1,4 +1,4 @@
-from django.core.validators import MinValueValidator, MaxValueValidator
+from django.core.validators import MinValueValidator
 from django.db import models
 from cloudinary.models import CloudinaryField
 
@@ -25,11 +25,6 @@ class Product(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    rating = models.IntegerField(
-        null=True,
-        blank=True,
-        validators=[MinValueValidator(0), MaxValueValidator(5)]
-    )
     image = CloudinaryField('image', null=True, blank=True)
     stock = models.IntegerField(default=5, validators=[MinValueValidator(0)])
 
