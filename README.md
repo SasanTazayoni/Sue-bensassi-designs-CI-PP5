@@ -68,21 +68,21 @@ I've used CSS `:root` variables to easily update the global colour scheme by cha
 
 ### Typography
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑START OF NOTES (to be deleted)
+- [Pavanam](https://fonts.google.com/specimen/Pavanam) for headings:
 
-Explain any fonts and icon libraries used, like Google Fonts and/or Font Awesome.
+	- Bold and Distinctive: Pavanam's bold and clean lines make it ideal for headings, ensuring that key information stands out and grabs attention.
+	- Modern Look: The contemporary style of Pavanam complements the modern aesthetic of the site, reinforcing the professional and polished appearance.
 
-Consider adding a link to each font used, and the Font Awesome site if used (or similar icon library).
+- [Montserrat](https://fonts.google.com/specimen/Montserrat) for the body:
 
-Example:
+	- Readability: Montserrat is known for its excellent readability, making it perfect for body text where clarity is crucial.
+	- Versatile and Elegant: Montserrat's versatile design adapts well to various screen sizes and resolutions, maintaining a sleek and elegant look across different devices.
+	- Consistency: Using Montserrat for body text ensures a consistent reading experience, allowing users to easily navigate and consume content without distraction.
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
-- [Montserrat](https://fonts.google.com/specimen/Montserrat) was used for the primary headers and titles.
-
-- [Lato](https://fonts.google.com/specimen/Lato) was used for all other secondary text.
+Together, these fonts create a harmonious balance between striking headings and readable body text, enhancing the overall visual appeal and functionality of the website.
 
 - [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
+
 
 ## User Stories
 
