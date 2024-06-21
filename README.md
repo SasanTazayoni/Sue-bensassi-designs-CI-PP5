@@ -180,69 +180,84 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 ### Mobile Wireframes
 
-< details >
-< summary > Click here to see the Mobile Wireframes < / summary >
+<details>
+<summary> Click here to see the CART TEMPLATE wireframes </summary>
 
-Home
-  - ![screenshot](documentation/wireframes/mobile-home.png)
+  - ![screenshot](documentation/wireframes/cart.png)
 
-About
-  - ![screenshot](documentation/wireframes/mobile-about.png)
+</details>
+<details>
+<summary> Click here to see the CHECKOUT TEMPLATE wireframes </summary>
 
-Contact
-  - ![screenshot](documentation/wireframes/mobile-contact.png)
+  - ![screenshot](documentation/wireframes/checkout.png)
 
-Gallery
-  - ![screenshot](documentation/wireframes/mobile-gallery.png)
+</details>
+<details>
+<summary> Click here to see the CHECKOUT SUCCESS TEMPLATE wireframes </summary>
 
-etc.
-  - repeat for any remaining mobile wireframes
+  - ![screenshot](documentation/wireframes/checkoutsuccess.png)
 
-< / details >
+</details>
+<summary> Click here to see the CONTACT TEMPLATE wireframes </summary>
 
-### Tablet Wireframes
+  - ![screenshot](documentation/wireframes/contact.png)
 
-< details >
-< summary > Click here to see the Tablet Wireframes < / summary >
+</details>
+<summary> Click here to see the CONTACT SUCCESS TEMPLATE wireframes </summary>
 
-Home
-  - ![screenshot](documentation/wireframes/tablet-home.png)
+  - ![screenshot](documentation/wireframes/contactsuccess.png)
 
-About
-  - ![screenshot](documentation/wireframes/tablet-about.png)
+</details>
+<summary> Click here to see the ABOUT TEMPLATE wireframes </summary>
 
-Contact
-  - ![screenshot](documentation/wireframes/tablet-contact.png)
+  - ![screenshot](documentation/wireframes/about.png)
 
-Gallery
-  - ![screenshot](documentation/wireframes/tablet-gallery.png)
+</details>
+<summary> Click here to see the DELIVERY TEMPLATE wireframes </summary>
 
-etc.
-  - repeat for any remaining tablet wireframes
+  - ![screenshot](documentation/wireframes/delivery.png)
 
-< / details >
+</details>
+<summary> Click here to see the INDEX TEMPLATE wireframes </summary>
 
-### Desktop Wireframes
+  - ![screenshot](documentation/wireframes/home.png)
 
-< details >
-< summary > Click here to see the Desktop Wireframes < / summary >
+</details>
+<summary> Click here to see the TERMS & CONDITIONS TEMPLATE wireframes </summary>
 
-Home
-  - ![screenshot](documentation/wireframes/desktop-home.png)
+  - ![screenshot](documentation/wireframes/terms.png)
 
-About
-  - ![screenshot](documentation/wireframes/desktop-about.png)
+</details>
+<summary> Click here to see the ADD/EDIT PRODUCT TEMPLATE wireframes </summary>
 
-Contact
-  - ![screenshot](documentation/wireframes/desktop-contact.png)
+  - ![screenshot](documentation/wireframes/addeditproduct.png)
 
-Gallery
-  - ![screenshot](documentation/wireframes/desktop-gallery.png)
+</details>
+<summary> Click here to see the PRODUCT DETAIL TEMPLATE wireframes </summary>
 
-etc.
-  - repeat for any remaining desktop wireframes
+  - ![screenshot](documentation/wireframes/productdetail.png)
 
-< / details >
+</details>
+<summary> Click here to see the PRODUCTS TEMPLATE wireframes </summary>
+
+  - ![screenshot](documentation/wireframes/products.png)
+
+</details>
+<summary> Click here to see the PROFILE TEMPLATE wireframes </summary>
+
+  - ![screenshot](documentation/wireframes/profile.png)
+
+</details>
+<summary> Click here to see the LOGIN TEMPLATE wireframes </summary>
+
+  - ![screenshot](documentation/wireframes/login.png)
+
+</details>
+<summary> Click here to see the SIGN UP TEMPLATE wireframes </summary>
+
+  - ![screenshot](documentation/wireframes/signup.png)
+
+</details>
 
 ## Features
 
