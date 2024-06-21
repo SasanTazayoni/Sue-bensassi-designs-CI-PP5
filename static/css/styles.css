@@ -321,6 +321,12 @@ label {
     }
 }
 
+@media screen and (max-width: 991px) {
+    .dropdown-item {
+        font-size: 14px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .nav-icon > i {
         align-items: center;
@@ -341,6 +347,10 @@ label {
 
     .nav-icon-text {
         display: none;
+    }
+
+    .dropdown-item {
+        font-size: 12px;
     }
     
     .cart {
