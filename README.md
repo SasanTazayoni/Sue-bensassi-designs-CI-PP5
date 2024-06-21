@@ -20,17 +20,21 @@ You can access the live application [here](https://sue-bensassi-designs-beea48c7
 
 ## UX
 
-When designing this website the aim was to create an engaging and intuitive user experience (UX), characterised by a professional aesthetic with neutral colours. The design approach focuses on simplicity and functionality to ensure every visitor enjoys exploring and shopping for bespoke home accessories.
+At Sue Bensassi Designs, the website is meticulously crafted to deliver an engaging and intuitive user experience (UX), anchored by a deliberate design approach emphasising both aesthetics and functionality.
 
-From the moment visitors land on the site they encounter a clean, inviting interface with a warm welcome.
+The design philosophy revolves around simplicity and elegance, employing a neutral colour palette chosen to convey professionalism and timeless appeal. This choice ensures that the focus remains on the bespoke home accessories showcased throughout the site. Clean lines and uncluttered layouts enhance visual clarity, making navigation and exploration seamless. The final design strikes a balance between contemporary flair and unique elements, all while maintaining a simple and user-friendly interface.
 
-Navigating the site is effortless, with a persistent navigation menu that grants instant access to product categories and essential pages. Transparency is prioritised by prominently displaying the shopping cart and its running total, empowering customers to manage their selections comfortably and confidently throughout their visit.
+Upon arriving at the website, visitors encounter a clean and inviting interface that sets the tone for a pleasant browsing experience. The design ensures that every element, from the placement of navigation menus to the arrangement of product images and descriptions, enhances usability and encourages exploration.
 
-Customisation lies at the heart of the service. Whether browsing pre-made items or exploring bespoke options, customers can select from a diverse range of fabrics and designs. Emphasis on flexibility allows customers to submit their fabric for a truly personalised touch, ensuring each piece resonates with their unique style and preferences.
+Navigation is intuitive and user-friendly, facilitated by a persistent menu that grants immediate access to various product categories, informational pages, and shopping essentials. This approach ensures that customers can find what they need quickly and efficiently, whether browsing the curated collection of ready-made items or exploring bespoke customisation options.
 
-The footer includes quick links to essential information pages, enhancing ease of exploration and accessibility to detailed product information.
+Transparency is a cornerstone of the design ethos. The shopping cart and its running total are prominently displayed throughout the browsing journey, empowering customers to manage their selections with confidence. This transparency extends to detailed product pages, where comprehensive information and high-quality images enable customers to make informed decisions.
 
-In conclusion, Sue Bensassi Designs strives to deliver a user experience that is not only aesthetically pleasing but also functional and intuitive. By blending craftsmanship with user-centric design principles, we aim to redefine how customers interact with and enjoy shopping for home accessories online.
+Customisation lies at the heart of the service, offering a diverse range of fabrics, designs, and customisation options to cater to individual tastes and preferences. Whether choosing from pre-made items or opting for bespoke creations using their own fabric, the design approach ensures that each piece reflects the customer's unique style and vision.
+
+The footer serves as a convenient hub for quick links to essential information, ensuring easy access to detailed product information, delivery policies, and contact options.
+
+In essence, Sue Bensassi Designs combines craftsmanship with user-centric design principles to redefine the online shopping experience for home accessories. The website serves as a platform for showcasing products and as a gateway to an immersive journey where customers can explore, customise, and find inspiration.
 
 
 ### Colour Scheme
