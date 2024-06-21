@@ -92,68 +92,68 @@ View a full list of user stories [here](https://github.com/SasanTazayoni/Sue-ben
 
 EPIC 1: User Account Management
 
-- Sign up - As a new site user I can register and establish a personal account on the site so that I can make purchases using my own credentials. (MUST HAVE)
-- Log in - As a registered user I can log in to my account so that I can review products that I have purchased, view my order history and order products using my credentials. (MUST HAVE)
-- Log out - As a registered user I can log out of my account so that I can securely end my session and protect my personal information. (MUST HAVE)
-- Password reset - As a registered user/site admin I can reset my password so that I can regain access to my account in case I forget my password. (SHOULD HAVE)
-- Edit account details - As a registered user I can edit my account information so that I can ensure that my profile remains up to date and accurate. (MUST HAVE)
+- Sign up - As a new site user I can register and establish a personal account on the site so that I can make purchases using my own credentials. `(MUST HAVE)`
+- Log in - As a registered user I can log in to my account so that I can review products that I have purchased, view my order history and order products using my credentials. `(MUST HAVE)`
+- Log out - As a registered user I can log out of my account so that I can securely end my session and protect my personal information. `(MUST HAVE)`
+- Password reset - As a registered user/site admin I can reset my password so that I can regain access to my account in case I forget my password. `(SHOULD HAVE)`
+- Edit account details - As a registered user I can edit my account information so that I can ensure that my profile remains up to date and accurate. `(MUST HAVE)`
 
 EPIC 2: Product Exploration
 
-- View all products - As a site user I can see a list of all products so that I can easily browse and explore the full range of available items. (SHOULD HAVE)
-- Product pricing - As a site user I can see the price of a product clearly so that I can make a decision whether to purchase the item or not. (MUST HAVE)
-- View product details - As a site user I can view a product on its own individual page so that see more details about the product. (MUST HAVE)
-- Sort products - As a site user I can sort products by category so that I can find specific products based on the category I select. (SHOULD HAVE)
-- Popular items - As a site user I can view a list of best-selling items so that I can easily discover popular products that are favoured by other customers, helping me make informed purchasing decisions. (COULD HAVE)
-- Stock count - As a site user I can view the stock count of products so that I can make informed purchasing decisions based on the availability of items. (COULD HAVE)
+- View all products - As a site user I can see a list of all products so that I can easily browse and explore the full range of available items. `(SHOULD HAVE)`
+- Product pricing - As a site user I can see the price of a product clearly so that I can make a decision whether to purchase the item or not. `(MUST HAVE)`
+- View product details - As a site user I can view a product on its own individual page so that see more details about the product. `(MUST HAVE)`
+- Sort products - As a site user I can sort products by category so that I can find specific products based on the category I select. `(SHOULD HAVE)`
+- Popular items - As a site user I can view a list of best-selling items so that I can easily discover popular products that are favoured by other customers, helping me make informed purchasing decisions. `(COULD HAVE)`
+- Stock count - As a site user I can view the stock count of products so that I can make informed purchasing decisions based on the availability of items. `(COULD HAVE)`
 
 EPIC 3: Shopping Experience
 
-- Add items to cart - As a registered user I can add items to my cart so that I can conveniently gather desired products in one place while browsing in order to purchase. (MUST HAVE)
-- Remove items from cart - As a registered user I can remove items from my cart so that I can refine my choices and ensure that my final purchase consists only of the items I truly intend to buy. (MUST HAVE)
-- View my cart - As a registered user I can view the items in my cart so that I can review my selected products, check quantities and verify prices before proceeding to checkout. (MUST HAVE)
-- Checkout - As a site user I can checkout with a card payment so that I can complete my purchase transaction securely and efficiently, providing my payment and shipping information to finalise the order and receive the products I have selected. (MUST HAVE)
-- Order confirmation summary - As a registered user I can receive an email which confirms my order after purchasing from the store so that I can review the details of my purchase and be reassured that my order was successfully processed. (MUST HAVE)
-- Search for a product - As a site user I can use a search bar to search the website so that I can find a specific product. (COULD HAVE)
+- Add items to cart - As a registered user I can add items to my cart so that I can conveniently gather desired products in one place while browsing in order to purchase. `(MUST HAVE)`
+- Remove items from cart - As a registered user I can remove items from my cart so that I can refine my choices and ensure that my final purchase consists only of the items I truly intend to buy. `(MUST HAVE)`
+- View my cart - As a registered user I can view the items in my cart so that I can review my selected products, check quantities and verify prices before proceeding to checkout. `(MUST HAVE)`
+- Checkout - As a site user I can checkout with a card payment so that I can complete my purchase transaction securely and efficiently, providing my payment and shipping information to finalise the order and receive the products I have selected. `(MUST HAVE)`
+- Order confirmation summary - As a registered user I can receive an email which confirms my order after purchasing from the store so that I can review the details of my purchase and be reassured that my order was successfully processed. `(MUST HAVE)`
+- Search for a product - As a site user I can use a search bar to search the website so that I can find a specific product. `(COULD HAVE)`
 
 EPIC 4: Product Management (Admin)
 
-- Stock management - As a site admin I can set the stock count for each product so that I can accurately manage inventory levels, prevent overselling or stockouts and ensure that site users have access to up-to-date information on product availability. (SHOULD HAVE)
-- Add products - As a site admin I can add products to the store so that I can expand the range of available items and keep the product catalogue updated. (MUST HAVE)
-- Edit product details - As a site admin I can edit the details of a specific product so that I can keep product information accurate and up to date. (MUST HAVE)
-- Delete products - As a site admin I can remove products from the store so that I can manage inventory effectively, removing discontinued or outdated items. (MUST HAVE)
+- Stock management - As a site admin I can set the stock count for each product so that I can accurately manage inventory levels, prevent overselling or stockouts and ensure that site users have access to up-to-date information on product availability. `(SHOULD HAVE)`
+- Add products - As a site admin I can add products to the store so that I can expand the range of available items and keep the product catalogue updated. `(MUST HAVE)`
+- Edit product details - As a site admin I can edit the details of a specific product so that I can keep product information accurate and up to date. `(MUST HAVE)`
+- Delete products - As a site admin I can remove products from the store so that I can manage inventory effectively, removing discontinued or outdated items. `(MUST HAVE)`
 
 EPIC 5: Site Information
 
-- Merchant details - As a new site user I can learn about the background of the merchant so that I can gain insight into the company's values and expertise, fostering trust and confidence in their products or services. (COULD HAVE)
-- Delivery information - As a site user I can access delivery information so that I can understand the shipping options, delivery times and any associated costs, enabling me to plan my purchases accordingly and ensure a smooth and timely delivery of my orders. (MUST HAVE)
-- Terms and conditions - As a site user I can view the terms and conditions so that I can understand the rules, regulations, and agreements governing the use of the platform, ensuring transparency and clarity in my interactions with the website. (MUST HAVE)
-- Contact information - As a site user I can easily find and access the store owner's contact information so that I can get in touch for inquiries or assistance. (MUST HAVE)
+- Merchant details - As a new site user I can learn about the background of the merchant so that I can gain insight into the company's values and expertise, fostering trust and confidence in their products or services. `(COULD HAVE)`
+- Delivery information - As a site user I can access delivery information so that I can understand the shipping options, delivery times and any associated costs, enabling me to plan my purchases accordingly and ensure a smooth and timely delivery of my orders. `(MUST HAVE)`
+- Terms and conditions - As a site user I can view the terms and conditions so that I can understand the rules, regulations, and agreements governing the use of the platform, ensuring transparency and clarity in my interactions with the website. `(MUST HAVE)`
+- Contact information - As a site user I can easily find and access the store owner's contact information so that I can get in touch for inquiries or assistance. `(MUST HAVE)`
 
 EPIC 6: Marketing and Engagement
 
-- Newsletter - As a site user I can sign up for the site's mailing list so that I can receive special offers and updates in my inbox. (SHOULD HAVE)
-- Mailing List - As a site admin I can view my mailing list so that I can send special offers or news updates about my products to my subscribers. (SHOULD HAVE)
-- Facebook marketing - As a site admin I can share the business on Facebook so that I can increase visibility and reach for the platform, attract new users and engage with existing ones on a popular social media platform, ultimately driving traffic to the site and potentially boosting sales and brand recognition. (MUST HAVE)
-- Appropriate SEO use - As a site admin I can use specific keywords on site pages so that I maximise the probability of new customers locating the store on a Google search. (MUST HAVE)
+- Newsletter - As a site user I can sign up for the site's mailing list so that I can receive special offers and updates in my inbox. `(SHOULD HAVE)`
+- Mailing List - As a site admin I can view my mailing list so that I can send special offers or news updates about my products to my subscribers. `(SHOULD HAVE)`
+- Facebook marketing - As a site admin I can share the business on Facebook so that I can increase visibility and reach for the platform, attract new users and engage with existing ones on a popular social media platform, ultimately driving traffic to the site and potentially boosting sales and brand recognition. `(MUST HAVE)`
+- Appropriate SEO use - As a site admin I can use specific keywords on site pages so that I maximise the probability of new customers locating the store on a Google search. `(MUST HAVE)`
 
 EPIC 7: Additional Features
 
-- Funny Fake Items on 404 Error Page - As a site user I can see humorous fake items on the 404 error page so that I can enjoy a playful experience when encountering page errors. (COULD HAVE)
+- Funny Fake Items on 404 Error Page - As a site user I can see humorous fake items on the 404 error page so that I can enjoy a playful experience when encountering page errors. `(COULD HAVE)`
 
 EPIC 8: User Experience and Interface
 
-- First impression - As a new site user I can comprehend the website's purpose at a glance so that I can determine if the platform aligns with my needs and interests. (MUST HAVE)
-- Website navigation - As a site user I can navigate through the interface effortlessly so that I can quickly and easily find the information I need. (MUST HAVE)
+- First impression - As a new site user I can comprehend the website's purpose at a glance so that I can determine if the platform aligns with my needs and interests. `(MUST HAVE)`
+- Website navigation - As a site user I can navigate through the interface effortlessly so that I can quickly and easily find the information I need. `(MUST HAVE)`
 
 EPIC 9: Future Enhancements
 
-- Filter products by price - As a site user I can filter products by price so that I can easily find items that fit within my budget. (WON'T HAVE)
-- Special offers - As a site user I can receive notifications so that I am promptly informed about any special offers or discounts available on the website. (WON'T HAVE)
-- View product reviews - As a site user I can view product reviews so that I can make informed purchasing decisions by considering the experiences and opinions of other customers. (WON'T HAVE)
-- Review a product - As a registered user I can submit a review for a product that I have previously bought so that I can share my experiences and opinions with other users. (WON'T HAVE)
-- Edit my review - As a registered user I can edit my review on a product so that I can update or improve the information I provided based on further experiences with the product. (WON'T HAVE)
-- Delete my review - As a registered user I can delete my review on a product so that I can remove outdated or inaccurate feedback. (WON'T HAVE)
+- Filter products by price - As a site user I can filter products by price so that I can easily find items that fit within my budget. `(WON'T HAVE)`
+- Special offers - As a site user I can receive notifications so that I am promptly informed about any special offers or discounts available on the website. `(WON'T HAVE)`
+- View product reviews - As a site user I can view product reviews so that I can make informed purchasing decisions by considering the experiences and opinions of other customers. `(WON'T HAVE)`
+- Review a product - As a registered user I can submit a review for a product that I have previously bought so that I can share my experiences and opinions with other users. `(WON'T HAVE)`
+- Edit my review - As a registered user I can edit my review on a product so that I can update or improve the information I provided based on further experiences with the product. `(WON'T HAVE)`
+- Delete my review - As a registered user I can delete my review on a product so that I can remove outdated or inaccurate feedback. `(WON'T HAVE)`
 
 ## Wireframes
 
