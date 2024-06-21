@@ -183,79 +183,91 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 <details>
 <summary> Click here to see the CART TEMPLATE wireframes </summary>
 
-  - ![screenshot](documentation/wireframes/cart.png)
+  - ![screenshot](documentation/wireframes/cart.jpg)
 
 </details>
 <details>
 <summary> Click here to see the CHECKOUT TEMPLATE wireframes </summary>
 
-  - ![screenshot](documentation/wireframes/checkout.png)
+  - ![screenshot](documentation/wireframes/checkout.jpg)
 
 </details>
 <details>
 <summary> Click here to see the CHECKOUT SUCCESS TEMPLATE wireframes </summary>
 
-  - ![screenshot](documentation/wireframes/checkoutsuccess.png)
+  - ![screenshot](documentation/wireframes/checkoutsuccess.jpg)
 
 </details>
+<details>
 <summary> Click here to see the CONTACT TEMPLATE wireframes </summary>
 
-  - ![screenshot](documentation/wireframes/contact.png)
+  - ![screenshot](documentation/wireframes/contact.jpg)
 
 </details>
+<details>
 <summary> Click here to see the CONTACT SUCCESS TEMPLATE wireframes </summary>
 
-  - ![screenshot](documentation/wireframes/contactsuccess.png)
+  - ![screenshot](documentation/wireframes/contactsuccess.jpg)
 
 </details>
+<details>
 <summary> Click here to see the ABOUT TEMPLATE wireframes </summary>
 
-  - ![screenshot](documentation/wireframes/about.png)
+  - ![screenshot](documentation/wireframes/about.jpg)
 
 </details>
+<details>
 <summary> Click here to see the DELIVERY TEMPLATE wireframes </summary>
 
-  - ![screenshot](documentation/wireframes/delivery.png)
+  - ![screenshot](documentation/wireframes/delivery.jpg)
 
 </details>
+<details>
 <summary> Click here to see the INDEX TEMPLATE wireframes </summary>
 
-  - ![screenshot](documentation/wireframes/home.png)
+  - ![screenshot](documentation/wireframes/home.jpg)
 
 </details>
+<details>
 <summary> Click here to see the TERMS & CONDITIONS TEMPLATE wireframes </summary>
 
-  - ![screenshot](documentation/wireframes/terms.png)
+  - ![screenshot](documentation/wireframes/terms.jpg)
 
 </details>
+<details>
 <summary> Click here to see the ADD/EDIT PRODUCT TEMPLATE wireframes </summary>
 
-  - ![screenshot](documentation/wireframes/addeditproduct.png)
+  - ![screenshot](documentation/wireframes/addeditproduct.jpg)
 
 </details>
+<details>
 <summary> Click here to see the PRODUCT DETAIL TEMPLATE wireframes </summary>
 
-  - ![screenshot](documentation/wireframes/productdetail.png)
+  - ![screenshot](documentation/wireframes/productdetail.jpg)
 
 </details>
+<details>
 <summary> Click here to see the PRODUCTS TEMPLATE wireframes </summary>
 
-  - ![screenshot](documentation/wireframes/products.png)
+  - ![screenshot](documentation/wireframes/products.jpg)
 
 </details>
+<details>
 <summary> Click here to see the PROFILE TEMPLATE wireframes </summary>
 
-  - ![screenshot](documentation/wireframes/profile.png)
+  - ![screenshot](documentation/wireframes/profile.jpg)
 
 </details>
+<details>
 <summary> Click here to see the LOGIN TEMPLATE wireframes </summary>
 
-  - ![screenshot](documentation/wireframes/login.png)
+  - ![screenshot](documentation/wireframes/login.jpg)
 
 </details>
+<details>
 <summary> Click here to see the SIGN UP TEMPLATE wireframes </summary>
 
-  - ![screenshot](documentation/wireframes/signup.png)
+  - ![screenshot](documentation/wireframes/signup.jpg)
 
 </details>
 
