@@ -39,50 +39,30 @@ In essence, Sue Bensassi Designs combines craftsmanship with user-centric design
 
 ### Colour Scheme
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑START OF NOTES (to be deleted)
+The aim was to create a clean, professional, and modern aesthetic for the site, using a combination of bold and subtle colours to ensure clarity and enhance the user experience.
 
-Explain your colours and the colour scheme.
+- #000000 (black) is used for text, headings, and buttons, providing a strong contrast and ensuring readability and emphasis.
+- #6C757D (gray) is used for the footer and navigation links, giving these areas a more subdued and refined appearance.
+- #E6E6E6 (light gray) is used for borders and card bodies, adding a subtle separation between elements without being too stark.
+- #FAF7F7 (very light gray) is used for various backgrounds, offering a soft and neutral backdrop that complements the other colours.
+- #FFFFFF (white) is used for the navbar, footer text, button text, card header elements, and form backgrounds, maintaining a clean and crisp look throughout the site.
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
+This colour scheme ensures a balance between modern design and usability, making the site visually appealing and easy to navigate.
 
-- `#000000` used for primary text.
-- `#E84610` used for primary highlights.
-- `#4A4A4F` used for secondary text.
-- `#009FE3` used for secondary highlights.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑START OF NOTES (to be deleted)
-
-Consider adding a link and screenshot for your colour scheme using "coolors".
-https://coolors.co/generate
-
-When you add a colour to the palette, the URL is dynamically updated, making it easier for you to return back to your colour palette later if needed.
-
-Example:
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
-I used [coolors.co](https://coolors.co/e84610-009fe3-4a4a4f-445261-d63649-e6ecf0-000000) to generate my colour palette.
+I used [coolors.co](https://coolors.co/000000-6c757d-e6e6e6-faf7f7-ffffff) to generate my colour palette.
 
 ![screenshot](documentation/coolors.png)
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑START OF NOTES (to be deleted)
-
-⚠️ ONLY IF YOU ACTUALLY ADDED `:root` variables in CSS! ⚠️
-If you've used CSS `:root` variables, consider also including a code snippet here!
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
 I've used CSS `:root` variables to easily update the global colour scheme by changing only one value, instead of everywhere in the CSS file.
 
 ```css
 :root {
-    /* P = Primary | S = Secondary */
-    --p-text: #000000;
-    --p-highlight: #E84610;
-    --s-text: #4A4A4F;
-    --s-highlight: #009FE3;
-    --white: #FFFFFF;
-    --black: #000000;
+    --color-primary: rgb(108, 117, 125);
+    --color-secondary: rgba(0, 0, 0, 0.3);
+    --color-tertiary: rgb(230, 230, 230);
+    --color-accent: rgba(182, 211, 229, 0.5);
+    --color-text: rgba(0, 0, 0, 1);
+    --x: 45deg;
 }
 ```
 
