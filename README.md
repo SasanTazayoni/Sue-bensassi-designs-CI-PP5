@@ -157,29 +157,6 @@ EPIC 9: Future Enhancements
 
 ## Wireframes
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 START OF NOTES (to be deleted)
-
-In this section, display your wireframe screenshots using a Markdown `table`.
-Instructions on how to do Markdown `tables` start on line #213 on this site: https://pandao.github.io/editor.md/en.html
-
-Alternatively, dropdowns are a way to condense several wireframes into a collapsible menu to save space.
-Dropdowns in Markdown are considered some of the only acceptable HTML components that are allowed for assessment purposes.
-
-⚠️ **IMPORTANT**! ⚠️ **IMPORTANT**! ⚠️ **IMPORTANT**! ⚠️
-The example below uses the `details` and `summary` code elements.
-However, for these scripts to work, I've had to add spaces within the `< >` elements.
-
-You MUST remove these spaces for it to work properly on your own README/TESTING files.
-Remove the spaces within the `< >` brackets for the `details` and `summary` code elements,
-for the Mobile, Tablet, and Desktop wireframes.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
-To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
-I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
-
-### Mobile Wireframes
-
 <details>
 <summary> Click here to see the CART TEMPLATE wireframes </summary>
 
@@ -273,22 +250,29 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 ## Features
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 START OF NOTES (to be deleted)
-
-In this section, you should go over the different parts of your project,
-and describe each in a sentence or so.
-
-You will need to explain what value each of the features provides for the user,
-focusing on who this website is for, what it is that they want to achieve,
-and how your project is the best way to help them achieve these things.
-
-For some/all of your features, you may choose to reference the specific project files that implement them.
-
-IMPORTANT: Remember to always include a screenshot of each individual feature!
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
 ### Existing Features
+
+- Navbar (All pages)
+	On large screens (992px and above), the navigation bar includes the following elements:
+
+	![screenshot](documentation/features/navbarlarge.png)
+
+	- A logo.
+	- A search bar for product searches.
+	- Navigation links for various product categories.
+	- Three icons arranged from left to right:
+		- A home icon for returning to the home page.
+		- An account icon for accessing the user account which has a dropdown menu.
+		- A cart icon for accessing the shopping cart which shows the total cost of the current cart items.
+
+	- ![screenshot](documentation/features/accountcart.png)
+
+	On smaller screens (991px and below), the navigation bar includes the following elements:
+
+ 	- A toggler with a dropdown menu of the navigation links.
+	- ![screenshot](documentation/features/togglerdropdown.png)
+	- The same three icons from the large screen with an additional icon for the search. The search icon features a dropdown.
+	- ![screenshot](documentation/features/searchbardropdown.png)
 
 - **YOUR-TITLE-FOR-FEATURE-#1**
 
