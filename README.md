@@ -252,27 +252,28 @@ EPIC 9: Future Enhancements
 
 ### Existing Features
 
-- Navbar (All pages)
-	On large screens (992px and above), the navigation bar includes the following elements:
+#### Navbar (All pages)
 
-	![screenshot](documentation/features/navbarlarge.png)
+On large screens (992px and above), the navigation bar includes the following elements:
 
-	- A logo.
-	- A search bar for product searches.
-	- Navigation links for various product categories.
-	- Three icons arranged from left to right:
-		- A home icon for returning to the home page.
-		- An account icon for accessing the user account which has a dropdown menu.
-		- A cart icon for accessing the shopping cart which shows the total cost of the current cart items.
+![screenshot](documentation/features/navbarlarge.png)
 
-	- ![screenshot](documentation/features/accountcart.png)
+- A logo.
+- A search bar for product searches.
+- Navigation links for various product categories.
+- Three icons arranged from left to right:
+	- A home icon for returning to the home page.
+	- An account icon for accessing the user account which has a dropdown menu.
+	- A cart icon for accessing the shopping cart which shows the total cost of the current cart items.
 
-	On smaller screens (991px and below), the navigation bar includes the following elements:
+- ![screenshot](documentation/features/accountcart.png)
 
- 	- A toggler with a dropdown menu of the navigation links.
-	- ![screenshot](documentation/features/togglerdropdown.png)
-	- The same three icons from the large screen with an additional icon for the search. The search icon features a dropdown.
-	- ![screenshot](documentation/features/searchbardropdown.png)
+On smaller screens (991px and below), the navigation bar includes the following elements:
+
+- A toggler with a dropdown menu of the navigation links.
+- ![screenshot](documentation/features/togglerdropdown.png)
+- The same three icons from the large screen with an additional icon for the search. The search icon features a dropdown.
+- ![screenshot](documentation/features/searchbardropdown.png)
 
 - **YOUR-TITLE-FOR-FEATURE-#1**
 
