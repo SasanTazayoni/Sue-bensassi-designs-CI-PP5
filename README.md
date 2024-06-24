@@ -570,16 +570,6 @@ Although the site has many features, there are several additional ones I would l
 - [![Gmail API](https://img.shields.io/badge/Gmail_API-grey?logo=gmail&logoColor=EA4335)](https://mail.google.com) used for sending emails in my application.
 - [![Font Awesome](https://img.shields.io/badge/Font_Awesome-grey?logo=fontawesome&logoColor=528DD7)](https://fontawesome.com) used for the icons.
 - [![ChatGPT](https://img.shields.io/badge/ChatGPT-grey?logo=chromatic&logoColor=75A99C)](https://chat.openai.com) used to help debug, troubleshoot, and explain things.
-- [Coolors](https://coolors.co/) used to display colour palette used on the website.
-- [Google Fonts](https://fonts.google.com/) used to import "Montserrat" and "Pavanam" fonts.
-- [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) used for performance review on each page.
-- [Caniuse](https://caniuse.com/) used to check compatibility of code syntax with other browsers.
-- [Amiresposive](https://amiresponsive.co.uk/) used to display website on the most common devices.
-- [Photoshop](https://www.adobe.com/uk/products/photoshop/) used to resize photos.
-- [Tinypng](https://tinypng.com/) used to compress image files for better performance.
-- [Unsplash](https://unsplash.com/) used to obtain background picture.
-- [Favicon.io](https://favicon.io/) used to generate favicon.
-- [Draw.io](https://app.diagrams.net/) used to generate ERD.
 
 ## Database Design
 
