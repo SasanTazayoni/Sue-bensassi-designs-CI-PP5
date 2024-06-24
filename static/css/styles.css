@@ -594,12 +594,6 @@ footer a:hover {
     border-bottom-right-radius: 0;
 }
 
-.large-logo {
-    width: 200px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-}
-
 .scroll-up-link {
     display: inline-block;
     opacity: 0;
