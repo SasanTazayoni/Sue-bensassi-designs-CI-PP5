@@ -615,21 +615,14 @@ Through it, user stories, issues, and milestone tasks were planned, then tracked
 [GitHub Issues](https://github.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/issues) served as an another Agile tool.
 There, I used my own **User Story Template** to manage user stories.
 
-It also helped with milestone iterations on a weekly basis.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 START OF NOTES (to be deleted)
-
-Consider adding a screenshot of your Open and Closed Issues.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
 - [Open Issues](https://github.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/issues) [![GitHub issues](https://img.shields.io/github/issues/SasanTazayoni/Sue-bensassi-designs-CI-PP5)](https://github.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/issues)
 
-    ![screenshot](documentation/gh-issues-open.png)
+![screenshot](documentation/issues-open.png)
 
 - [Closed Issues](https://github.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/issues?q=is%3Aissue+is%3Aclosed) [![GitHub closed issues](https://img.shields.io/github/issues-closed/SasanTazayoni/Sue-bensassi-designs-CI-PP5)](https://github.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/issues?q=is%3Aissue+is%3Aclosed)
 
-    ![screenshot](documentation/gh-issues-closed.png)
+![screenshot](documentation/issues-closed.png)
+![screenshot](documentation/issues-closed2.png)
 
 ### MoSCoW Prioritization
 
