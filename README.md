@@ -17,7 +17,6 @@ You can access the live application [here](https://sue-bensassi-designs-beea48c7
 
 ![screenshot](documentation/amiresponsive.png)
 
-
 ## UX
 
 At Sue Bensassi Designs, the website is meticulously crafted to deliver an engaging and intuitive user experience (UX), anchored by a deliberate design approach emphasising both aesthetics and functionality.
@@ -256,7 +255,7 @@ EPIC 9: Future Enhancements
 
 #### Navbar (All pages)
 
-On large screens (992px and above), the navigation bar includes the following elements:
+* On large screens (992px and above), the navigation bar includes the following elements:
 
 ![screenshot](documentation/features/navbarlarge.png)
 
@@ -270,38 +269,19 @@ On large screens (992px and above), the navigation bar includes the following el
 
 - ![screenshot](documentation/features/accountcart.png)
 
-On smaller screens (991px and below), the navigation bar includes the following elements:
+* On smaller screens (991px and below), the navigation bar includes the following elements:
 
 - A toggler with a dropdown menu of the navigation links.
 - ![screenshot](documentation/features/togglerdropdown.png)
 - The same three icons from the large screen with an additional icon for the search. The search icon features a dropdown.
 - ![screenshot](documentation/features/searchbardropdown.png)
 
-- **YOUR-TITLE-FOR-FEATURE-#1**
+* The "All products" and "Notice boards" navigation links feature dropdown menus.
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
-
-![screenshot](documentation/features/feature01.png)
-
-- **YOUR-TITLE-FOR-FEATURE-#2**
-
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
-
-![screenshot](documentation/features/feature02.png)
-
-- **YOUR-TITLE-FOR-FEATURE-#3**
-
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
-
-![screenshot](documentation/features/feature03.png)
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 START OF NOTES (to be deleted)
-
-Repeat as necessary for as many features as your site contains.
-
-Hint: the more, the merrier!
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
+- The "All products" dropdown menu offers categories to sort products based on various criteria.
+- ![screenshot](documentation/features/productsdropdown.png)
+- The "Notice boards" dropdown menu provides further subcategories within the notice boards category for more specific sorting options.
+- ![screenshot](documentation/features/nbdropdown.png)
 
 ### Future Features
 
