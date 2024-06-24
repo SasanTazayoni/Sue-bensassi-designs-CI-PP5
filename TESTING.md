@@ -22,6 +22,7 @@ Some of the pages on this site require a user to be logged-in and authenticated 
 | Page | W3C URL | Screenshot | Notes |
 | --- | --- | --- | --- |
 | Cart | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fcart%2F) | ![screenshot](documentation/validation/html/cart.png) | Pass: No errors |
+| Checkout | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fcheckout%2F) | ![screenshot](documentation/validation/html/checkout.png) | Pass: No errors |
 
 ### Python
 
