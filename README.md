@@ -604,17 +604,11 @@ INSTALLED_APPS = [
 ### GitHub Projects
 
 [GitHub Projects](https://github.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/projects) served as an Agile tool for this project.
-It isn't a specialized tool, but with the right tags and project creation/issue assignments, it can be made to work.
+It isn't a specialised tool, but with the right tags and project creation/issue assignments, it can be made to work.
 
 Through it, user stories, issues, and milestone tasks were planned, then tracked on a weekly basis using the basic Kanban board.
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 START OF NOTES (to be deleted)
-
-Consider adding a basic screenshot of your Projects Board.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
-![screenshot](documentation/gh-projects.png)
+![screenshot](documentation/kanban.png)
 
 ### GitHub Issues
 
