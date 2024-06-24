@@ -573,44 +573,11 @@ Although the site has many features, there are several additional ones I would l
 
 ## Database Design
 
-Entity Relationship Diagrams (ERD) help to visualize database architecture before creating models.
-Understanding the relationships between different tables can save time later in the project.
+Entity Relationship Diagrams (ERD) help to visualise database architecture before creating models. Understanding the relationships between different tables can save time later in the project. Initially an ERD was established using [!draw.io](https://draw.io/) as follows:
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 START OF NOTES (to be deleted)
+![screenshot](documentation/features/erd.png)
 
-Using your defined models (one example below), create an ERD with the relationships identified.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
-```python
-class Product(models.Model):
-    category = models.ForeignKey(
-        "Category", null=True, blank=True, on_delete=models.SET_NULL)
-    name = models.CharField(max_length=254)
-    description = models.TextField()
-    has_sizes = models.BooleanField(default=False, null=True, blank=True)
-    price = models.DecimalField(max_digits=6, decimal_places=2)
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
-
-    def __str__(self):
-        return self.name
-```
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 START OF NOTES (to be deleted)
-
-A couple recommendations for building free ERDs:
-- [Draw.io](https://draw.io)
-- [Lucidchart](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning)
-
-A more comprehensive ERD can be auto-generated once you're
-at the end of your development stages, just before you submit.
-Follow the steps below to obtain a thorough ERD that you can include.
-Feel free to leave the steps in the README for future use to yourself.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
-I have used `pygraphviz` and `django-extensions` to auto-generate an ERD.
+This ERD was later updated using `pygraphviz` and `django-extensions` to auto-generate an ERD.
 
 The steps taken were as follows:
 - In the terminal: `sudo apt update`
@@ -630,9 +597,7 @@ INSTALLED_APPS = [
 - removed `'django_extensions',` from my `INSTALLED_APPS`
 - finally, in the terminal: `pip3 uninstall django-extensions pygraphviz -y`
 
-![erd](documentation/erd.png)
-source: [medium.com](https://medium.com/@yathomasi1/1-using-django-extensions-to-visualize-the-database-diagram-in-django-application-c5fa7e710e16)
-
+![erd](documentation/erd2.png)
 
 ## Agile Development Process
 
