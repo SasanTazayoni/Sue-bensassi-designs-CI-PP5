@@ -498,7 +498,8 @@ All authentication pages feature a thematic background of a living room, alignin
 - Invalid fields prevent the sign up procedure and the user gets an error for each invalid field.
 - ![screenshot](documentation/features/registrationfail.png)
 - A successful registration will prompt a user to verify their email.
-- ![screenshot](documentation/features/emailverify.png)
+- ![screenshot](documentation/features/verify.png)
+- ![screenshot](documentation/features/login.png)
 - The registration can be toggled to show the login form instead. The login form also has a link back to the registration form.
 - The login form consists of an email and password field.
 - ![screenshot](documentation/features/login.png)
