@@ -11,9 +11,9 @@
 <main class="plain-background">
     <div class="container top-container" data-top-block>
         <div class="row">
-            <div class="card product-detail-form d-flex flex-row flex-wrap my-5 mx-1">
+            <div class="card product-detail-form d-flex flex-row flex-wrap my-5 mx-1 w-100">
                 <div class="col-md-6 col-12 d-flex justify-content-center align-items-center">
-                    <div class="image-container">
+                    <div class="image-container w-100">
                         {% if product.image %}
                             <a href="{{ product.image.url }}" target="_blank" rel="noopener">
                                 <img class="card-img" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -26,7 +26,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-12">
-                    <div class="product-details-container">
+                    <div class="product-details-container w-100">
                         <h1>{{ product.name }}</h1>
                         <hr class="divider">
                         <p class="lead mb-0 text-left"><strong>£{{ product.price }}</strong> + Free Shipping</p>
