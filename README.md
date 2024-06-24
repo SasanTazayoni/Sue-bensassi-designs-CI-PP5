@@ -1,4 +1,4 @@
-# SUE BENSASSI DESIGNS CI PP5
+![image](https://github.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/assets/80260775/93ef820c-d274-4fbc-924a-a01165b34b13)# SUE BENSASSI DESIGNS CI PP5
 
 Sue Bensassi Designs is an eCommerce store dedicated to offering bespoke home accessories crafted with care and precision. As a designer and maker based in West London, Sue Bensassi brings years of experience and passion into creating unique home decor items that can either be purchased as ready-made pieces or custom-made to fit individual preferences.
 The primary goal of this project is to create a user-friendly and visually appealing prototype of an online store where customers can easily browse, customise, and purchase home accessories. By leveraging modern web technologies and design principles, we aim to provide a seamless shopping experience that reflects the quality and craftsmanship of Sue Bensassi's products.
@@ -327,6 +327,51 @@ There are 3 main features on the home page which are divided by subtle dividers 
 	- Located in the bottom right corner of the page.
    	- Fades in and out based on user scroll position to provide easy navigation back to the top of the page.
    	- ![screenshot](documentation/features/scrolltotop.png)
+
+#### Buttons
+
+Each button features a subtle hover effect achieved through pseudo-selectors. While most buttons maintain a black-grey appearance, certain buttons which have secondary effects such as "Cancel," exhibit a blue-grey colour scheme.
+
+- ![screenshot](documentation/features/btns.png)
+
+#### Products page
+
+The products page features a paginated grid displaying up to 12 products per page.
+
+- At the top left, there is text indicating the total number of products currently displayed with a link to display all products.
+- ![screenshot](documentation/features/productslink.png)
+- Pagination buttons are clickable and designed with colours that harmonise with the website's theme.
+- ![screenshot](documentation/features/pagination.png)
+- Each product is presented as a bordered card containing the product image, name, price, stock count and a button for adding the item to the shopping cart.
+- ![screenshot](documentation/features/productcard.png)
+- When an admin user is logged in, additional options to edit and delete the product are available.
+- ![screenshot](documentation/features/productcardadmin.png)
+- Product grid layouts adapt responsively:
+  	- On extra-large screens, products are displayed in a 4-column grid (1200px and above).
+  	- ![screenshot](documentation/features/products4column.png)
+  	- At screen widths from 992px to 1199px, a 3-column grid layout is used.
+  	- ![screenshot](documentation/features/products3column.png)
+  	- For widths between 576px and 991px, products appear in a 2-column grid.
+  	- ![screenshot](documentation/features/products2column.png)
+  	- At 575px and below, products are presented in a single column for optimal viewing on smaller devices.
+  	- ![screenshot](documentation/features/products1column.png)
+
+- Products which are out of stock are greyed out distinctly.
+- ![screenshot](documentation/features/outofstock.png)
+- This page also features a scroll-to-top button.
+- Clicking the product image shows more details of the product on a separate page.
+
+#### Product detail page
+
+The product detail page features a grid with all the product details.
+
+- This includes a large image of the product, product name, product description, product category, the stock count, price per unit, a quantity selector to specify the number of items, a button to add the selected quantity to the cart and a button to return to the shopping page.
+- On medium screens and larger, the image and details are displayed in a 2-column grid layout. For screens 768px and below, the layout shifts to a single-column grid for better readability on smaller devices.
+- ![screenshot](documentation/features/productdetaillarge.png)
+- ![screenshot](documentation/features/productdetailsmall.png)
+- The page also has a scroll to top button in case of long descriptions.
+- Items which are out of stock are clearly labelled and cannot be added to the cart therefore the quantity selector and "Add to cart" buttons are absent.
+- ![screenshot](documentation/features/outofstocklarge.png)
 
 ### Future Features
 
