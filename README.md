@@ -255,7 +255,7 @@ EPIC 9: Future Enhancements
 
 #### Navbar (All pages)
 
-* On large screens (992px and above), the navigation bar includes the following elements:
+1) On large screens (992px and above), the navigation bar includes the following elements:
 
 ![screenshot](documentation/features/navbarlarge.png)
 
@@ -269,19 +269,64 @@ EPIC 9: Future Enhancements
 
 - ![screenshot](documentation/features/accountcart.png)
 
-* On smaller screens (991px and below), the navigation bar includes the following elements:
+2) On smaller screens (991px and below), the navigation bar includes the following elements:
 
 - A toggler with a dropdown menu of the navigation links.
 - ![screenshot](documentation/features/togglerdropdown.png)
 - The same three icons from the large screen with an additional icon for the search. The search icon features a dropdown.
 - ![screenshot](documentation/features/searchbardropdown.png)
 
-* The "All products" and "Notice boards" navigation links feature dropdown menus.
+3) The "All products" and "Notice boards" navigation links feature dropdown menus.
 
 - The "All products" dropdown menu offers categories to sort products based on various criteria.
 - ![screenshot](documentation/features/productsdropdown.png)
 - The "Notice boards" dropdown menu provides further subcategories within the notice boards category for more specific sorting options.
 - ![screenshot](documentation/features/nbdropdown.png)
+
+#### Footer (All pages)
+
+1) On extra large screens (1300px and above), the footer features 3 separate parts - a credits section with the copyright and credits, footer links to information pages and a newsletter sign up form for users. These elements become stacked vertically at 1299px and below.
+
+![screenshot](documentation/features/footerlarge.png)
+![screenshot](documentation/features/footersmall.png)
+
+- When signing up for the newsletter, the email must be valid otherwise an error will be thrown to the user.
+- ![screenshot](documentation/features/newslettererror.png)
+- Duplicate emails cannot be signed up.
+- ![screenshot](documentation/features/newsletterwarning.png)
+- Successful sign ups are saved in the mailing list and the user receives a confirmation email.
+- ![screenshot](documentation/features/newslettersuccess.png)
+- ![screenshot](documentation/features/newslettersignup.png)
+
+#### Home page
+
+There are 3 main features on the home page which are divided by subtle dividers - the hero section, product showcases and the scroll to top button.
+
+- Hero Section
+	- There hero section is divided into 2 sections featuring an eye-catching image and key store information.
+	- ![screenshot](documentation/features/hero.png)
+	- The hero also includes navigation buttons to access the store and contact the store owner.
+	- On smaller screens, the hero is simplifies to show only the image to reduce clutter.
+   	- ![screenshot](documentation/features/herosmall.png)
+ 
+- Each section has a subtle section divider
+
+![screenshot](documentation/features/divider.png)
+
+- Product Showcases
+	- The first set of products showcases a 3-column grid highlighting 2 filing chests.
+   	- ![screenshot](documentation/features/filingchestshowcase.png)
+   	- The second set of products showcases a 3-column grid displaying samples from all item categories.
+   	- ![screenshot](documentation/features/productsampleshowcase.png)
+   	- The third set of products showcases a 4-column grid of best sellers within the store.
+   	- ![screenshot](documentation/features/bestsellershowcase.png)
+   	- On medium to small screens (768px and below) all grids become single-column grids.
+   	- ![screenshot](documentation/features/singlecolumngridhome.png)
+
+- Scroll-to-Top Button
+	- Located in the bottom right corner of the page.
+   	- Fades in and out based on user scroll position to provide easy navigation back to the top of the page.
+   	- ![screenshot](documentation/features/scrolltotop.png)
 
 ### Future Features
 
