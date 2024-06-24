@@ -573,9 +573,9 @@ Although the site has many features, there are several additional ones I would l
 
 ## Database Design
 
-Entity Relationship Diagrams (ERD) help to visualise database architecture before creating models. Understanding the relationships between different tables can save time later in the project. Initially an ERD was established using [!draw.io](https://draw.io/) as follows:
+Entity Relationship Diagrams (ERD) help to visualise database architecture before creating models. Understanding the relationships between different tables can save time later in the project. Initially an ERD was established using [draw.io](https://draw.io/) as follows:
 
-![screenshot](documentation/features/erd.png)
+![screenshot](documentation/erd.png)
 
 This ERD was later updated using `pygraphviz` and `django-extensions` to auto-generate an ERD.
 
