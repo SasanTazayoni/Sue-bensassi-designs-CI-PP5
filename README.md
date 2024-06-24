@@ -519,21 +519,34 @@ All authentication pages feature a thematic background of a living room, alignin
 
 ### Future Features
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 START OF NOTES (to be deleted)
+Although the site has many features, there are several additional ones I would like to incorporate in the future that didn't fit into the current development cycle. These features have been classified as "Won't Have" in my MoSCoW prioritization and placed in the backlog on my project's development board.
 
-Do you have additional ideas that you'd like to include on your project in the future?
-Fantastic! List them here!
-It's always great to have plans for future improvements!
-Consider adding any helpful links or notes to help remind you in the future, if you revisit the project in a couple years.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
-- YOUR-TITLE-FOR-FUTURE-FEATURE-#1
-    - Any additional notes about this feature.
-- YOUR-TITLE-FOR-FUTURE-FEATURE-#2
-    - Any additional notes about this feature.
-- YOUR-TITLE-FOR-FUTURE-FEATURE-#3
-    - Any additional notes about this feature.
+- Filter products by price which would:
+  	- Improve Usability: Simplify the shopping process by reducing the time and effort needed to find affordable products.
+  	- Potentially Increase Sales: Encourage purchases by making it easier for users to find items they can afford.
+  	- Enhance Customer Satisfaction: Provide a more personalised shopping experience, leading to higher customer satisfaction and retention.
+ 
+- Special offers which would:
+	- Increase User Engagement: Keeping users informed about promotions, leading to higher engagement and return visits to the site.
+ 	- Boost Sales: Prompt notifications about discounts and special offers can drive immediate purchases, increasing overall sales.
+  	- Enhance User Experience: Providing timely and relevant information helps users make informed purchasing decisions, leading to greater satisfaction and loyalty.
+ 
+- View product reviews which would:
+	- Inform Purchasing Decisions: Users can make more informed decisions by reading about others' experiences with the product.
+	- Build Trust: Reviews build trust as they provide social proof of product quality and reliability.
+	- Enhance User Engagement: Reading reviews encourages users to spend more time on the site, increasing engagement.
+- Review a product which would:
+	- Customer Feedback: Allows users to share their opinions, which can be valuable for both potential buyers and the store.
+	- Product Improvement: Feedback helps the store understand customer preferences and areas for product improvement.
+	- Community Building: Encourages interaction among users and creates a community around the products offered.
+- Edit my review which would:
+	- Update Information: Users can update their review based on their evolving experience with the product.
+	- Accuracy: Ensures that the information provided remains relevant and accurate over time.
+	- User Control: Provides users with control over their contributions to maintain transparency and trust.
+- Delete my review which would:
+	- User Control and Privacy: Gives users the option to remove their review if they change their opinion or no longer wish to have it displayed.
+ 	- Flexibility: Enhances user experience by allowing them to manage their content on the site.
+	- Compliance: Aligns with privacy and data protection regulations by offering users the ability to delete personal contributions.
 
 ## Tools & Technologies Used
 
