@@ -1,4 +1,4 @@
-# SUE BENSASSI DESIGNS CI PP5
+![image](https://github.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/assets/80260775/da694868-7f87-49d7-9af2-9e735fe12198)![image](https://github.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/assets/80260775/bb97932b-96e6-4280-aa2a-3256e83e76b4)![image](https://github.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/assets/80260775/1b81bef3-5ab4-421a-a22e-ebfa94d4c651)![image](https://github.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/assets/80260775/b35ab022-fe7c-448b-926e-bba9b5a6598f)![image](https://github.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/assets/80260775/85587f32-23ad-44cd-9096-4ba1d1a31ca8)![image](https://github.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/assets/80260775/a63a9b2e-c685-4bd3-895a-3dcebfe43c4c)# SUE BENSASSI DESIGNS CI PP5
 
 Sue Bensassi Designs is an eCommerce store dedicated to offering bespoke home accessories crafted with care and precision. As a designer and maker based in West London, Sue Bensassi brings years of experience and passion into creating unique home decor items that can either be purchased as ready-made pieces or custom-made to fit individual preferences.
 The primary goal of this project is to create a user-friendly and visually appealing prototype of an online store where customers can easily browse, customise, and purchase home accessories. By leveraging modern web technologies and design principles, we aim to provide a seamless shopping experience that reflects the quality and craftsmanship of Sue Bensassi's products.
@@ -297,6 +297,7 @@ EPIC 9: Future Enhancements
 - Successful sign ups are saved in the mailing list and the user receives a confirmation email.
 - ![screenshot](documentation/features/newslettersuccess.png)
 - ![screenshot](documentation/features/newslettersignup.png)
+- ![screenshot](documentation/features/mailinglist.png)
 
 #### Home page
 
@@ -358,6 +359,8 @@ The products page features a paginated grid displaying up to 12 products per pag
 
 - Products which are out of stock are greyed out distinctly.
 - ![screenshot](documentation/features/outofstock.png)
+- When all notice boards are displayed, buttons appear at the top of the page so that users can easily navigate between the sub-categories of the notice boards.
+- ![screenshot](documentation/features/nbsubcategories.png)
 - This page also features a scroll-to-top button.
 - Clicking the product image shows more details of the product on a separate page.
 
@@ -366,12 +369,152 @@ The products page features a paginated grid displaying up to 12 products per pag
 The product detail page features a grid with all the product details.
 
 - This includes a large image of the product, product name, product description, product category, the stock count, price per unit, a quantity selector to specify the number of items, a button to add the selected quantity to the cart and a button to return to the shopping page.
+- When an admin user is logged in, additional options to edit and delete the product are available.
+- ![screenshot](documentation/features/productdetailadmin.png)
 - On medium screens and larger, the image and details are displayed in a 2-column grid layout. For screens 768px and below, the layout shifts to a single-column grid for better readability on smaller devices.
 - ![screenshot](documentation/features/productdetaillarge.png)
 - ![screenshot](documentation/features/productdetailsmall.png)
 - The page also has a scroll to top button in case of long descriptions.
 - Items which are out of stock are clearly labelled and cannot be added to the cart therefore the quantity selector and "Add to cart" buttons are absent.
 - ![screenshot](documentation/features/outofstocklarge.png)
+- The quantity form will not allow an excess of the product to be added to the cart.
+- ![screenshot](documentation/features/excessquantity.png)
+
+#### Toasts
+
+There are 4 different toasts that exist on this website - red (error), yellow (warning), green (success) and blue (information).
+
+- Red toasts appear when something goes wrong or an action fails (example given above).
+- Yellow toasts appear when information is being conveyed.
+- ![screenshot](documentation/features/yellow.png)
+- Green toasts appear when an action is successful.
+- ![screenshot](documentation/features/green.png)
+- Blue toasts appear when updating the cart. The blue toast also features the current cart details as a quick reference with a "checkout" button.
+- ![screenshot](documentation/features/blue.png)
+
+#### Add/Edit product forms
+
+As an admin user new products can be added and deleted, and existing products can be edited.
+
+- The "Add product" menu item is only available as an admin user.
+- ![screenshot](documentation/features/addproduct.png)
+- The "Add product" and "Edit product" forms are only accessible via an admin user and these enable the creation or edition of product information respectively.
+- ![screenshot](documentation/features/addproductform.png)
+- ![screenshot](documentation/features/editproductform.png)
+- A newly added product will appear within its category.
+- Products with no image get assigned a default image.
+- ![screenshot](documentation/features/newnoimage.png)
+- Clicking "Delete" opens a confirmation modal. "No" dismisses the modal and "Yes" permanently removes the product.
+- ![screenshot](documentation/features/deletemodal.png)
+
+#### Shopping cart
+
+The shopping cart page displays a list of all products in the cart, with each product separated by a divider.
+
+- Each row includes the product image, the price per unit, a quantity update form with links to either update the quantity or remove the product entirely and the subtotal for the item based on the quantity ordered.
+- At the bottom of the cart, the grand total for all items is displayed, along with buttons to either proceed to checkout or return to the products page.
+- The page also has a scroll to top button.
+
+- ![screenshot](documentation/features/cart.png)
+- ![screenshot](documentation/features/cartsmall.png)
+
+#### Checkout page
+
+The checkout page is designed as a two-column grid. On screens 991px and below, the layout changes to a single-column grid to ensure optimal readability and usability on smaller devices. This page includes the following features:
+
+- Left Column (Form):
+	- A form for the customer to fill out their delivery details, including contact number and email.
+ 	- If the user is logged in, they have the option to save this information to their profile.
+	- A button to complete the order or another button to navigate back to the products page.
+	- A display of the total amount that the user will be charged.
+	- The form must be filled out correctly (including the card details) otherwise the user will receive an error and the payment will not proceed.
+- Right Column (Order Summary):
+	- An order summary showing the item details and cost breakdown.
+- ![screenshot](documentation/features/checkout.png)
+- ![screenshot](documentation/features/checkoutbottom.png)
+- Successfully checking out shows a spinner while the payment processes and locks the page temporarily.
+- ![screenshot](documentation/features/spinner.png)
+
+#### Checkout success page
+
+The checkout success page includes the following features:
+
+- A thank you message along with a summary of the recently processed order.
+- ![screenshot](documentation/features/checkoutsuccess.png)
+- If the user is logged in, the order information is stored in their order history on their profile.
+- The user also receives an email confirmation for their order.
+- ![screenshot](documentation/features/orderconfirmation.png)
+- The store owner also receives an email to notify them of a placed order (This is temporarily set as myself).
+- ![screenshot](documentation/features/ordernotification.png)
+- Two buttons at the bottom of the page - One to navigate back to the products page and one to navigate to the user's profile.
+
+#### Profile page
+
+The profile page is a 2-column grid on large screens (992px and above) and a single-column grid on smaller screens (991px and below). It consists of the following 2 features:
+
+- The delivery information of the user.
+- An order history form.
+- ![screenshot](documentation/features/profile.png)
+- ![screenshot](documentation/features/profilesmall.png)
+
+#### About page
+
+The about page is a simple page with information with a 2-column grid that becomes a single-column grid on smaller screens.
+
+- ![screenshot](documentation/features/about.png)
+
+#### Delivery page
+
+The delivery page is a simple page with the delivery options and information.
+
+- ![screenshot](documentation/features/delivery.png)
+
+#### Terms & conditions page
+
+The terms & conditions page is a simple page with information.
+
+- ![screenshot](documentation/features/terms.png)
+
+#### Contact and contact success pages
+
+The contact page consists of contact information for the store owner and an enquiry form.
+
+- If the form is correctly filled out then the user will submit the enquiry to the admin panel and get redirected to the contact success page.
+- ![screenshot](documentation/features/contact.png)
+- The contact success page will have buttons to navigate back to the home page or the shop.
+- ![screenshot](documentation/features/contactsuccess.png)
+- Invalid forms will not be submitted.
+- The admin panel will show new enquiries and they will be unchecked will signals that they need actioning.
+- ![screenshot](documentation/features/contactadmin.png)
+
+#### Authentication pages
+
+All authentication pages feature a thematic background of a living room, aligning with the store's aesthetic.
+
+- Clicking log out opens a log out modal which logs the user out if "Yes" is clicked.
+- ![screenshot](documentation/features/logoutmodal.png)
+- The registration form consists of 5 fields which must be correctly filled out.
+- ![screenshot](documentation/features/register.png)
+- Invalid fields prevent the sign up procedure and the user gets an error for each invalid field.
+- ![screenshot](documentation/features/registrationfail.png)
+- A successful registration will prompt a user to verify their email.
+- ![screenshot](documentation/features/emailverify.png)
+- The registration can be toggled to show the login form instead. The login form also has a link back to the registration form.
+- The login form consists of an email and password field.
+- ![screenshot](documentation/features/login.png)
+- Users who want to reset their passwords can do so via the "Forgot your password?" link. This asks the user to enter their email and then sends a token to that email. If the email does not exist, nothing happens. Users can then access their email and use the token to reset their password.
+- ![screenshot](documentation/features/pwresetrequest.png)
+- ![screenshot](documentation/features/pwtokensent.png)
+- ![screenshot](documentation/features/pwresetemail.png)
+- ![screenshot](documentation/features/pwresetform.png)
+- ![screenshot](documentation/features/pwresetcomplete.png)
+
+#### Error pages
+
+- In case of an internal server error, the error500 is handled so that the user can return to the home page or shop.
+- ![screenshot](documentation/features/error500.png)
+- In case the user navigates to a page that does not exist or enters an incorrect sub-url, the error404 is handled so that a random fake item appears with a message saying that the page does not exist with navigations buttons back to the main site.
+- ![screenshot](documentation/features/error404.png)
 
 ### Future Features
 
