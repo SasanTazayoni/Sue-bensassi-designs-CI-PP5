@@ -114,6 +114,7 @@ EPIC 3: Shopping Experience
 - View my cart - As a registered user I can view the items in my cart so that I can review my selected products, check quantities and verify prices before proceeding to checkout. `(MUST HAVE)`
 - Checkout - As a site user I can checkout with a card payment so that I can complete my purchase transaction securely and efficiently, providing my payment and shipping information to finalise the order and receive the products I have selected. `(MUST HAVE)`
 - Order confirmation summary - As a registered user I can receive an email which confirms my order after purchasing from the store so that I can review the details of my purchase and be reassured that my order was successfully processed. `(MUST HAVE)`
+- Order history - As a registered user I can access my order history so that I can review past purchases, track the status of my orders and keep a record of my transactions. `(COULD HAVE)`
 - Search for a product - As a site user I can use a search bar to search the website so that I can find a specific product. `(COULD HAVE)`
 
 EPIC 4: Product Management (Admin)
@@ -134,6 +135,7 @@ EPIC 6: Marketing and Engagement
 
 - Newsletter - As a site user I can sign up for the site's mailing list so that I can receive special offers and updates in my inbox. `(SHOULD HAVE)`
 - Mailing List - As a site admin I can view my mailing list so that I can send special offers or news updates about my products to my subscribers. `(SHOULD HAVE)`
+- Enquiry list - As a site admin I can a comprehensive list of customer enquiries so that efficiently address each one and manage my responses accordingly.
 - Facebook marketing - As a site admin I can share the business on Facebook so that I can increase visibility and reach for the platform, attract new users and engage with existing ones on a popular social media platform, ultimately driving traffic to the site and potentially boosting sales and brand recognition. `(MUST HAVE)`
 - Appropriate SEO use - As a site admin I can use specific keywords on site pages so that I maximise the probability of new customers locating the store on a Google search. `(MUST HAVE)`
 
