@@ -124,24 +124,24 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 
 | Device | Screenshot | Notes |
 | --- | --- | --- |
-| desktop | ![screenshot](documentation/testing/desktop.png) | Works as expected |
-| iPhone-SE | ![screenshot](documentation/testing/iPhone-SE.png) | Works as expected |
-| iPhone-XR | ![screenshot](documentation/testing/iPhone-XR.png) | Works as expected |
-| iPhone-12-Pro | ![screenshot](documentation/testing/iPhone-12-Pro.png) | Works as expected |
-| iPhone-14-Pro-Max | ![screenshot](documentation/testing/iPhone-14-Pro-Max.png) | Works as expected |
-| Pixel-7 | ![screenshot](documentation/testing/Pixel-7.png) | Works as expected |
-| Samsung-Galaxy-S8+ | ![screenshot](documentation/testing/Samsung-Galaxy-S8+.png) | Works as expected |
-| Samsung-Galaxy-S20-Ultra | ![screenshot](documentation/testing/Samsung-Galaxy-S20-Ultra.png) | Works as expected |
-| iPad-Mini | ![screenshot](documentation/testing/iPad-Mini.png) | Works as expected |
-| iPad-Air | ![screenshot](documentation/testing/iPad-Air.png) | Works as expected |
-| iPad-Pro | ![screenshot](documentation/testing/iPad-Pro.png) | Works as expected |
-| Surface-Pro-7 | ![screenshot](documentation/testing/Surface-Pro-7.png) | Works as expected |
-| Surface-Duo | ![screenshot](documentation/testing/Surface-Duo.png) | Works as expected |
-| Galaxy-Z-Fold-5 | ![screenshot](documentation/testing/Galaxy-Z-Fold-5.png) | Works as expected |
-| Asus-Zenbook-Fold | ![screenshot](documentation/testing/Asus-Zenbook-Fold.png) | Works as expected |
-| Samsung-Galaxy-A51-71 | ![screenshot](documentation/testing/Samsung-Galaxy-A51-71.png) | Works as expected |
-| Nest-Hub | ![screenshot](documentation/testing/Nest-Hub.png) | Works as expected |
-| Nest-Hub-Max | ![screenshot](documentation/testing/Nest-Hub-Max.png) | Works as expected |
+| desktop | ![screenshot](documentation/testing/devices/desktop.png) | Works as expected |
+| iPhone-SE | ![screenshot](documentation/testing/devices/iPhone-SE.png) | Works as expected |
+| iPhone-XR | ![screenshot](documentation/testing/devices/iPhone-XR.png) | Works as expected |
+| iPhone-12-Pro | ![screenshot](documentation/testing/devices/iPhone-12-Pro.png) | Works as expected |
+| iPhone-14-Pro-Max | ![screenshot](documentation/testing/devices/iPhone-14-Pro-Max.png) | Works as expected |
+| Pixel-7 | ![screenshot](documentation/testing/devices/Pixel-7.png) | Works as expected |
+| Samsung-Galaxy-S8+ | ![screenshot](documentation/testing/devices/Samsung-Galaxy-S8+.png) | Works as expected |
+| Samsung-Galaxy-S20-Ultra | ![screenshot](documentation/testing/devices/Samsung-Galaxy-S20-Ultra.png) | Works as expected |
+| iPad-Mini | ![screenshot](documentation/testing/devices/iPad-Mini.png) | Works as expected |
+| iPad-Air | ![screenshot](documentation/testing/devices/iPad-Air.png) | Works as expected |
+| iPad-Pro | ![screenshot](documentation/testing/devices/iPad-Pro.png) | Works as expected |
+| Surface-Pro-7 | ![screenshot](documentation/testing/devices/Surface-Pro-7.png) | Works as expected |
+| Surface-Duo | ![screenshot](documentation/testing/devices/Surface-Duo.png) | Works as expected |
+| Galaxy-Z-Fold-5 | ![screenshot](documentation/testing/devices/Galaxy-Z-Fold-5.png) | Works as expected |
+| Asus-Zenbook-Fold | ![screenshot](documentation/testing/devices/Asus-Zenbook-Fold.png) | Works as expected |
+| Samsung-Galaxy-A51-71 | ![screenshot](documentation/testing/devices/Samsung-Galaxy-A51-71.png) | Works as expected |
+| Nest-Hub | ![screenshot](documentation/testing/devices/Nest-Hub.png) | Works as expected |
+| Nest-Hub-Max | ![screenshot](documentation/testing/devices/Nest-Hub-Max.png) | Works as expected |
 
 ## Lighthouse Audit
 
