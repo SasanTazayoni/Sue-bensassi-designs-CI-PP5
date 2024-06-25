@@ -58,14 +58,14 @@
                             <div class="form-group my-3">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <button class="button button-square btn-secondary" data-decrement>
+                                        <button class="button button-square btn-secondary" aria-label="Decrease quantity" data-decrement>
                                             <i></i><i></i>
                                             <span><i class="fas fa-minus fa-sm"></i></span>
                                         </button>
                                     </div>
                                     <input type="number" class="form-control form control-sm" name="quantity" value="{{ item.quantity }}" min="1" max="{{ item.product.stock }}" data-product="{{ item.item_id }}">
                                     <div class="input-group-append">
-                                        <button class="button button-square btn-secondary" data-increment>
+                                        <button class="button button-square btn-secondary" aria-label="Increase quantity" data-increment>
                                             <i></i><i></i>
                                             <span><i class="fas fa-plus fa-sm"></i></span>
                                         </button>
