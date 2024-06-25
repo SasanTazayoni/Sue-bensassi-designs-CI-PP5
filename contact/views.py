@@ -35,7 +35,10 @@ def contact(request):
                     request, 'There was an error sending your enquiry. \
                         Please try again later.'
                 )
-
+        else:
+            messages.error(
+                request, 'The form data you entered was invalid. \
+                    Please check the form and try again.')
     else:
         form = ContactForm()
 
