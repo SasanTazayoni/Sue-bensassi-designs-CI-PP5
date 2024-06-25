@@ -62,7 +62,7 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 | quantityInput.js | ![screenshot](documentation/testing/validation/quantityinput.png) | Pass: No Errors |
 | scrollToTop.js | ![screenshot](documentation/testing/validation/scrolltotop.png) | Pass: No Errors |
 | shoppingCartQuantities.js | ![screenshot](documentation/testing/validation/shoppingcartquantities.png) | Pass: No Errors |
-| stripeElements.js | ![screenshot](documentation/testing/validation/stripeelements.png) | Pass: No Errors |
+| stripeElements.js | ![screenshot](documentation/testing/validation/stripeelements.png) | Undefined Stripe variable |
 | toasts.js | ![screenshot](documentation/testing/validation/toasts.png) | Pass: No Errors |
 
 ### Python
