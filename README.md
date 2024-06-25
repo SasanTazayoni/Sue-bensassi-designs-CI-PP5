@@ -1045,6 +1045,7 @@ On Heroku:
 | [Google Fonts](https://fonts.google.com/) | entire site | font | headers and text |
 | [Photoshop](https://www.adobe.com/uk/products/photoshop/) | products page | image | tool for image adjustment |
 | [Favicon.io](https://favicon.io/) | browser tab | image | favicon generator |
+| Sue Bensassi | entire site | image | images obtained from client |
 
 ### Acknowledgements
 
