@@ -39,6 +39,12 @@ Some of the pages on this site require a user to be logged-in and authenticated 
 | Log in | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Faccounts%2Flogin%2F) | ![screenshot](documentation/validation/html/login.png) | Pass: No errors |
 | Search | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2F8000-sasantazayo-suebensassi-813vyfvgjj0.ws.codeinstitute-ide.net%2Fproducts%2F%3Fq%3Dbook) | ![screenshot](documentation/validation/html/search.png) | Pass: No errors |
 
+### CSS
+
+| File | Jigsaw URL | Screenshot | Notes |
+| --- | --- | --- | --- |
+| styles.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fstatic%2Fcss%2Fstyles.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot](documentation/validation/css.png) | Pass: No Errors |
+
 ### Python
 
 I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.
