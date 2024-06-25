@@ -145,31 +145,27 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 
 ## Lighthouse Audit
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-Use this space to discuss testing the live/deployed site's Lighthouse Audit reports.
-Avoid testing the local version (especially if developing in Gitpod), as this can have knock-on effects of performance.
-
-If you don't have Lighthouse in your Developer Tools,
-it can be added as an [extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk).
-
-Don't just test the home page (unless it's a single-page application).
-Make sure to test the Lighthouse Audit results for all of your pages.
-
-**IMPORTANT**: You must provide screenshots of the results, to "prove" that you've actually tested them.
-
-Sample Lighthouse testing documentation:
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
 I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
 
 | Page | Mobile | Desktop | Notes |
 | --- | --- | --- | --- |
-| Home | ![screenshot](documentation/lighthouse/lighthouse-home-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-home-desktop.png) | Some minor warnings |
-| About | ![screenshot](documentation/lighthouse/lighthouse-about-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-about-desktop.png) | Some minor warnings |
-| Gallery | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Slow response time due to large images |
-| x | x | x | repeat for any other tested pages/sizes |
+| Cart | ![screenshot](documentation/testing/lighthouse/cartmobile.png) | ![screenshot](documentation/testing/lighthouse/cart.png) | Some minor warnings |
+| Checkout | ![screenshot](documentation/testing/lighthouse/checkoutmobile.png) | ![screenshot](documentation/testing/lighthouse/checkout.png) | Some minor warnings |
+| Checkout success | ![screenshot](documentation/testing/lighthouse/checkoutsuccessmobile.png) | ![screenshot](documentation/testing/lighthouse/checkoutsuccess.png) | Some minor warnings |
+| Contact | ![screenshot](documentation/testing/lighthouse/contactmobile.png) | ![screenshot](documentation/testing/lighthouse/contact.png) | Some minor warnings |
+| Contact success | ![screenshot](documentation/testing/lighthouse/contactsuccessmobile.png) | ![screenshot](documentation/testing/lighthouse/contactsuccess.png) | Some minor warnings |
+| About | ![screenshot](documentation/testing/lighthouse/aboutmobile.png) | ![screenshot](documentation/testing/lighthouse/about.png) | Some minor warnings |
+| Delivery | ![screenshot](documentation/testing/lighthouse/deliverymobile.png) | ![screenshot](documentation/testing/lighthouse/delivery.png) | Some minor warnings |
+| Index | ![screenshot](documentation/testing/lighthouse/indexmobile.png) | ![screenshot](documentation/testing/lighthouse/index.png) | Some minor warnings |
+| Terms & conditions | ![screenshot](documentation/testing/lighthouse/termsmobile.png) | ![screenshot](documentation/testing/lighthouse/terms.png) | Some minor warnings |
+| Products | ![screenshot](documentation/testing/lighthouse/productsmobile.png) | ![screenshot](documentation/testing/lighthouse/products.png) | Some minor warnings |
+| Product detail | ![screenshot](documentation/testing/lighthouse/productdetailmobile.png) | ![screenshot](documentation/testing/lighthouse/productdetail.png) | Some minor warnings |
+| Add product | ![screenshot](documentation/testing/lighthouse/addproductmobile.png) | ![screenshot](documentation/testing/lighthouse/addproduct.png) | Some minor warnings |
+| Edit product | ![screenshot](documentation/testing/lighthouse/editproductmobile.png) | ![screenshot](documentation/testing/lighthouse/editproduct.png) | Some minor warnings |
+| Profile | ![screenshot](documentation/testing/lighthouse/profilemobile.png) | ![screenshot](documentation/testing/lighthouse/profile.png) | Some minor warnings |
+| Sign up | ![screenshot](documentation/testing/lighthouse/signupmobile.png) | ![screenshot](documentation/testing/lighthouse/signup.png) | Some minor warnings |
+| Log in | ![screenshot](documentation/testing/lighthouse/loginmobile.png) | ![screenshot](documentation/testing/lighthouse/login.png) | Some minor warnings |
+| Search | ![screenshot](documentation/testing/lighthouse/searchmobile.png) | ![screenshot](documentation/testing/lighthouse/search.png) | Some minor warnings |
 
 ## Defensive Programming
 
