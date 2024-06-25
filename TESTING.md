@@ -23,6 +23,20 @@ Some of the pages on this site require a user to be logged-in and authenticated 
 | --- | --- | --- | --- |
 | Cart | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fcart%2F) | ![screenshot](documentation/validation/html/cart.png) | Pass: No errors |
 | Checkout | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fcheckout%2F) | ![screenshot](documentation/validation/html/checkout.png) | Pass: No errors |
+| Checkout success | n/a | ![screenshot](documentation/validation/html/checkoutsuccess.png) | Pass: No errors |
+| Contact | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fcontact%2F) | ![screenshot](documentation/validation/html/contact.png) | Pass: No errors |
+| Contact success | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fcontact%2Fsuccess%2F) | ![screenshot](documentation/validation/html/contactsuccess.png) | Pass: No errors |
+| About | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fabout%2F) | ![screenshot](documentation/validation/html/about.png) | Pass: No errors |
+| Delivery | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fdelivery%2F) | ![screenshot](documentation/validation/html/delivery.png) | Pass: No errors |
+| Index | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2F) | ![screenshot](documentation/validation/html/index.png) | Pass: No errors |
+| Terms & conditions | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fterms%2F) | ![screenshot](documentation/validation/html/terms.png) | Pass: No errors |
+| Products | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fcontact%2Fsuccess%2F) | ![screenshot](documentation/validation/html/products.png) | Pass: No errors |
+| Product detail | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fproducts%2F96%2F) | ![screenshot](documentation/validation/html/productdetail.png) | Pass: No errors |
+| Add product | n/a | ![screenshot](documentation/validation/html/addproduct.png) | Pass: No errors |
+| Edit product | n/a | ![screenshot](documentation/validation/html/editproduct.png) | Pass: No errors |
+| Profile | n/a | ![screenshot](documentation/validation/html/profile.png) | Pass: No errors |
+| Sign up | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Faccounts%2Fsignup%2F) | ![screenshot](documentation/validation/html/signup.png) | Pass: No errors |
+| Log in | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Faccounts%2Flogin%2F) | ![screenshot](documentation/validation/html/login.png) | Pass: No errors |
 
 ### Python
 
