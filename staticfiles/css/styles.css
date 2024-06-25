@@ -684,6 +684,10 @@ footer a:hover {
 }
 
 @media screen and (max-width: 428px) {
+    .hero-image {
+        background-image: url('../images/hero-image-small.png');
+    }
+
     .btn-container {
         margin-top: 12px;
     }
