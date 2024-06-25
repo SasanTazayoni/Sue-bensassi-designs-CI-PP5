@@ -37,6 +37,7 @@ Some of the pages on this site require a user to be logged-in and authenticated 
 | Profile | n/a | ![screenshot](documentation/validation/html/profile.png) | Pass: No errors |
 | Sign up | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Faccounts%2Fsignup%2F) | ![screenshot](documentation/validation/html/signup.png) | Pass: No errors |
 | Log in | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Faccounts%2Flogin%2F) | ![screenshot](documentation/validation/html/login.png) | Pass: No errors |
+| Search | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2F8000-sasantazayo-suebensassi-813vyfvgjj0.ws.codeinstitute-ide.net%2Fproducts%2F%3Fq%3Dbook) | ![screenshot](documentation/validation/html/search.png) | Pass: No errors |
 
 ### Python
 
