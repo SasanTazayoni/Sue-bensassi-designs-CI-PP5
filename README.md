@@ -109,6 +109,7 @@ EPIC 2: Product Exploration
 EPIC 3: Shopping Experience
 
 - Add items to cart - As a registered user I can add items to my cart so that I can conveniently gather desired products in one place while browsing in order to purchase. `(MUST HAVE)`
+- Adjust Quantity of Items in Cart - As a site user I can adjust the quantity of items in my cart so that I can easily increase or decrease the number of items I wish to purchase. `(MUST HAVE)`
 - Remove items from cart - As a registered user I can remove items from my cart so that I can refine my choices and ensure that my final purchase consists only of the items I truly intend to buy. `(MUST HAVE)`
 - View my cart - As a registered user I can view the items in my cart so that I can review my selected products, check quantities and verify prices before proceeding to checkout. `(MUST HAVE)`
 - Checkout - As a site user I can checkout with a card payment so that I can complete my purchase transaction securely and efficiently, providing my payment and shipping information to finalise the order and receive the products I have selected. `(MUST HAVE)`
