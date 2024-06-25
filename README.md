@@ -964,6 +964,7 @@ os.environ.setdefault("SECRET_KEY", "user's own value")
 os.environ.setdefault("STRIPE_PUBLIC_KEY", "user's own value")
 os.environ.setdefault("STRIPE_SECRET_KEY", "user's own value")
 os.environ.setdefault("STRIPE_WH_SECRET", "user's own value")
+os.environ.setdefault("TEMP_EMAIL", "user's own value")
 
 # local environment only (do not include these in production/deployment!)
 os.environ.setdefault("DEBUG", "True")
