@@ -415,9 +415,10 @@ The shopping cart page displays a list of all products in the cart, with each pr
 - Each row includes the product image, the price per unit, a quantity update form with links to either update the quantity or remove the product entirely and the subtotal for the item based on the quantity ordered.
 - At the bottom of the cart, the grand total for all items is displayed, along with buttons to either proceed to checkout or return to the products page.
 - The page also has a scroll to top button.
-
+- An empty shopping cart just shows a picture of an empty trolley.
 - ![screenshot](documentation/features/cart.png)
 - ![screenshot](documentation/features/cartsmall.png)
+- ![screenshot](documentation/features/emptycart.png)
 
 #### Checkout page
 
