@@ -599,6 +599,82 @@ INSTALLED_APPS = [
 
 ![erd](documentation/erd2.png)
 
+```mermaid
+erDiagram
+    ORDER {
+        string order_number
+        string full_name
+        string email
+        string phone_number
+        string postcode
+        string town_or_city
+        string street_address1
+        string street_address2
+        string county
+        datetime date
+        decimal grand_total
+        text original_cart
+        string stripe_pid
+    }
+
+    ORDERLINEITEM {
+        int quantity
+        decimal lineitem_total
+    }
+
+    ENQUIRY {
+        string name
+        string email
+        text message
+        datetime date_sent
+        boolean replied_to
+    }
+
+    NEWSLETTERSUBSCRIPTION {
+        string email
+    }
+
+    CATEGORY {
+        string name
+        string display_name
+    }
+
+    PRODUCT {
+        string name
+        text description
+        decimal price
+        string image
+        int stock
+    }
+
+    FAKEITEM {
+        string name
+    }
+
+    USERPROFILE {
+        string default_phone_number
+        string default_street_address1
+        string default_street_address2
+        string default_town_or_city
+        string default_county
+        string default_postcode
+    }
+
+    USER {
+        string username
+        string email
+        string first_name
+        string last_name
+        string password
+    }
+
+    ORDER }o--|| USERPROFILE : "user_profile"
+    ORDERLINEITEM }o--|| ORDER : "order"
+    ORDERLINEITEM }o--|| PRODUCT : "product"
+    PRODUCT }o--|| CATEGORY : "category"
+    USERPROFILE ||--|| USER : "user"
+```
+
 ## Agile Development Process
 
 ### GitHub Projects
