@@ -230,11 +230,12 @@ Defensive programming was manually tested with the below user acceptance testing
 | As a registered user I can log out of my account so that I can securely end my session and protect my personal information. | ![screenshot](documentation/features/logoutmodal.png) |
 | As a registered user/site admin I can reset my password so that I can regain access to my account in case I forget my password. | ![screenshot](documentation/features/pwresetrequest.png) |
 | As a registered user I can edit my account information so that I can ensure that my profile remains up to date and accurate. | ![screenshot](documentation/features/updateinfo.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/features/feature06.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/features/feature07.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/features/feature08.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/features/feature09.png) |
-| repeat for all remaining user stories | x |
+| As a site user I can see a list of all products so that I can easily browse and explore the full range of available items. | ![screenshot](documentation/features/navbarlarge.png) |
+| As a site user I can see the price of a product clearly so that I can make a decision whether to purchase the item or not. | ![screenshot](documentation/features/productcard.png) |
+| As a site user I can view a product on its own individual page so that see more details about the product. | ![screenshot](documentation/features/productdetaillarge.png) |
+| As a site user I can sort products by category so that I can find specific products based on the category I select. | ![screenshot](documentation/features/productsdropdown.png) |
+| As a site user I can view a list of best-selling items so that I can easily discover popular products that are favoured by other customers, helping me make informed purchasing decisions. | ![screenshot](documentation/features/bestsellershowcase.png) |
+| As a site user I can view the stock count of products so that I can make informed purchasing decisions based on the availability of items. | ![screenshot](documentation/features/productcard.png) |
 
 ## Automated Testing
 
