@@ -779,7 +779,7 @@ email address if they are interested in learning more.
 
 A custom newsletter app was developed for this project, incorporating a NewsletterSubscription model. I also included a form in the site's footer to gather user email addresses.
 
-```
+```python
 class NewsletterSubscription(models.Model):
     email = models.EmailField(
         unique=True, null=False, blank=False
