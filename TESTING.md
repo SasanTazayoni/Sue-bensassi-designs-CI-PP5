@@ -242,7 +242,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | As a site user I can view the items in my cart so that I can review my selected products, check quantities and verify prices before proceeding to checkout. | ![screenshot](documentation/features/cart.png) |
 | As a site user I can checkout with a card payment so that I can complete my purchase transaction securely and efficiently, providing my payment and shipping information to finalise the order and receive the products I have selected. | ![screenshot](documentation/features/checkout.png) |
 | As a site user I can receive an email which confirms my order after purchasing from the store so that I can review the details of my purchase and be reassured that my order was successfully processed. | ![screenshot](documentation/features/orderconfirmation.png) |
-| As a registered user I can access my order history so that I can review past purchases, track the status of my orders and keep a record of my transactions. | ![screenshot](documentation/features/orerhistory.png) |
+| As a registered user I can access my order history so that I can review past purchases, track the status of my orders and keep a record of my transactions. | ![screenshot](documentation/features/orderhistory.png) |
 | As a site user I can use a search bar to search the website so that I can find a specific product. | ![screenshot](documentation/features/searchbar.png) |
 
 ## Automated Testing
