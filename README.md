@@ -972,4 +972,4 @@ On Heroku:
 ### Acknowledgements
 
 - I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for his support throughout the development of this project.
-- I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
+- I would like to thank the [Code Institute](https://codeinstitute.net) tutor team, particularly Sean Murphy and Oisin Tohak, for their assistance with troubleshooting and debugging some project issues.
