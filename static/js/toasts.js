@@ -1,4 +1,5 @@
 /* jshint esversion: 11 */
+/* globals bootstrap */
 
 document.addEventListener('DOMContentLoaded', () => {
     const toastElements = document.querySelectorAll('.toast');

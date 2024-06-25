@@ -7,5 +7,5 @@ btns.forEach(btn => {
         let rect = e.target.getBoundingClientRect();
         let x = e.clientX * 1.5 - rect.left;
         btn.style.setProperty('--x', x + 'deg');
-    })
-})
+    });
+});
