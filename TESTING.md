@@ -21,29 +21,49 @@ Some of the pages on this site require a user to be logged-in and authenticated 
 
 | Page | W3C URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| Cart | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fcart%2F) | ![screenshot](documentation/validation/html/cart.png) | Pass: No errors |
-| Checkout | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fcheckout%2F) | ![screenshot](documentation/validation/html/checkout.png) | Pass: No errors |
-| Checkout success | n/a | ![screenshot](documentation/validation/html/checkoutsuccess.png) | Pass: No errors |
-| Contact | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fcontact%2F) | ![screenshot](documentation/validation/html/contact.png) | Pass: No errors |
-| Contact success | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fcontact%2Fsuccess%2F) | ![screenshot](documentation/validation/html/contactsuccess.png) | Pass: No errors |
-| About | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fabout%2F) | ![screenshot](documentation/validation/html/about.png) | Pass: No errors |
-| Delivery | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fdelivery%2F) | ![screenshot](documentation/validation/html/delivery.png) | Pass: No errors |
-| Index | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2F) | ![screenshot](documentation/validation/html/index.png) | Pass: No errors |
-| Terms & conditions | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fterms%2F) | ![screenshot](documentation/validation/html/terms.png) | Pass: No errors |
-| Products | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fcontact%2Fsuccess%2F) | ![screenshot](documentation/validation/html/products.png) | Pass: No errors |
-| Product detail | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fproducts%2F96%2F) | ![screenshot](documentation/validation/html/productdetail.png) | Pass: No errors |
-| Add product | n/a | ![screenshot](documentation/validation/html/addproduct.png) | Pass: No errors |
-| Edit product | n/a | ![screenshot](documentation/validation/html/editproduct.png) | Pass: No errors |
-| Profile | n/a | ![screenshot](documentation/validation/html/profile.png) | Pass: No errors |
-| Sign up | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Faccounts%2Fsignup%2F) | ![screenshot](documentation/validation/html/signup.png) | Pass: No errors |
-| Log in | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Faccounts%2Flogin%2F) | ![screenshot](documentation/validation/html/login.png) | Pass: No errors |
-| Search | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2F8000-sasantazayo-suebensassi-813vyfvgjj0.ws.codeinstitute-ide.net%2Fproducts%2F%3Fq%3Dbook) | ![screenshot](documentation/validation/html/search.png) | Pass: No errors |
+| Cart | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fcart%2F) | ![screenshot](documentation/testing/validation/html/cart.png) | Pass: No errors |
+| Checkout | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fcheckout%2F) | ![screenshot](documentation/testing/validation/html/checkout.png) | Pass: No errors |
+| Checkout success | n/a | ![screenshot](documentation/testing/validation/html/checkoutsuccess.png) | Pass: No errors |
+| Contact | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fcontact%2F) | ![screenshot](documentation/testing/validation/html/contact.png) | Pass: No errors |
+| Contact success | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fcontact%2Fsuccess%2F) | ![screenshot](documentation/testing/validation/html/contactsuccess.png) | Pass: No errors |
+| About | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fabout%2F) | ![screenshot](documentation/testing/validation/html/about.png) | Pass: No errors |
+| Delivery | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fdelivery%2F) | ![screenshot](documentation/testing/validation/html/delivery.png) | Pass: No errors |
+| Index | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2F) | ![screenshot](documentation/testing/validation/html/index.png) | Pass: No errors |
+| Terms & conditions | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fterms%2F) | ![screenshot](documentation/testing/validation/html/terms.png) | Pass: No errors |
+| Products | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fcontact%2Fsuccess%2F) | ![screenshot](documentation/testing/validation/html/products.png) | Pass: No errors |
+| Product detail | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fproducts%2F96%2F) | ![screenshot](documentation/testing/validation/html/productdetail.png) | Pass: No errors |
+| Add product | n/a | ![screenshot](documentation/testing/validation/html/addproduct.png) | Pass: No errors |
+| Edit product | n/a | ![screenshot](documentation/testing/validation/html/editproduct.png) | Pass: No errors |
+| Profile | n/a | ![screenshot](documentation/testing/validation/html/profile.png) | Pass: No errors |
+| Sign up | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Faccounts%2Fsignup%2F) | ![screenshot](documentation/testing/validation/html/signup.png) | Pass: No errors |
+| Log in | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Faccounts%2Flogin%2F) | ![screenshot](documentation/testing/validation/html/login.png) | Pass: No errors |
+| Search | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2F8000-sasantazayo-suebensassi-813vyfvgjj0.ws.codeinstitute-ide.net%2Fproducts%2F%3Fq%3Dbook) | ![screenshot](documentation/testing/validation/html/search.png) | Pass: No errors |
 
 ### CSS
 
+I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files.
+
 | File | Jigsaw URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| styles.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fstatic%2Fcss%2Fstyles.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot](documentation/validation/css.png) | Pass: No Errors |
+| styles.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fstatic%2Fcss%2Fstyles.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot](documentation/testing/validation/css.png) | Pass: No Errors |
+
+### JavaScript
+
+I have used the recommended [JShint Validator](https://jshint.com) to validate all of my JS files.
+
+| File | Screenshot | Notes |
+| --- | --- | --- |
+| buttons.js | ![screenshot](documentation/testing/validation/buttons.png) | Pass: No Errors |
+| disableSubmit.js | ![screenshot](documentation/testing/validation/disablesubmit.png) | Pass: No Errors |
+| dynamicMargin.js | ![screenshot](documentation/testing/validation/dynamicmargin.png) | Pass: No Errors |
+| logoutModal.js | ![screenshot](documentation/testing/validation/logoutmodal.png) | Pass: No Errors |
+| navbar.js | ![screenshot](documentation/testing/validation/navbar.png) | Pass: No Errors |
+| newsletter.js | ![screenshot](documentation/testing/validation/newsletter.png) | Pass: No Errors |
+| quantityInput.js | ![screenshot](documentation/testing/validation/quantityinput.png) | Pass: No Errors |
+| scrollToTop.js | ![screenshot](documentation/testing/validation/scrolltotop.png) | Pass: No Errors |
+| shoppingCartQuantities.js | ![screenshot](documentation/testing/validation/shoppingcartquantities.png) | Pass: No Errors |
+| stripeElements.js | ![screenshot](documentation/testing/validation/stripeelements.png) | Pass: No Errors |
+| toasts.js | ![screenshot](documentation/testing/validation/toasts.png) | Pass: No Errors |
 
 ### Python
 
@@ -51,42 +71,42 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 | Directory | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| cart | contexts.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/cart/contexts.py) | ![screenshot](documentation/validation/python/cart/contexts.png) | Pass: No Errors |
-| cart | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/cart/urls.py) | ![screenshot](documentation/validation/python/cart/urls.png) | Pass: No Errors |
-| cart | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/cart/views.py) | ![screenshot](documentation/validation/python/cart/views.png) | Pass: No Errors |
-| checkout | admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/checkout/admin.py) | ![screenshot](documentation/validation/python/checkout/admin.png) | Pass: No Errors |
-| checkout | forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/checkout/forms.py) | ![screenshot](documentation/validation/python/checkout/forms.png) | Pass: No Errors |
-| checkout | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/checkout/models.py) | ![screenshot](documentation/validation/python/checkout/models.png) | Pass: No Errors |
-| checkout | signals.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/checkout/signals.py) | ![screenshot](documentation/validation/python/checkout/signals.png) | Pass: No Errors |
-| checkout | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/checkout/urls.py) | ![screenshot](documentation/validation/python/checkout/urls.png) | Pass: No Errors |
-| checkout | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/checkout/views.py) | ![screenshot](documentation/validation/python/checkout/views.png) | Pass: No Errors |
-| checkout | webhook_handler.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/checkout/webhook_handler.py) | ![screenshot](documentation/validation/python/checkout/webhook_handler.png) | Pass: No Errors |
-| checkout | webhooks.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/checkout/webhooks.py) | ![screenshot](documentation/validation/python/checkout/webhooks.png) | Pass: No Errors |
-| contact | admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/contact/admin.py) | ![screenshot](documentation/validation/python/contact/admin.png) | Pass: No Errors |
-| contact | forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/contact/forms.py) | ![screenshot](documentation/validation/python/contact/forms.png) | Pass: No Errors |
-| contact | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/contact/models.py) | ![screenshot](documentation/validation/python/contact/models.png) | Pass: No Errors |
-| contact | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/contact/urls.py) | ![screenshot](documentation/validation/python/contact/urls.png) | Pass: No Errors |
-| contact | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/contact/views.py) | ![screenshot](documentation/validation/python/contact/views.png) | Pass: No Errors |
-| core | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/core/urls.py) | ![screenshot](documentation/validation/python/core/urls.png) | Pass: No Errors |
-| core | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/core/views.py) | ![screenshot](documentation/validation/python/core/views.png) | Pass: No Errors |
-| newsletter | admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/newsletter/admin.py) | ![screenshot](documentation/validation/python/newsletter/admin.png) | Pass: No Errors |
-| newsletter | forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/newsletter/forms.py) | ![screenshot](documentation/validation/python/newsletter/forms.png) | Pass: No Errors |
-| newsletter | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/newsletter/models.py) | ![screenshot](documentation/validation/python/newsletter/models.png) | Pass: No Errors |
-| newsletter | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/newsletter/urls.py) | ![screenshot](documentation/validation/python/newsletter/urls.png) | Pass: No Errors |
-| newsletter | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/newsletter/views.py) | ![screenshot](documentation/validation/python/newsletter/views.png) | Pass: No Errors |
-| products | admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/products/admin.py) | ![screenshot](documentation/validation/python/products/admin.png) | Pass: No Errors |
-| products | forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/products/forms.py) | ![screenshot](documentation/validation/python/products/forms.png) | Pass: No Errors |
-| products | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/products/models.py) | ![screenshot](documentation/validation/python/products/models.png) | Pass: No Errors |
-| products | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/products/urls.py) | ![screenshot](documentation/validation/python/products/urls.png) | Pass: No Errors |
-| products | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/products/views.py) | ![screenshot](documentation/validation/python/products/views.png) | Pass: No Errors |
-| products | widgets.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/products/widgets.py) | ![screenshot](documentation/validation/python/products/widgets.png) | Pass: No Errors |
-| profiles | forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/profiles/forms.py) | ![screenshot](documentation/validation/python/profiles/forms.png) | Pass: No Errors |
-| profiles | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/profiles/models.py) | ![screenshot](documentation/validation/python/profiles/models.png) | Pass: No Errors |
-| profiles | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/profiles/urls.py) | ![screenshot](documentation/validation/python/profiles/urls.png) | Pass: No Errors |
-| profiles | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/profiles/views.py) | ![screenshot](documentation/validation/python/profiles/views.png) | Pass: No Errors |
-| sue_bensassi_designs | settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/sue_bensassi_designs/settings.py) | ![screenshot](documentation/validation/python/sue_bensassi_designs/settings.png) | Pass: No Errors |
-| sue_bensassi_designs | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/sue_bensassi_designs/urls.py) | ![screenshot](documentation/validation/python/sue_bensassi_designs/urls.png) | Pass: No Errors |
-| sue_bensassi_designs | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/sue_bensassi_designs/views.py) | ![screenshot](documentation/validation/python/sue_bensassi_designs/views.png) | Pass: No Errors |
+| cart | contexts.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/cart/contexts.py) | ![screenshot](documentation/testing/validation/python/cart/contexts.png) | Pass: No Errors |
+| cart | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/cart/urls.py) | ![screenshot](documentation/testing/validation/python/cart/urls.png) | Pass: No Errors |
+| cart | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/cart/views.py) | ![screenshot](documentation/testing/validation/python/cart/views.png) | Pass: No Errors |
+| checkout | admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/checkout/admin.py) | ![screenshot](documentation/testing/validation/python/checkout/admin.png) | Pass: No Errors |
+| checkout | forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/checkout/forms.py) | ![screenshot](documentation/testing/validation/python/checkout/forms.png) | Pass: No Errors |
+| checkout | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/checkout/models.py) | ![screenshot](documentation/testing/validation/python/checkout/models.png) | Pass: No Errors |
+| checkout | signals.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/checkout/signals.py) | ![screenshot](documentation/testing/validation/python/checkout/signals.png) | Pass: No Errors |
+| checkout | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/checkout/urls.py) | ![screenshot](documentation/testing/validation/python/checkout/urls.png) | Pass: No Errors |
+| checkout | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/checkout/views.py) | ![screenshot](documentation/testing/validation/python/checkout/views.png) | Pass: No Errors |
+| checkout | webhook_handler.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/checkout/webhook_handler.py) | ![screenshot](documentation/testing/validation/python/checkout/webhook_handler.png) | Pass: No Errors |
+| checkout | webhooks.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/checkout/webhooks.py) | ![screenshot](documentation/testing/validation/python/checkout/webhooks.png) | Pass: No Errors |
+| contact | admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/contact/admin.py) | ![screenshot](documentation/testing/validation/python/contact/admin.png) | Pass: No Errors |
+| contact | forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/contact/forms.py) | ![screenshot](documentation/testing/validation/python/contact/forms.png) | Pass: No Errors |
+| contact | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/contact/models.py) | ![screenshot](documentation/testing/validation/python/contact/models.png) | Pass: No Errors |
+| contact | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/contact/urls.py) | ![screenshot](documentation/testing/validation/python/contact/urls.png) | Pass: No Errors |
+| contact | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/contact/views.py) | ![screenshot](documentation/testing/validation/python/contact/views.png) | Pass: No Errors |
+| core | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/core/urls.py) | ![screenshot](documentation/testing/validation/python/core/urls.png) | Pass: No Errors |
+| core | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/core/views.py) | ![screenshot](documentation/testing/validation/python/core/views.png) | Pass: No Errors |
+| newsletter | admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/newsletter/admin.py) | ![screenshot](documentation/testing/validation/python/newsletter/admin.png) | Pass: No Errors |
+| newsletter | forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/newsletter/forms.py) | ![screenshot](documentation/testing/validation/python/newsletter/forms.png) | Pass: No Errors |
+| newsletter | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/newsletter/models.py) | ![screenshot](documentation/testing/validation/python/newsletter/models.png) | Pass: No Errors |
+| newsletter | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/newsletter/urls.py) | ![screenshot](documentation/testing/validation/python/newsletter/urls.png) | Pass: No Errors |
+| newsletter | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/newsletter/views.py) | ![screenshot](documentation/testing/validation/python/newsletter/views.png) | Pass: No Errors |
+| products | admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/products/admin.py) | ![screenshot](documentation/testing/validation/python/products/admin.png) | Pass: No Errors |
+| products | forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/products/forms.py) | ![screenshot](documentation/testing/validation/python/products/forms.png) | Pass: No Errors |
+| products | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/products/models.py) | ![screenshot](documentation/testing/validation/python/products/models.png) | Pass: No Errors |
+| products | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/products/urls.py) | ![screenshot](documentation/testing/validation/python/products/urls.png) | Pass: No Errors |
+| products | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/products/views.py) | ![screenshot](documentation/testing/validation/python/products/views.png) | Pass: No Errors |
+| products | widgets.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/products/widgets.py) | ![screenshot](documentation/testing/validation/python/products/widgets.png) | Pass: No Errors |
+| profiles | forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/profiles/forms.py) | ![screenshot](documentation/testing/validation/python/profiles/forms.png) | Pass: No Errors |
+| profiles | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/profiles/models.py) | ![screenshot](documentation/testing/validation/python/profiles/models.png) | Pass: No Errors |
+| profiles | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/profiles/urls.py) | ![screenshot](documentation/testing/validation/python/profiles/urls.png) | Pass: No Errors |
+| profiles | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/profiles/views.py) | ![screenshot](documentation/testing/validation/python/profiles/views.png) | Pass: No Errors |
+| sue_bensassi_designs | settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/sue_bensassi_designs/settings.py) | ![screenshot](documentation/testing/validation/python/sue_bensassi_designs/settings.png) | Pass: No Errors |
+| sue_bensassi_designs | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/sue_bensassi_designs/urls.py) | ![screenshot](documentation/testing/validation/python/sue_bensassi_designs/urls.png) | Pass: No Errors |
+| sue_bensassi_designs | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/main/sue_bensassi_designs/views.py) | ![screenshot](documentation/testing/validation/python/sue_bensassi_designs/views.png) | Pass: No Errors |
 
 ## Browser Compatibility
 
