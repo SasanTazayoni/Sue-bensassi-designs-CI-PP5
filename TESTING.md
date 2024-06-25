@@ -53,17 +53,17 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 
 | File | Screenshot | Notes |
 | --- | --- | --- |
-| buttons.js | ![screenshot](documentation/testing/validation/buttons.png) | Pass: No Errors |
-| disableSubmit.js | ![screenshot](documentation/testing/validation/disablesubmit.png) | Pass: No Errors |
-| dynamicMargin.js | ![screenshot](documentation/testing/validation/dynamicmargin.png) | Pass: No Errors |
-| logoutModal.js | ![screenshot](documentation/testing/validation/logoutmodal.png) | Pass: No Errors |
-| navbar.js | ![screenshot](documentation/testing/validation/navbar.png) | Pass: No Errors |
-| newsletter.js | ![screenshot](documentation/testing/validation/newsletter.png) | Pass: No Errors |
-| quantityInput.js | ![screenshot](documentation/testing/validation/quantityinput.png) | Pass: No Errors |
-| scrollToTop.js | ![screenshot](documentation/testing/validation/scrolltotop.png) | Pass: No Errors |
-| shoppingCartQuantities.js | ![screenshot](documentation/testing/validation/shoppingcartquantities.png) | Pass: No Errors |
-| stripeElements.js | ![screenshot](documentation/testing/validation/stripeelements.png) | Undefined Stripe variable |
-| toasts.js | ![screenshot](documentation/testing/validation/toasts.png) | Pass: No Errors |
+| buttons.js | ![screenshot](documentation/testing/validation/javascript/buttons.png) | Pass: No Errors |
+| disableSubmit.js | ![screenshot](documentation/testing/validation/javascript/disablesubmit.png) | Pass: No Errors |
+| dynamicMargin.js | ![screenshot](documentation/testing/validation/javascript/dynamicmargin.png) | Pass: No Errors |
+| logoutModal.js | ![screenshot](documentation/testing/validation/javascript/logoutmodal.png) | Pass: No Errors |
+| navbar.js | ![screenshot](documentation/testing/validation/javascript/navbar.png) | Pass: No Errors |
+| newsletter.js | ![screenshot](documentation/testing/validation/javascript/newsletter.png) | Pass: No Errors |
+| quantityInput.js | ![screenshot](documentation/testing/validation/javascript/quantityinput.png) | Pass: No Errors |
+| scrollToTop.js | ![screenshot](documentation/testing/validation/javascript/scrolltotop.png) | Pass: No Errors |
+| shoppingCartQuantities.js | ![screenshot](documentation/testing/validation/javascript/shoppingcartquantities.png) | Pass: No Errors |
+| stripeElements.js | ![screenshot](documentation/testing/validation/javascript/stripeelements.png) | Undefined Stripe variable |
+| toasts.js | ![screenshot](documentation/testing/validation/javascript/toasts.png) | Pass: No Errors |
 
 ### Python
 
