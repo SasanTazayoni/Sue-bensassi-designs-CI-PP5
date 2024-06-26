@@ -269,6 +269,16 @@ Defensive programming was manually tested with the below user acceptance testing
 | | As a new site user I can comprehend the website's purpose at a glance so that I can determine if the platform aligns with my needs and interests. | ![screenshot](documentation/features/hero.png) |
 | | As a site user I can navigate through the interface effortlessly so that I can quickly and easily find the information I need. | ![screenshot](documentation/features/productsdropdown.png) |
 
+The following are user stories I wasn't able to implement and have labeled as Wont Have in my MoSCoW prioritisation:
+
+| User Story | Screenshot |
+| As a site user I can filter products by price so that I can easily find items that fit within my budget. | n/a |
+| As a site user I can receive notifications so that I am promptly informed about any special offers or discounts available on the website. | n/a |
+| As a site user I can view product reviews so that I can make informed purchasing decisions by considering the experiences and opinions of other customers. | n/a |
+| As a registered user I can submit a review for a product that I have previously bought so that I can share my experiences and opinions with other users. | n/a |
+| As a registered user I can edit my review on a product so that I can update or improve the information I provided based on further experiences with the product. | n/a |
+| As a registered user I can delete my review on a product so that I can remove outdated or inaccurate feedback. | n/a |
+
 ## Automated Testing
 
 I have conducted a series of automated tests on my application.
