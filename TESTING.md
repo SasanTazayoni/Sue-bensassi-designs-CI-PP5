@@ -413,7 +413,7 @@ Below are the results from the various apps on my application that I've tested:
 | Contact | 97% | ![screenshot](documentation/testing/contact-coverage.png) |
 | Core | 100% | ![screenshot](documentation/testing/core-coverage.png) |
 | Newsletter | 93% | ![screenshot](documentation/testing/newsletter-coverage.png) |
-| Products | 93%y | ![screenshot](documentation/testing/products-coverage.png) |
+| Products | 93% | ![screenshot](documentation/testing/products-coverage.png) |
 | Profiles | 94% | ![screenshot](documentation/testing/profiles-coverage.png) |
 
 #### Unit Test Issues
