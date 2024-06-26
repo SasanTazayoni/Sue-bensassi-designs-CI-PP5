@@ -409,12 +409,12 @@ Below are the results from the various apps on my application that I've tested:
 | App | Coverage | Screenshot |
 | --- | --- | --- |
 | Cart | 95% | ![screenshot](documentation/testing/cart-coverage.png) |
-| Checkout | test_models.py | 51% | ![screenshot](documentation/testing/checkout-coverage.png) |
-| Contact | test_urls.py | 97% | ![screenshot](documentation/testing/contact-coverage.png) |
-| Core | test_views.py | 100% | ![screenshot](documentation/testing/core-coverage.png) |
-| Newsletter | test_forms.py | 93% | ![screenshot](documentation/testing/newsletter-coverage.png) |
-| Products | test_models.py | 93% | ![screenshot](documentation/testing/products-coverage.png) |
-| Profiles | test_urls.py | 94% | ![screenshot](documentation/testing/profiles-coverage.png) |
+| Checkout | 51% | ![screenshot](documentation/testing/checkout-coverage.png) |
+| Contact | 97% | ![screenshot](documentation/testing/contact-coverage.png) |
+| Core | 100% | ![screenshot](documentation/testing/core-coverage.png) |
+| Newsletter | 93% | ![screenshot](documentation/testing/newsletter-coverage.png) |
+| Products | 93%y | ![screenshot](documentation/testing/products-coverage.png) |
+| Profiles | 94% | ![screenshot](documentation/testing/profiles-coverage.png) |
 
 #### Unit Test Issues
 
