@@ -407,7 +407,7 @@ Here are the results my unit tests:
 Below are the results from the various apps on my application that I've tested:
 
 | App | Coverage | Screenshot |
-| --- | --- | --- | --- |
+| --- | --- | --- |
 | Cart | 95% | ![screenshot](documentation/testing/cart-coverage.png) |
 | Checkout | test_models.py | 51% | ![screenshot](documentation/testing/checkout-coverage.png) |
 | Contact | test_urls.py | 97% | ![screenshot](documentation/testing/contact-coverage.png) |
