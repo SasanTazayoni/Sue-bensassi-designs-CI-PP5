@@ -33,20 +33,20 @@ def add_to_cart(request, item_id):
             )
         else:
             messages.error(
-                request, f'Error: {product.name} has only {product.stock} \
-                units left. You currently have {cart[item_id]} in your cart.'
+                request, f'Error: {product.name} has only {product.stock} '
+                         f'units left. You currently have {cart[item_id]}'
+                         f'in your cart.'
             )
     else:
         if quantity <= product.stock:
             cart[item_id] = quantity
             messages.info(
-                request, f'{quantity} {product.name} added to your \
-                    cart.'
+                request, f'{quantity} {product.name} added to your cart.'
             )
         else:
             messages.error(
-                request, f'Error: {product.name} has only {product.stock} \
-                    units left.'
+                request, f'Error: {product.name} has only {product.stock} '
+                         f'units left.'
             )
 
     request.session['cart'] = cart
@@ -74,9 +74,10 @@ def adjust_cart(request, item_id):
                 request, f'{product.name} quantity updated to {quantity}.'
             )
         else:
+            cart[item_id] = product.stock
             messages.error(
-                request, f'Error: {product.name} has only \
-                    {product.stock} units left.'
+                request,
+                f'Error: {product.name} has only {product.stock} units left.'
             )
     else:
         messages.error(request, 'Quantity must be greater than zero.')
