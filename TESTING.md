@@ -257,6 +257,17 @@ Defensive programming was manually tested with the below user acceptance testing
 | | As a site user I can access delivery information so that I can understand the shipping options, delivery times and any associated costs, enabling me to plan my purchases accordingly and ensure a smooth and timely delivery of my orders. | ![screenshot](documentation/features/delivery.png) |
 | | As a site user I can view the terms and conditions so that I can understand the rules, regulations, and agreements governing the use of the platform, ensuring transparency and clarity in my interactions with the website. | ![screenshot](documentation/features/terms.png) |
 | | As a site user I can easily find and access the store owner's contact information so that I can get in touch for inquiries or assistance. | ![screenshot](documentation/features/contact.png) |
+| EPIC 6: Marketing and Engagement | | |
+| | As a site user I can sign up for the site's mailing list so that I can receive special offers and updates in my inbox. | ![screenshot](documentation/features/newslettersuccess.png) |
+| | As a site admin I can view my mailing list so that I can send special offers or news updates about my products to my subscribers. | ![screenshot](documentation/features/mailinglist.png) |
+| | As a site admin I can a comprehensive list of customer enquiries so that efficiently address each one and manage my responses accordingly. | ![screenshot](documentation/features/contactadmin.png) |
+| | As a site admin I can share the business on Facebook so that I can increase visibility and reach for the platform, attract new users and engage with existing ones on a popular social media platform, ultimately driving traffic to the site and potentially boosting sales and brand recognition. | ![screenshot](documentation/features/mockup-facebook.png) |
+| | As a site admin I can use specific keywords on site pages so that I maximise the probability of new customers locating the store on a Google search. | ![screenshot](documentation/features/keywords.png) |
+| EPIC 7: Additional Features | | |
+| | As a site user I can see humorous fake items on the 404 error page so that I can enjoy a playful experience when encountering page errors. | ![screenshot](documentation/features/error404.png) |
+| EPIC 8: User Experience and Interface | | |
+| | As a new site user I can comprehend the website's purpose at a glance so that I can determine if the platform aligns with my needs and interests. | ![screenshot](documentation/features/hero.png) |
+| | As a site user I can navigate through the interface effortlessly so that I can quickly and easily find the information I need. | ![screenshot](documentation/features/productsdropdown.png) |
 
 ## Automated Testing
 
