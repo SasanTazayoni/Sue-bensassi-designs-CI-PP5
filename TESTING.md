@@ -372,6 +372,7 @@ Defensive programming was manually tested with the below user acceptance testing
 The following are user stories I wasn't able to implement and have labeled as Wont Have in my MoSCoW prioritisation:
 
 | User Story | Screenshot |
+| --- | --- |
 | As a site user I can filter products by price so that I can easily find items that fit within my budget. | n/a |
 | As a site user I can receive notifications so that I am promptly informed about any special offers or discounts available on the website. | n/a |
 | As a site user I can view product reviews so that I can make informed purchasing decisions by considering the experiences and opinions of other customers. | n/a |
