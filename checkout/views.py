@@ -30,8 +30,11 @@ def cache_checkout_data(request):
         })
         return HttpResponse(status=200)
     except Exception as e:
-        messages.error(request, 'Sorry, your payment cannot be \
-            processed right now. Please try again later.')
+        messages.error(
+            request, 
+            f'Sorry, your payment cannot be processed right now.'
+            f'Please try again later.'
+        )
         return HttpResponse(content=e, status=400)
 
 
@@ -73,9 +76,10 @@ def checkout(request):
                     )
                     order_line_item.save()
                 except Product.DoesNotExist:
-                    messages.error(request, (
-                        'One of the products in your cart was not found \
-                            in our database. Please call us for assistance!')
+                    messages.error(
+                        request,
+                        f'One of the products in your cart was not found'
+                        f'in our database. Please call us for assistance!'
                     )
                     order.delete()
                     return redirect(reverse('view_cart'))
@@ -84,8 +88,11 @@ def checkout(request):
             return redirect(reverse(
                 'checkout_success', args=[order.order_number]))
         else:
-            messages.error(request, 'There was an error with your form. \
-                Please double check your information.')
+            messages.error(
+                request,
+                f'There was an error with your form. Please double check'
+                f'your information.'
+            )
 
     else:
         cart = request.session.get('cart', {})
@@ -125,8 +132,11 @@ def checkout(request):
             order_form = OrderForm()
 
     if not stripe_public_key:
-        messages.warning(request, 'Stripe public key is missing. \
-            Did you forget to set it in your environment?')
+        messages.warning(
+            request,
+            f'Stripe public key is missing. Did you forget to set it'
+            f'in your environment?'
+        )
 
     template = 'checkout/checkout.html'
 
@@ -163,9 +173,11 @@ def checkout_success(request, order_number):
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
-    messages.success(request, f'Order successfully processed! \
-        Your order number is {order_number}. A confirmation \
-        email will be sent to {order.email}.')
+    messages.success(
+        request,
+        f'Order successfully processed! Your order number is {order_number}.'
+        f'A confirmation email will be sent to {order.email}.'
+    )
 
     if 'cart' in request.session:
         del request.session['cart']
