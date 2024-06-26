@@ -244,6 +244,10 @@ Defensive programming was manually tested with the below user acceptance testing
 | As a site user I can receive an email which confirms my order after purchasing from the store so that I can review the details of my purchase and be reassured that my order was successfully processed. | ![screenshot](documentation/features/orderconfirmation.png) |
 | As a registered user I can access my order history so that I can review past purchases, track the status of my orders and keep a record of my transactions. | ![screenshot](documentation/features/orderhistory.png) |
 | As a site user I can use a search bar to search the website so that I can find a specific product. | ![screenshot](documentation/features/searchbar.png) |
+| As a site admin I can set the stock count for each product so that I can accurately manage inventory levels, prevent overselling or stockouts and ensure that site users have access to up-to-date information on product availability. | ![screenshot](documentation/features/stockmanage.png) |
+| As a site admin I can add products to the store so that I can expand the range of available items and keep the product catalogue updated. | ![screenshot](documentation/features/addproductform.png) |
+| As a site admin I can edit the details of a specific product so that I can keep product information accurate and up to date. | ![screenshot](documentation/features/editproductform.png) |
+| As a site admin I can remove products from the store so that I can manage inventory effectively, removing discontinued or outdated items. | ![screenshot](documentation/features/deletemodal.png) |
 
 ## Automated Testing
 
