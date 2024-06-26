@@ -223,31 +223,40 @@ Defensive programming was manually tested with the below user acceptance testing
 
 ## User Story Testing
 
-| User Story | Screenshot |
-| --- | --- |
-| As a new site user I can register and establish a personal account on the site so that I can make purchases using my own credentials. | ![screenshot](documentation/features/register.png) |
-| As a registered user I can log in to my account so that I can review products that I have purchased, view my order history and order products using my credentials. | ![screenshot](documentation/features/login.png) |
-| As a registered user I can log out of my account so that I can securely end my session and protect my personal information. | ![screenshot](documentation/features/logoutmodal.png) |
-| As a registered user/site admin I can reset my password so that I can regain access to my account in case I forget my password. | ![screenshot](documentation/features/pwresetrequest.png) |
-| As a registered user I can edit my account information so that I can ensure that my profile remains up to date and accurate. | ![screenshot](documentation/features/updateinfo.png) |
-| As a site user I can see a list of all products so that I can easily browse and explore the full range of available items. | ![screenshot](documentation/features/navbarlarge.png) |
-| As a site user I can see the price of a product clearly so that I can make a decision whether to purchase the item or not. | ![screenshot](documentation/features/productcard.png) |
-| As a site user I can view a product on its own individual page so that see more details about the product. | ![screenshot](documentation/features/productdetaillarge.png) |
-| As a site user I can sort products by category so that I can find specific products based on the category I select. | ![screenshot](documentation/features/productsdropdown.png) |
-| As a site user I can view a list of best-selling items so that I can easily discover popular products that are favoured by other customers, helping me make informed purchasing decisions. | ![screenshot](documentation/features/bestsellershowcase.png) |
-| As a site user I can view the stock count of products so that I can make informed purchasing decisions based on the availability of items. | ![screenshot](documentation/features/productcard.png) |
-| As a site user I can add items to my cart so that I can conveniently gather desired products in one place while browsing in order to purchase. | ![screenshot](documentation/features/addtocart.png) |
-| As a site user I can adjust the quantity of items in my cart so that I can easily increase or decrease the number of items I wish to purchase. | ![screenshot](documentation/features/quantity.png) |
-| As a site user I can remove items from my cart so that I can refine my choices and ensure that my final purchase consists only of the items I truly intend to buy. | ![screenshot](documentation/features/removefromcart.png) |
-| As a site user I can view the items in my cart so that I can review my selected products, check quantities and verify prices before proceeding to checkout. | ![screenshot](documentation/features/cart.png) |
-| As a site user I can checkout with a card payment so that I can complete my purchase transaction securely and efficiently, providing my payment and shipping information to finalise the order and receive the products I have selected. | ![screenshot](documentation/features/checkout.png) |
-| As a site user I can receive an email which confirms my order after purchasing from the store so that I can review the details of my purchase and be reassured that my order was successfully processed. | ![screenshot](documentation/features/orderconfirmation.png) |
-| As a registered user I can access my order history so that I can review past purchases, track the status of my orders and keep a record of my transactions. | ![screenshot](documentation/features/orderhistory.png) |
-| As a site user I can use a search bar to search the website so that I can find a specific product. | ![screenshot](documentation/features/searchbar.png) |
-| As a site admin I can set the stock count for each product so that I can accurately manage inventory levels, prevent overselling or stockouts and ensure that site users have access to up-to-date information on product availability. | ![screenshot](documentation/features/stockmanage.png) |
-| As a site admin I can add products to the store so that I can expand the range of available items and keep the product catalogue updated. | ![screenshot](documentation/features/addproductform.png) |
-| As a site admin I can edit the details of a specific product so that I can keep product information accurate and up to date. | ![screenshot](documentation/features/editproductform.png) |
-| As a site admin I can remove products from the store so that I can manage inventory effectively, removing discontinued or outdated items. | ![screenshot](documentation/features/deletemodal.png) |
+| Epic | User Story | Screenshot |
+| --- | --- | --- |
+| EPIC 1: User Account Management | | |
+| | As a new site user I can register and establish a personal account on the site so that I can make purchases using my own credentials. | ![screenshot](documentation/features/register.png) |
+| | As a registered user I can log in to my account so that I can review products that I have purchased, view my order history and order products using my credentials. | ![screenshot](documentation/features/login.png) |
+| | As a registered user I can log out of my account so that I can securely end my session and protect my personal information. | ![screenshot](documentation/features/logoutmodal.png) |
+| | As a registered user/site admin I can reset my password so that I can regain access to my account in case I forget my password. | ![screenshot](documentation/features/pwresetrequest.png) |
+| | As a registered user I can edit my account information so that I can ensure that my profile remains up to date and accurate. | ![screenshot](documentation/features/updateinfo.png) |
+| EPIC 2: Product Exploration | | |
+| | As a site user I can see a list of all products so that I can easily browse and explore the full range of available items. | ![screenshot](documentation/features/navbarlarge.png) |
+| | As a site user I can see the price of a product clearly so that I can make a decision whether to purchase the item or not. | ![screenshot](documentation/features/productcard.png) |
+| | As a site user I can view a product on its own individual page so that see more details about the product. | ![screenshot](documentation/features/productdetaillarge.png) |
+| | As a site user I can sort products by category so that I can find specific products based on the category I select. | ![screenshot](documentation/features/productsdropdown.png) |
+| | As a site user I can view a list of best-selling items so that I can easily discover popular products that are favoured by other customers, helping me make informed purchasing decisions. | ![screenshot](documentation/features/bestsellershowcase.png) |
+| | As a site user I can view the stock count of products so that I can make informed purchasing decisions based on the availability of items. | ![screenshot](documentation/features/productcard.png) |
+| EPIC 3: Shopping Experience | | |
+| | As a site user I can add items to my cart so that I can conveniently gather desired products in one place while browsing in order to purchase. | ![screenshot](documentation/features/addtocart.png) |
+| | As a site user I can adjust the quantity of items in my cart so that I can easily increase or decrease the number of items I wish to purchase. | ![screenshot](documentation/features/quantity.png) |
+| | As a site user I can remove items from my cart so that I can refine my choices and ensure that my final purchase consists only of the items I truly intend to buy. | ![screenshot](documentation/features/removefromcart.png) |
+| | As a site user I can view the items in my cart so that I can review my selected products, check quantities and verify prices before proceeding to checkout. | ![screenshot](documentation/features/cart.png) |
+| | As a site user I can checkout with a card payment so that I can complete my purchase transaction securely and efficiently, providing my payment and shipping information to finalise the order and receive the products I have selected. | ![screenshot](documentation/features/checkout.png) |
+| | As a site user I can receive an email which confirms my order after purchasing from the store so that I can review the details of my purchase and be reassured that my order was successfully processed. | ![screenshot](documentation/features/orderconfirmation.png) |
+| | As a registered user I can access my order history so that I can review past purchases, track the status of my orders and keep a record of my transactions. | ![screenshot](documentation/features/orderhistory.png) |
+| | As a site user I can use a search bar to search the website so that I can find a specific product. | ![screenshot](documentation/features/searchbar.png) |
+| EPIC 4: Product Management (Admin) | | |
+| | As a site admin I can set the stock count for each product so that I can accurately manage inventory levels, prevent overselling or stockouts and ensure that site users have access to up-to-date information on product availability. | ![screenshot](documentation/features/stockmanage.png) |
+| | As a site admin I can add products to the store so that I can expand the range of available items and keep the product catalogue updated. | ![screenshot](documentation/features/addproductform.png) |
+| | As a site admin I can edit the details of a specific product so that I can keep product information accurate and up to date. | ![screenshot](documentation/features/editproductform.png) |
+| | As a site admin I can remove products from the store so that I can manage inventory effectively, removing discontinued or outdated items. | ![screenshot](documentation/features/deletemodal.png) |
+| EPIC 5: Site Information | | |
+| | As a new site user I can learn about the background of the merchant so that I can gain insight into the company's values and expertise, fostering trust and confidence in their products or services. | ![screenshot](documentation/features/about.png) |
+| | As a site user I can access delivery information so that I can understand the shipping options, delivery times and any associated costs, enabling me to plan my purchases accordingly and ensure a smooth and timely delivery of my orders. | ![screenshot](documentation/features/delivery.png) |
+| | As a site user I can view the terms and conditions so that I can understand the rules, regulations, and agreements governing the use of the platform, ensuring transparency and clarity in my interactions with the website. | ![screenshot](documentation/features/terms.png) |
+| | As a site user I can easily find and access the store owner's contact information so that I can get in touch for inquiries or assistance. | ![screenshot](documentation/features/contact.png) |
 
 ## Automated Testing
 
