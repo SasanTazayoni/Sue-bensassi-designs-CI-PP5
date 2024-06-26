@@ -313,7 +313,7 @@ class TestEditProductView(TestCase):
 
     def test_edit_product_view_post_success(self):
         """
-        Test POST request to edit_product view with valid data.
+        Test POST request to edit product view with valid data.
         """
         url = reverse('edit_product', args=[self.product_id])
         post_data = {
@@ -342,7 +342,7 @@ class TestEditProductView(TestCase):
 
     def test_edit_product_view_post_fail_invalid_form(self):
         """
-        Test POST request to edit_product view with invalid data.
+        Test POST request to edit product view with invalid data.
         """
         url = reverse('edit_product', args=[self.product_id])
         post_data = {
@@ -375,7 +375,7 @@ class TestEditProductView(TestCase):
 
     def test_edit_product_view_get_unauthenticated(self):
         """
-        Test GET request to edit_product view when user is not authenticated.
+        Test GET request to edit product view when user is not authenticated.
         """
         self.client.logout()
         url = reverse('edit_product', args=[self.product_id])
@@ -406,7 +406,7 @@ class TestDeleteProductView(TestCase):
 
     def test_delete_product_superuser(self):
         """
-        Test DELETE request to delete_product view as a superuser.
+        Test DELETE request to delete product view as a superuser.
         """
         url = reverse('delete_product', args=[self.product.id])
         response = self.client.delete(url)
