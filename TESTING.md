@@ -173,53 +173,153 @@ Defensive programming was manually tested with the below user acceptance testing
 
 | Page | User Action | Expected Result | Pass/Fail | Comments |
 | --- | --- | --- | --- | --- |
-| All pages | | | | |
-| | Click on Logo | Redirection to home page | Pass | |
+| All pages - Navbar | | | | |
+| | Click on Logo | Redirection to Home page | Pass | |
 | | Enter word into search bar that appears in at least one product's name or description and search | Redirection to Products page | Pass | Products filtered to only show products containing search term |
 | | Enter word into search bar that doesn't appear in any product's name or description and search | Redirection to Products page | Pass | Products page is empty and shows user that 0 products were returned |
 | | Enter nothing into search bar and search | Redirection to Products page | Pass | Error message shows and lets user know they entered nothing into the search bar and all products are displayed |
 | | Click off of a toast | Dismisses the toast | Pass | |
 | | Click on the home icon | Redirection to Home page | Pass | |
 | | Click on the user icon (authenticated user) | Dropdown menu appears | Pass | Dropdown menu has a "Logout" link and a "My profile" link, super users also have the "Add product" link |
-| | Click on "Add product" in the user icon dropdown menu as a super user | Redirection to Add product page | Pass | |
+| | Click on "Add product" in the user icon dropdown menu (super user) | Redirection to Add product page | Pass | |
 | | Click on "My profile" in the user icon the dropdown menu | Redirection to profile page | Pass | |
 | | Click on "Logout" in the user icon the dropdown menu | Opens a modal | Pass | The modal is to confirm the log out |
-| | Click "Yes" after opening the log out modal (above) | Closes the modal, logs the user out and redirects to the home page | Pass | |
+| | Click "Yes" after opening the log out modal (above) | Closes the modal, logs the user out and redirects to the Home page | Pass | |
 | | Click "No" after opening the log out modal (above) | Dismisses the modal | Pass | |
 | | Click on the user icon (non-authenticated user) | Dropdown menu appears | Pass | Dropdown menu has a "Register" link and a "Login" link |
 | | Click on "Register" in the user icon the dropdown menu | Redirects to registration page | Pass | |
 | | Click on "Login" in the user icon the dropdown menu | Redirects to login page | Pass | |
 | | Click on cart icon | Redirects to cart page | Pass | |
 | | Click on "All products" link | Dropdown menu appears | Pass | Dropdown menu has the links: "By Price", "By Name", "By Category" and "All products" |
-
-
-
-| Contact | | | | |
-| | Click on Contact link in navbar | Redirection to Contact page | Pass | |
-| | Enter first/last name | Field will accept freeform text | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter message in textarea | Field will accept freeform text | Pass | |
-| | Click the Submit button | Redirects user to form-dump | Pass | User must click 'Back' button to return |
-| Sign Up | | | | |
-| | Click on Sign Up button | Redirection to Sign Up page | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter valid password (twice) | Field will only accept password format | Pass | |
-| | Click on Sign Up button | Asks user to confirm email page | Pass | Email sent to user |
-| | Confirm email | Redirects user to blank Sign In page | Pass | |
-| Log In | | | | |
-| | Click on the Login link | Redirection to Login page | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter valid password | Field will only accept password format | Pass | |
-| | Click Login button | Redirects user to home page | Pass | |
-| Log Out | | | | |
-| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
-| | Click Confirm Logout button | Redirects user to home page | Pass | |
-| Profile | | | | |
-| | Click on Profile button | User will be redirected to the Profile page | Pass | |
-| | Click on the Edit button | User will be redirected to the edit profile page | Pass | |
-| | Click on the My Orders link | User will be redirected to the My Orders page | Pass | |
-| | Brute forcing the URL to get to another user's profile | User should be given an error | Pass | Redirects user back to own profile |
-| repeat for all remaining pages | x | x | x | x |
+| | Click on "All products" link then "By price" sublink | Redirection to Products page | Pass | Products sorted by price (low to high) |
+| | Click on "All products" link then "By name" sublink | Redirection to Products page | Pass | Products sorted in ascending alphabetical |
+| | Click on "All products" link then "By category" sublink | Redirection to Products page | Pass | Products sorted by category in ascending alphabetical order |
+| | Click on "All products" link then "By category" sublink | Redirection to Products page | Pass | Products sorted in no particular order |
+| | Click on "Notice boards" link | Dropdown menu appears | Pass | Dropdown menu has the links: "Florals", "Spots and checks", "Linen", "For children", "Other designs" and "All notice boards" |
+| | Click on "Notice boards" link then "Florals" sublink | Redirection to Products page | Pass | Only shows notice boards that are in the subcategory "Florals" |
+| | Click on "Notice boards" link then "Spots and checks" sublink | Redirection to Products page | Pass | Only shows notice boards that are in the subcategory "Spots and checks" |
+| | Click on "Notice boards" link then "Linen" sublink | Redirection to Products page | Pass | Only shows notice boards that are in the subcategory "Linen" |
+| | Click on "Notice boards" link then "For children" sublink | Redirection to Products page | Pass | Only shows notice boards that are in the subcategory "For children" |
+| | Click on "Notice boards" link then "Other designs" sublink | Redirection to Products page | Pass | Only shows notice boards that are in the subcategory "Other designs" |
+| | Click on "Notice boards" link then "All notice boards" sublink | Redirection to Products page | Pass | Shows all notice boards in no particular order |
+| | Click on "Photo frames" link | Redirection to Products page | Pass | Shows all photo frames in no particular order |
+| | Click on "Memo blocks" link | Redirection to Products page | Pass | Shows all memo blocks in no particular order |
+| | Click on "Key holders" link | Redirection to Products page | Pass | Shows all key holders in no particular order |
+| | Click on "Filing chests" link | Redirection to Products page | Pass | Shows all filing chests in no particular order |
+| | Click on "Photo albums" link | Redirection to Products page | Pass | Shows all photo albums in no particular order |
+| All pages - Footer | | | | |
+| | Click on the github icon | Opens my github in a new tab | Pass | |
+| | Click on "Delivery" link | Redirection to Delivery page | Pass | |
+| | Click on "About" link | Redirection to About page | Pass | |
+| | Click on "Contact" link | Redirection to Contact page | Pass | |
+| | Click on "Terms & Conditions" link | Redirection to Terms & Conditions page | Pass | |
+| | Click on "Subscribe" button with nothing in the input field | Nothing happens | Pass | User is prompted to enter data |
+| | Click on "Subscribe" button with an invalid input | Error toast shows | Pass | Toast prompts the user to enter valid data |
+| | Click on "Subscribe" button with a valid input | Success toast shows, email is added to the mailing list in the admin panel and the user receives an email | Pass | Toast informs user that they have subscribed and they receive a welcome email |
+| | Click on "Subscribe" button with an email that has already been subscribed | Warning toast shows | Pass | Toast informs the user that the email is already subscribed |
+| Home page | | | | |
+| | Click on "Shop" button in the hero | Redirection to Products page | Pass | Displays all products in no particular order |
+| | Click on "Contact" button in the hero | Redirection to Contact page | Pass | |
+| | Click on "Arrow up" icon | Scrolls to top of the page | Pass | |
+| | Click on "Notice boards" card | Redirection to Products page | Pass | Shows all notice boards in no particular order |
+| | Click on "Memo blocks" card | Redirection to Products page | Pass | Shows all memo blocks in no particular order |
+| | Click on "Photo frames" card | Redirection to Products page | Pass | Shows all photo frames in no particular order |
+| | Click on "Photo albums" card | Redirection to Products page | Pass | Shows all photo albums in no particular order |
+| | Click on "Key holders" card | Redirection to Products page | Pass | Shows all key holders in no particular order |
+| | Click on "Filing chests" card | Redirection to Products page | Pass | Shows all filing chests in no particular order |
+| Contact page | | | | |
+| | Click on "Submit" button in the form with an empty form | Nothing happens | Pass | User is prompted to enter data |
+| | Click on "Submit" button in the form with an invalid inputs | Error toast shows | Pass | Toast prompts the user to enter valid data |
+| | Click on "Submit" button in the form with a valid inputs | Redirects to contact success page, an enquiry is generated in the admin panel and success toast shows | Pass | Toast informs user that their query was sent |
+| | Click on "Clear" button in the form | Clears all fields in the form | Pass | |
+| Products page | | | | |
+| | Click on an image in a product card | Redirects to Product detail page of that specific product | Pass | |
+| | Click on "Add to cart" button in a product card | Adds the product to the cart and shows an info toast | Pass | The toast shows the current cart items |
+| | Click on "Edit" link in a product card (super user) | Redirects to Edit product page and shows a warning toast | Pass | The toast warns the user of which product is being edited |
+| | Click on "Delete" link in a product card (super user) | Opens a confirmation modal | Pass | |
+| | Click "Yes" after opening the delete product modal (above) | Closes the modal, deletes the product and redirects to the Products page | Pass | |
+| | Click "No" after opening the delete product modal (above) | Dismisses the modal | Pass | |
+| | Click on "Arrow up" icon | Scrolls to top of the page | Pass | |
+| | Click on a page number in the pagination menu | Redirects to the respective Products page | Pass | |
+| Products page - notice boards | | | | |
+| | Click on button that represents a subcategory of notice boards | Redirects to the Products page | Pass | Displays the notice boards in the subcategory |
+| Products page - any category | | | | |
+| | Click on "Back to products" link | Redirects to the Products page | Pass | |
+| Product detail page | | | | |
+| | Clicking the category link | Redirects to the Products page | Pass | Shows the products of the respective category |
+| | Click on "Edit" link (super user) | Redirects to Edit product page and shows a warning toast | Pass | The toast warns the user of which product is being edited |
+| | Click on "Delete" link (super user) | Opens a confirmation modal | Pass | |
+| | Click "Yes" after opening the delete product modal (above) | Closes the modal, deletes the product and redirects to the Products page | Pass | |
+| | Click "No" after opening the delete product modal (above) | Dismisses the modal | Pass | |
+| | Click "+" | Increases the quantity in the input field | Pass | Gets disabled when the maximum quantity is reached |
+| | Click "-" | Decreases the quantity in the input field | Pass | Gets disabled when the minimum quantity is reached |
+| | Manually input the quantity with an invalid amount or excess quantity and click "Add to cart" button | Nothing happens | Pass | Validator manages the quantity input according to the stock |
+| | Attempt to add excess quantity to the cart and click "Add to cart" button | Error toast appears | Pass | Toast informs user that they can only add a certain amount to the cart |
+| | After adjusting cart items click the "Secure checkout" button in the info toast | Redirects to Cart page | Pass | |
+| | Click the "Keep shopping" button | Redirects to the Products page | Pass | Shows all products in no particular order |
+| Cart page | | | | |
+| | Click "+" | Increases the quantity in the input field | Pass | Gets disabled when the maximum quantity is reached |
+| | Click "-" | Decreases the quantity in the input field | Pass | Gets disabled when the minimum quantity is reached |
+| | Manually input the quantity with an invalid amount and click "Update" link | Error toast appears | Pass | Error toast informs user of why the cart has not updated |
+| | Attempt to add excess quantity to the cart and click "Add to cart" button | Error toast appears | Pass | Toast informs user that they can only add a certain amount to the cart |
+| | Click "Update" link without changing quantity | Nothing happens | Pass | |
+| | Click "Update" link after changing quantity | Nothing happens | Pass | |
+| | Click "Remove" link | Removes item from the cart and shows an info toast | Pass | |
+| | Click the "Checkout" button | Redirects to the Checkout page | Pass | |
+| | Click the "Keep shopping" button | Redirects to the Products page | Pass | Shows all products in no particular order |
+| Checkout page | | | | |
+| | Brute force the URL to get to the page | Error toast appears | Pass | |
+| | Enter an invalid email format into the form with other valid credentials and click "Complete Order" button | Form fails to process and throws an error | Pass | User informed that email is invalid |
+| | Enter a invalid card details into the form with other valid credentials and click "Complete Order" button | Form fails to process and throws an error | Pass | User informed that card details are invalid |
+| | Click the checkbox "Save this delivery information to my profile" with valid form credentials and click "Complete Order" button | Details saved to user profile | Pass | |
+| | Click "Complete Order" button with valid form details | Order processes, stock count of items adjust accordingly, a success toast appears and user redirects to Checkout success page | Pass | User receives an email as a confirmation and if the user is authenticated the order details are saved in the history in their profile |
+| | Click the "Adjust cart" button | Redirects to the Cart page | Pass | |
+| Checkout success page | | | | |
+| | Brute force the URL to get to the page | Redirects to 404 page | Pass | |
+| | Click the "Profile" button (authenticated user) | Redirects to the Profile page | Pass | |
+| | Click the "Shop" button | Redirects to the Products page | Pass | Shows all products in no particular order |
+| Profile page | | | | |
+| | Brute force the URL to get to the profile page (non-authenticated user) | Redirects to Login page | Pass | |
+| | Click on "Update Info" button | User details will get updated | Pass | Allows user to remove all details |
+| | Click on an order number link | User will be redirected to the checkout success page of that order and a warning toast appears | Pass | Toast informs user that this is a previous order |
+| Add product page | | | | |
+| | Brute force the URL to get to the page (non-super user) | Error toast appears | Pass | User is informed that they do not have permission |
+| | Click "Add" button with empty fields | Nothing happens | Pass | User prompted to fill fields correctly |
+| | Click "Add" button with invalid fields | Error toast appears | Pass | User prompted to adjust fields correctly |
+| | Click "Add" button with valid fields | The product is added to the database, appears in the store and a success toast appears | Pass | |
+| | Click "Select image" button | Allows an image to be uploaded | Pass | |
+| | Click "Cancel" button | Redirects to the Products page | Pass | Shows all products in no particular order |
+| Edit product page | | | | |
+| | Brute force the URL to get to the page (non-super user) | Error toast appears | Pass | User is informed that they do not have permission |
+| | Click "Update" button with empty fields | Nothing happens | Pass | User prompted to fill fields correctly |
+| | Click "Update" button with invalid fields | Error toast appears | Pass | User prompted to adjust fields correctly |
+| | Click "Update" button with valid fields | The product is updated in the database and store and a success toast appears | Pass | |
+| | Click "Update" button with the "Remove" checkbox checked | Removes the current image | Pass | |
+| | Click "Select image" button | Allows an image to be uploaded | Pass | Replaces current picture if there is one |
+| | Click "Cancel" button | Redirects to the Products page | Pass | Shows all products in no particular order |
+| Delete product page | | | | |
+| | Brute force the URL to get to the page (non-super user) | Error toast appears | Pass | User is informed that they do not have permission |
+| Log out page | | | | |
+| | Brute force the URL to get to the page (authenticated user) | Logs the user out | Pass | |
+| Log In page | | | | |
+| | Click "Forgot your password?" link | Redirects to Password reset page | Pass | |
+| | Enter invalid email address or password and click "Log in" button | Error message appears | Pass | |
+| | Enter valid password and email and click "Log in" button | Logs user in, redirects user to Home page and a success toast appears | Pass | |
+| | Click "Sign up here" link | Redirects to Sign up page | Pass | |
+| | Click "Reset" button | Clears all form fields | Pass | |
+| Sign Up page | | | | |
+| | Enter invalid details and click "Sign up" button | Error message appears for each invalid field entry | Pass | |
+| | Enter a non-unique username or email and click "Sign up" button | Error message appears for each invalid field entry | Pass | All emails and usernames must be unique |
+| | Enter details and click "Sign up" button | Saves the user details, sends the user an email with a confirmationtoken and redirects user to Email verification page | Pass | |
+| | Click "Log in here" link | Redirects to Login page | Pass | |
+| | Click "Reset" button | Clears all form fields | Pass | |
+| Error 404 page | | | | |
+| | Click "these items" link | Redirects to the Products page | Pass | Shows all products in no particular order |
+| | Click "Home" Button | Redirects to the Home page | Pass | |
+| | Click "Shop" Button | Redirects to the Products page | Pass | Shows all products in no particular order |
+| Error 500 page | | | | |
+| | Click "Home" Button | Redirects to the Home page | Pass | |
+| | Click "Shop" Button | Redirects to the Products page | Pass | Shows all products in no particular order |
 
 ## User Story Testing
 
