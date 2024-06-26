@@ -406,30 +406,19 @@ Here are the results my unit tests:
 
 Below are the results from the various apps on my application that I've tested:
 
-| App | Files | Coverage | Screenshot |
+| App | Coverage | Screenshot |
 | --- | --- | --- | --- |
-| Cart | test_forms.py | 99% | ![screenshot](documentation/tests/py-test-bag-forms.png) |
-| Checkout | test_models.py | 89% | ![screenshot](documentation/tests/py-test-bag-models.png) |
-| Bag | test_urls.py | 100% | ![screenshot](documentation/tests/py-test-bag-urls.png) |
-| Bag | test_views.py | 71% | ![screenshot](documentation/tests/py-test-bag-views.png) |
-| Checkout | test_forms.py | 99% | ![screenshot](documentation/tests/py-test-checkout-forms.png) |
-| Checkout | test_models.py | 89% | ![screenshot](documentation/tests/py-test-checkout-models.png) |
-| Checkout | test_urls.py | 100% | ![screenshot](documentation/tests/py-test-checkout-urls.png) |
-| Checkout | test_views.py | 71% | ![screenshot](documentation/tests/py-test-checkout-views.png) |
-| Home | test_forms.py | 99% | ![screenshot](documentation/tests/py-test-home-forms.png) |
-| Home | test_models.py | 89% | ![screenshot](documentation/tests/py-test-home-models.png) |
-| Home | test_urls.py | 100% | ![screenshot](documentation/tests/py-test-home-urls.png) |
-| Home | test_views.py | 71% | ![screenshot](documentation/tests/py-test-home-views.png) |
-| Products | test_forms.py | 99% | ![screenshot](documentation/tests/py-test-products-forms.png) |
-| Products | test_models.py | 89% | ![screenshot](documentation/tests/py-test-products-models.png) |
-| Products | test_urls.py | 100% | ![screenshot](documentation/tests/py-test-products-urls.png) |
-| Products | test_views.py | 71% | ![screenshot](documentation/tests/py-test-products-views.png) |
-| Profiles | test_forms.py | 99% | ![screenshot](documentation/tests/py-test-profiles-forms.png) |
-| Profiles | test_models.py | 89% | ![screenshot](documentation/tests/py-test-profiles-models.png) |
-| Profiles | test_urls.py | 100% | ![screenshot](documentation/tests/py-test-profiles-urls.png) |
-| Profiles | test_views.py | 71% | ![screenshot](documentation/tests/py-test-profiles-views.png) |
+| Cart | 95% | ![screenshot](documentation/testing/cart-coverage.png) |
+| Checkout | test_models.py | 51% | ![screenshot](documentation/testing/checkout-coverage.png) |
+| Contact | test_urls.py | 97% | ![screenshot](documentation/testing/contact-coverage.png) |
+| Core | test_views.py | 100% | ![screenshot](documentation/testing/core-coverage.png) |
+| Newsletter | test_forms.py | 93% | ![screenshot](documentation/testing/newsletter-coverage.png) |
+| Products | test_models.py | 93% | ![screenshot](documentation/testing/products-coverage.png) |
+| Profiles | test_urls.py | 94% | ![screenshot](documentation/testing/profiles-coverage.png) |
 
 #### Unit Test Issues
+
+Unit testing the checkout page posed challenges due to the intricate interactions with Stripe elements. To mitigate these challenges, the focus was primarily on testing form validation, given the complexities and uncertainties surrounding other aspects of the page.
 
 ## Bugs
 
