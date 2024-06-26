@@ -53,6 +53,8 @@ def all_products(request):
 
     current_sorting = f'{sort}_{direction}'
 
+    sort_by = f'sort={sort}&direction={direction}'  # format sorting for pagination
+
     paginator = Paginator(products, 12)
     page = request.GET.get('page')
     try:
@@ -67,6 +69,7 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'sort_by': sort_by,   # pass sorting in context
     }
 
     return render(request, 'products/products.html', context)
