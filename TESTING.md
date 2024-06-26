@@ -400,18 +400,16 @@ To create the coverage report, I would then run the following commands:
 
 `coverage report`
 
-To see the HTML version of the reports, and find out whether some pieces of code were missing, I ran the following commands:
+Here are the results my unit tests:
 
-`coverage html`
-
-`python3 -m http.server`
+![screenshot](documentation/testing/pythonunittesting.png)
 
 Below are the results from the various apps on my application that I've tested:
 
-| App | File | Coverage | Screenshot |
+| App | Files | Coverage | Screenshot |
 | --- | --- | --- | --- |
-| Bag | test_forms.py | 99% | ![screenshot](documentation/tests/py-test-bag-forms.png) |
-| Bag | test_models.py | 89% | ![screenshot](documentation/tests/py-test-bag-models.png) |
+| Cart | test_forms.py | 99% | ![screenshot](documentation/tests/py-test-bag-forms.png) |
+| Checkout | test_models.py | 89% | ![screenshot](documentation/tests/py-test-bag-models.png) |
 | Bag | test_urls.py | 100% | ![screenshot](documentation/tests/py-test-bag-urls.png) |
 | Bag | test_views.py | 71% | ![screenshot](documentation/tests/py-test-bag-views.png) |
 | Checkout | test_forms.py | 99% | ![screenshot](documentation/tests/py-test-checkout-forms.png) |
@@ -430,18 +428,8 @@ Below are the results from the various apps on my application that I've tested:
 | Profiles | test_models.py | 89% | ![screenshot](documentation/tests/py-test-profiles-models.png) |
 | Profiles | test_urls.py | 100% | ![screenshot](documentation/tests/py-test-profiles-urls.png) |
 | Profiles | test_views.py | 71% | ![screenshot](documentation/tests/py-test-profiles-views.png) |
-| x | x | x | repeat for all remaining tested apps/files |
 
 #### Unit Test Issues
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-Use this section to list any known issues you ran into while writing your unit tests.
-Remember to include screenshots (where possible), and a solution to the issue (if known).
-
-This can be used for both "fixed" and "unresolved" issues.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
 ## Bugs
 
