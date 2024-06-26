@@ -28,18 +28,26 @@ def add_to_cart(request, item_id):
     if item_id in cart:
         if product.stock >= cart[item_id] + quantity:
             cart[item_id] += quantity
-            messages.info(request, f'{quantity} {product.name} added to \
-                your cart.')
+            messages.info(
+                request, f'{quantity} {product.name} added to your cart.'
+            )
         else:
             messages.error(
                 request, f'Error: {product.name} has only {product.stock} \
-                    units left. You currently have {cart[item_id]} in \
-                    your cart.'
+                units left. You currently have {cart[item_id]} in your cart.'
             )
     else:
-        cart[item_id] = quantity
-        messages.info(request, f'{quantity} {product.name} added to \
-            your cart.')
+        if quantity <= product.stock:
+            cart[item_id] = quantity
+            messages.info(
+                request, f'{quantity} {product.name} added to your \
+                    cart.'
+            )
+        else:
+            messages.error(
+                request, f'Error: {product.name} has only {product.stock} \
+                    units left.'
+            )
 
     request.session['cart'] = cart
 
