@@ -27,18 +27,23 @@ def contact(request):
                     settings.DEFAULT_FROM_EMAIL,
                     [settings.DEFAULT_FROM_EMAIL],
                 )
-                messages.success(request, 'Your enquiry has been sent \
-                    successfully.')
+                messages.success(
+                    request,
+                    'Your enquiry has been sent successfully.'
+                )
                 return redirect('contact_success')
             except Exception as e:
                 messages.error(
-                    request, 'There was an error sending your enquiry. \
-                        Please try again later.'
+                    request,
+                    f'There was an error sending your enquiry. Please try'
+                    f'again later.'
                 )
         else:
             messages.error(
-                request, 'The form data you entered was invalid. \
-                    Please check the form and try again.')
+                request,
+                f'The form data you entered was invalid. Please check'
+                f'the form and try again.'
+            )
     else:
         form = ContactForm()
 
