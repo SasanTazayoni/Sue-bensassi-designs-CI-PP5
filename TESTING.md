@@ -331,6 +331,8 @@ Defensive programming was manually tested with the below user acceptance testing
 | | As a registered user I can log out of my account so that I can securely end my session and protect my personal information. | ![screenshot](documentation/features/logoutmodal.png) |
 | | As a registered user/site admin I can reset my password so that I can regain access to my account in case I forget my password. | ![screenshot](documentation/features/pwresetrequest.png) |
 | | As a registered user I can edit my account information so that I can ensure that my profile remains up to date and accurate. | ![screenshot](documentation/features/updateinfo.png) |
+| | As a registered user I can edit my enquiry details so that I can update or add information. | ![screenshot](documentation/features/enquiryeditform.png) |
+| | As a registered user I can delete my enquiry so that I can manage my queries. | ![screenshot](documentation/features/enquirydeletemodal.png) |
 | EPIC 2: Product Exploration | | |
 | | As a site user I can see a list of all products so that I can easily browse and explore the full range of available items. | ![screenshot](documentation/features/navbarlarge.png) |
 | | As a site user I can see the price of a product clearly so that I can make a decision whether to purchase the item or not. | ![screenshot](documentation/features/productcard.png) |
@@ -368,6 +370,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | EPIC 8: User Experience and Interface | | |
 | | As a new site user I can comprehend the website's purpose at a glance so that I can determine if the platform aligns with my needs and interests. | ![screenshot](documentation/features/hero.png) |
 | | As a site user I can navigate through the interface effortlessly so that I can quickly and easily find the information I need. | ![screenshot](documentation/features/productsdropdown.png) |
+| | As a site user I can submit an enquiry through the contact form so that the site administrator can respond to my query. | ![screenshot](documentation/features/enquiry.png) |
 
 The following are user stories I wasn't able to implement and have labeled as Wont Have in my MoSCoW prioritisation:
 
