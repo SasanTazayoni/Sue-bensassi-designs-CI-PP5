@@ -480,7 +480,7 @@ The terms & conditions page is a simple page with information.
 
 - ![screenshot](documentation/features/terms.png)
 
-#### Contact and contact success pages
+#### Contact, edit enquiry and contact success pages
 
 The contact page consists of contact information for the store owner and an enquiry form.
 
@@ -491,6 +491,11 @@ The contact page consists of contact information for the store owner and an enqu
 - Invalid forms will not be submitted.
 - The admin panel will show new enquiries and they will be unchecked will signals that they need actioning.
 - ![screenshot](documentation/features/contactadmin.png)
+- Authenticated users who submit a new message in the contact form will have their enquiry saved on their user profile.
+- ![screenshot](documentation/features/enquiry.png)
+- Users can edit or delete their saved enquiries.
+- ![screenshot](documentation/features/enquiryeditform.png)
+- ![screenshot](documentation/features/enquirydeletemodal.png)
 
 #### Authentication pages
 
