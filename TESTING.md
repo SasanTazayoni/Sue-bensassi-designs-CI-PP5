@@ -26,6 +26,7 @@ Some of the pages on this site require a user to be logged-in and authenticated 
 | Checkout success | n/a | ![screenshot](documentation/testing/validation/html/checkoutsuccess.png) | Pass: No errors |
 | Contact | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fcontact%2F) | ![screenshot](documentation/testing/validation/html/contact.png) | Pass: No errors |
 | Contact success | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fcontact%2Fsuccess%2F) | ![screenshot](documentation/testing/validation/html/contactsuccess.png) | Pass: No errors |
+| Edit enquiry | n/a | ![screenshot](documentation/testing/validation/html/editenquiry.png) | Pass: No errors |
 | About | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fabout%2F) | ![screenshot](documentation/testing/validation/html/about.png) | Pass: No errors |
 | Delivery | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2Fdelivery%2F) | ![screenshot](documentation/testing/validation/html/delivery.png) | Pass: No errors |
 | Index | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsue-bensassi-designs-beea48c7d401.herokuapp.com%2F) | ![screenshot](documentation/testing/validation/html/index.png) | Pass: No errors |
