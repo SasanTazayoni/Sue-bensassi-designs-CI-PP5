@@ -52,9 +52,9 @@
                                         <td>
                                             <ul class="list-unstyled">
                                                 {% for item in order.lineitems.all %}
-                                                <li class="small">
-                                                    {{ item.product.name }} x {{ item.quantity }}
-                                                </li>
+                                                    <li class="small">
+                                                        {{ item.product.name }} x {{ item.quantity }}
+                                                    </li>
                                                 {% endfor %}
                                             </ul>
                                         </td>
@@ -66,6 +66,55 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row">
+            {% for enquiry in enquiries %}
+                <div class="col-12 mb-3">
+                    <div class="card enquiry-card h-100">
+                        <div class="card-header"><h2 class="card-title text text-center">Enquiry on {{ enquiry.date_sent }}</h2></div>
+                        <div class="card-body">
+                            <p class="card-text">{{ enquiry.message }}</p>
+                            <p class="card-text"><small class="text-muted">Replied to: {{ enquiry.replied_to|yesno:"Yes,No" }}</small></p>
+                        </div>
+                        <div class="card-footer text-center py-1">
+                            <a href="{% url 'edit_enquiry' enquiry.id %}" class="button button-small btn-secondary">
+                                <i></i><i></i>
+                                <span>Edit</span>
+                            </a>
+                            <button type="button" class="button button-small btn-danger" data-toggle="modal" data-target="#deleteConfirmationModal{{ enquiry.id }}">
+                                <i></i><i></i>
+                                <span>Delete</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Delete Confirmation Modal -->
+                <div class="modal fade" id="deleteConfirmationModal{{ enquiry.id }}" tabindex="-1" aria-labelledby="deleteConfirmationModalLabel{{ enquiry.id }}" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header d-flex justify-content-center">
+                                <h2 class="modal-title" id="deleteConfirmationModalLabel{{ enquiry.id }}">Confirm Deletion</h2>
+                            </div>
+                            <div class="modal-body d-flex justify-content-center">
+                                Are you sure you want to delete this enquiry?
+                            </div>
+                            <div class="modal-footer d-flex justify-content-center align-items-center">
+                                <form action="{% url 'delete_enquiry' enquiry.id %}" method="post" class="d-flex justify-content-center align-items-center">
+                                    {% csrf_token %}
+                                    <button type="submit" class="button button-small btn-secondary">
+                                        <i></i><i></i>
+                                        <span>Yes</span>
+                                    </button>
+                                </form>
+                                <button type="button" class="button button-small btn-info" data-dismiss="modal">
+                                    <i></i><i></i>
+                                    <span>No</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
     </div>
 
