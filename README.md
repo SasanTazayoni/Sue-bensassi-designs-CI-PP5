@@ -181,7 +181,7 @@ EPIC 9: Future Enhancements
 
 </details>
 <details>
-<summary> Click here to see the CONTACT TEMPLATE wireframes </summary>
+<summary> Click here to see the CONTACT TEMPLATE/ENQUIRY EDIT wireframes </summary>
 
   - ![screenshot](documentation/wireframes/contact.jpg)
 
