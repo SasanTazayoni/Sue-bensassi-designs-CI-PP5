@@ -96,6 +96,8 @@ EPIC 1: User Account Management
 - Log out - As a registered user I can log out of my account so that I can securely end my session and protect my personal information. `(MUST HAVE)`
 - Password reset - As a registered user/site admin I can reset my password so that I can regain access to my account in case I forget my password. `(SHOULD HAVE)`
 - Edit account details - As a registered user I can edit my account information so that I can ensure that my profile remains up to date and accurate. `(MUST HAVE)`
+- Edit enquiry - As a a registered user I can edit my enquiry details so that I can update or add information. `(COULD HAVE)`
+- Delete enquiry - As a registered user I can delete my enquiry so that I can manage my queries. `(SHOULD HAVE)`
 
 EPIC 2: Product Exploration
 
@@ -147,6 +149,7 @@ EPIC 8: User Experience and Interface
 
 - First impression - As a new site user I can comprehend the website's purpose at a glance so that I can determine if the platform aligns with my needs and interests. `(MUST HAVE)`
 - Website navigation - As a site user I can navigate through the interface effortlessly so that I can quickly and easily find the information I need. `(MUST HAVE)`
+- Adding a new enquiry - As a site user I can submit an enquiry through the contact form so that the site administrator can respond to my query. `(MUST HAVE)`
 
 EPIC 9: Future Enhancements
 
