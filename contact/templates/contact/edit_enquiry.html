@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}- Edit Enquiry{% endblock %}
+
+{% block content %}
+<main class="plain-background">
+    <div class="container top-container d-flex justify-content-center align-items-center" data-top-block>
+        <div class="row">
+            <div class="card contact-form-container mx-3 mb-5">
+                <h2 class="mt-2">Edit Enquiry</h2>
+                <hr class="divider">
+                <form method="POST" class="contact-form">
+                    {% csrf_token %}
+                    <div class="form-fields">
+                        <div class="form-field">
+                            <label for="id_name">Name:</label>
+                            {{ form.name }}
+                        </div>
+                        <div class="form-field">
+                            <label for="id_email">Email:</label>
+                            {{ form.email }}
+                        </div>
+                        <div class="form-field">
+                            <label for="id_message">Message:</label>
+                            {{ form.message }}
+                        </div>
+                    </div>
+                    <div class="text-center btn-container">
+                        <button class="button btn-secondary" type="submit">
+                            <i></i><i></i>
+                            <span>Update</span>
+                        </button>
+                        <a href="{% url 'profile' %}" class="button btn-info">
+                            <i></i><i></i>
+                            <span>Cancel</span>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
