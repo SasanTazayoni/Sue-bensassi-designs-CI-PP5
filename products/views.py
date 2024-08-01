@@ -55,23 +55,24 @@ def all_products(request):
 
     current_sorting = f'{sort}_{direction}'
 
-    sort_by = f'sort={sort}&direction={direction}'  # format sorting for pagination
-
     paginator = Paginator(products, 12)
     page = request.GET.get('page')
+
     try:
         products = paginator.page(page)
     except PageNotAnInteger:
-        products = paginator.page(1)
+        page = 1
+        products = paginator.page(page)
     except EmptyPage:
-        products = paginator.page(paginator.num_pages)
+        page = paginator.num_pages
+        products = paginator.page(page)
 
     context = {
         'products': products,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
-        'sort_by': sort_by,   # pass sorting in context
+        'paginator': paginator,
     }
 
     return render(request, 'products/products.html', context)
