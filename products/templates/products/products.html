@@ -124,7 +124,7 @@
                                             </li>
                                         {% else %}
                                             <li class="page-item">
-                                                <a class="page-link" href="?page={{ num }}{% if request.GET.category %}&category={{ request.GET.category }}{% endif %}{% if request.GET.sort %}&sort={{ request.GET.sort }}{% endif %}{% if request.GET.direction %}&direction={{ request.GET.direction }}{% endif %}">
+                                                <a class="page-link" href="?page={{ num }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}{% if request.GET.category %}&category={{ request.GET.category }}{% endif %}{% if request.GET.sort %}&sort={{ request.GET.sort }}{% endif %}{% if request.GET.direction %}&direction={{ request.GET.direction }}{% endif %}">
                                                     {{ num }}
                                                 </a>
                                             </li>
