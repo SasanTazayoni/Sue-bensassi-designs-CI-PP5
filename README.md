@@ -573,7 +573,7 @@ Although the site has many features, there are several additional ones I would l
 - [![Bootstrap](https://img.shields.io/badge/Bootstrap-grey?logo=bootstrap&logoColor=7952B3)](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
 - [![Django](https://img.shields.io/badge/Django-grey?logo=django&logoColor=092E20)](https://www.djangoproject.com) used as the Python framework for the site.
 - [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-grey?logo=postgresql&logoColor=4169E1)](https://www.postgresql.org) used as the relational database management.
-- [![PostgreSQL by Code Institute](https://img.shields.io/badge/PostgreSQL_by_Code_Institute-grey?logo=okta&logoColor=F05223)](https://dbs.ci-dbs.net) used as the Postgres database from Code Institute.
+- [![PostgreSQL database by Neon](http://neon.tech/) used as the Postgres database from Neon Tech.
 - [![Cloudinary](https://img.shields.io/badge/Cloudinary-grey?logo=cloudinary&logoColor=3448C5)](https://cloudinary.com) used for online static file storage.
 - [![WhiteNoise](https://img.shields.io/badge/WhiteNoise-grey?logo=python&logoColor=FFFFFF)](https://whitenoise.readthedocs.io) used for serving static files with Heroku.
 - [![Stripe](https://img.shields.io/badge/Stripe-grey?logo=stripe&logoColor=008CDD)](https://stripe.com) used for online secure payments of ecommerce products/services.
@@ -812,19 +812,15 @@ The live deployed application can be found deployed on [Heroku](https://sue-bens
 
 ### PostgreSQL Database
 
-This project uses a [Code Institute PostgreSQL Database](https://dbs.ci-dbs.net).
+This project uses a [Neon Database](http://neon.tech/).
 
-To obtain my own Postgres Database from Code Institute, I followed these steps:
+To obtain your own Postgres Database, sign-up with your GitHub account, then follow these steps:
 
-- Signed-in to the CI LMS using my email address.
-- An email was sent to me with my new Postgres Database.
-
-> [!CAUTION]  
-> - PostgreSQL databases by Code Institute are only available to CI Students.
-> - You must acquire your own PostgreSQL database through some other method
-> if you plan to clone/fork this repository.
-> - Code Institute students are allowed a maximum of 8 databases.
-> - Databases are subject to deletion after 18 months.
+- Decide a project name (this is commonly the name of the project: Sue-bensassi-designs-CI-PP5) and a database name and fill in the fields.
+- Pick the version of Postgress that you would like from the drop-down menu.
+- Pick the region that is closest to you from the drop-down menu.
+- Click **Create Project**.
+- You can now connect to the database using the API provided.
 
 ### Cloudinary API
 
