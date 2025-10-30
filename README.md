@@ -819,7 +819,7 @@ This project uses a [Neon Database](http://neon.tech/).
 To obtain your own Postgres Database, sign-up with your GitHub account, then follow these steps:
 
 - Decide a project name (this is commonly the name of the project: Sue-bensassi-designs-CI-PP5) and a database name and fill in the fields.
-- Pick the version of Postgress that you would like from the drop-down menu.
+- Pick the version of Postgres that you would like from the drop-down menu.
 - Pick the region that is closest to you from the drop-down menu.
 - Click **Create Project**.
 - You can now connect to the database using the API provided.
