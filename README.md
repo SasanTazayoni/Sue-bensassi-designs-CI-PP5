@@ -2,6 +2,7 @@
 
 ![HTML](tech/html.png) ![CSS](tech/css.png) ![Javascript](tech/javascript.png) ![JQuery](tech/jquery.png) ![Bootstrap](tech/bootstrap.png) ![Python](tech/python.png) ![Django](tech/django.png) ![Heroku](tech/heroku.png) ![Postgressql](tech/postgresql.png) ![Cloudinary](tech/cloudinary.png) ![Neon](tech/neon.png) ![Gitpod](tech/gitpod.png) ![ChatGPT](tech/chatgpt.png)
 
+
 ## 🎯 Quick Links
 
 - [Live Site](https://sue-bensassi-designs-beea48c7d401.herokuapp.com) - View the deployed application
@@ -27,6 +28,40 @@ By addressing these objectives and focusing on our target audience, Sue Bensassi
 You can access the live application [here](https://sue-bensassi-designs-beea48c7d401.herokuapp.com).
 
 ![screenshot](documentation/amiresponsive.png)
+
+
+## 🔧 Key Technical Challenges Solved
+
+### 1. Stripe Payment Integration
+
+**Challenge:** Needed secure, reliable payment processing for e-commerce transactions.  
+**Solution:** Implemented Stripe API with webhook handling for payment confirmation, including backup mechanisms for interrupted transactions and proper error handling for failed payments.
+
+### 2. Complex Product & Inventory Management
+
+**Challenge:** Required dynamic stock tracking, category filtering, and admin CRUD operations for products.  
+**Solution:** Built Django models with PostgreSQL for inventory tracking, automated stock updates on purchases, and comprehensive admin interface for product management.
+
+### 3. User Authentication & Profile Management
+
+**Challenge:** Needed secure user accounts with order history, saved delivery information, and enquiry tracking.  
+**Solution:** Implemented Django Allauth for authentication with custom profile model, order history tracking, and CRUD operations for user enquiries.
+
+### 4. Email Automation & Order Processing
+
+**Challenge:** Required automated order confirmations to both customers and store owner, plus newsletter functionality.  
+**Solution:** Integrated Gmail API for transactional emails, built custom newsletter app with validation, and automated email triggers for order events.
+
+### 5. Image Management at Scale
+
+**Challenge:** E-commerce sites need reliable image hosting that doesn't consume Heroku's ephemeral storage.  
+**Solution:** Integrated Cloudinary API for image uploads, storage, and optimization, with fallback to default images for products without custom images.
+
+### 6. SEO & Marketing Infrastructure
+
+**Challenge:** New e-commerce store needed discoverability and customer engagement tools.  
+**Solution:** Implemented SEO best practices (sitemap.xml, robots.txt, meta tags), newsletter signup, social media integration, and Facebook business page mockup.
+
 
 ## UX
 
