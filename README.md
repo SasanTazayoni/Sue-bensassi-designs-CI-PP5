@@ -2,6 +2,15 @@
 
 ![HTML](tech/html.png) ![CSS](tech/css.png) ![Javascript](tech/javascript.png) ![JQuery](tech/jquery.png) ![Bootstrap](tech/bootstrap.png) ![Python](tech/python.png) ![Django](tech/django.png) ![Heroku](tech/heroku.png) ![Postgressql](tech/postgresql.png) ![Cloudinary](tech/cloudinary.png) ![Neon](tech/neon.png) ![Gitpod](tech/gitpod.png) ![ChatGPT](tech/chatgpt.png)
 
+## 🎯 Quick Links
+
+- [Live Site](https://sue-bensassi-designs-beea48c7d401.herokuapp.com) - View the deployed application
+- [User Stories](#user-stories) - Full list of features and requirements
+- [Features](#existing-features) - Detailed feature breakdown
+- [Database Design](#database-design) - ERD and schema
+- [Testing](TESTING.md) - Comprehensive testing documentation
+- [Deployment](#deployment) - Setup and deployment guide
+
 Sue Bensassi Designs is an eCommerce store dedicated to offering bespoke home accessories crafted with care and precision. As a designer and maker based in West London, Sue Bensassi brings years of experience and passion into creating unique home decor items that can either be purchased as ready-made pieces or custom-made to fit individual preferences.
 The primary goal of this project is to create a user-friendly and visually appealing prototype of an online store where customers can easily browse, customise, and purchase home accessories. By leveraging modern web technologies and design principles, we aim to provide a seamless shopping experience that reflects the quality and craftsmanship of Sue Bensassi's products.
 The project targets homeowners, interior designers, and gift buyers who value high-quality, custom-made home accessories. Our audience is likely to appreciate unique, personalised items and the flexibility to tailor products to their specific tastes and requirements.
