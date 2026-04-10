@@ -1,4 +1,3 @@
-from django.shortcuts import get_object_or_404
 from products.models import Product
 
 
@@ -9,8 +8,15 @@ def cart_contents(request):
     product_count = 0
     cart = request.session.get('cart', {})
 
+    product_map = {
+        str(p.pk): p
+        for p in Product.objects.filter(pk__in=cart.keys())
+    }
+
     for item_id, quantity in cart.items():
-        product = get_object_or_404(Product, pk=item_id)
+        product = product_map.get(item_id)
+        if not product:
+            continue
         grand_total += quantity * product.price
         product_count += quantity
         cart_items.append({
