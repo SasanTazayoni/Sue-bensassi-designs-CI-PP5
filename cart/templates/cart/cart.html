@@ -146,6 +146,8 @@
 
             $.post(url, data).done(function () {
                 location.reload();
+            }).fail(function () {
+                location.reload();
             });
         });
     </script>
