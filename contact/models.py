@@ -4,7 +4,7 @@ from profiles.models import UserProfile
 
 class Enquiry(models.Model):
     name = models.CharField(max_length=100)
-    email = models.EmailField(max_length=50)
+    email = models.EmailField(max_length=254)
     message = models.TextField(max_length=1000)
     date_sent = models.DateTimeField(auto_now_add=True)
     replied_to = models.BooleanField(default=False)
