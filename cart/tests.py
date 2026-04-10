@@ -252,15 +252,15 @@ class RemoveFromCartViewTest(TestCase):
             category=self.category
         )
 
-        # Set up a sample cart with the product
-        self.client.session['cart'] = {str(self.product.id): 1}
-        self.client.session.save()
 
     def test_remove_from_cart_success(self):
         """
         Test removing a product from the cart when it exists in the cart.
         """
-        # Make a request to remove the product from the cart
+        session = self.client.session
+        session['cart'] = {str(self.product.id): 1}
+        session.save()
+
         response = self.client.post(reverse('remove_from_cart', args=[self.product.id]))
 
         # Check if the response status code is 200 when product is successfully removed

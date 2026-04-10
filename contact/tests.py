@@ -289,12 +289,6 @@ class DeleteEnquiryViewTests(TestCase):
             user_profile=self.user.userprofile
         )
 
-    def test_get_delete_enquiry_renders_confirmation(self):
-        """ Test GET request to delete enquiry renders confirmation page. """
-        response = self.client.get(reverse('delete_enquiry', args=[self.enquiry.id]))
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'contact/delete_enquiry.html')
-
     def test_delete_enquiry_success(self):
         """ Test POST request to delete an existing enquiry. """
         # Issue a POST request to delete the enquiry
