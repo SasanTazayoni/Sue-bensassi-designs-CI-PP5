@@ -2,7 +2,9 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     function updateMarginTop() {
-        const navbarHeight = document.querySelector('header').offsetHeight + 5;
+        const header = document.querySelector('header');
+        if (!header) return;
+        const navbarHeight = header.offsetHeight + 5;
         const topContainers = document.querySelectorAll('[data-top-block]');
         
         // If there are any containers, update their margin-top
