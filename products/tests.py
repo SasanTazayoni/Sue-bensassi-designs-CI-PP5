@@ -5,9 +5,6 @@ from django.core.paginator import Page
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import User
 from django.contrib.messages import get_messages
-from django.core.files.uploadedfile import SimpleUploadedFile
-from django.conf import settings
-import os
 from products.models import Product, Category
 from products.forms import ProductForm
 

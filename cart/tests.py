@@ -2,12 +2,9 @@ from django.test import TestCase
 from django.urls import reverse
 from django.contrib.auth.models import User
 from django.contrib.messages import get_messages
-from django.shortcuts import get_object_or_404, redirect
 from products.models import Product, Category
-from django.http import HttpResponse
 from urllib.parse import urlencode
 from django.contrib import messages
-from django.core.exceptions import ValidationError
 
 
 class ViewCartTest(TestCase):

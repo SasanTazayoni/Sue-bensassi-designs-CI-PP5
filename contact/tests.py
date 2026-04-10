@@ -4,7 +4,6 @@ from django.core import mail
 from django.contrib.messages import get_messages
 from contact.forms import ContactForm
 from django.utils import timezone
-from django.contrib.auth.models import User
 from django.contrib.auth import get_user_model
 from contact.models import Enquiry
 

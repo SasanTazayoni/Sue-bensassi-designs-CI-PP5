@@ -1,3 +1,4 @@
+from functools import wraps
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -6,6 +7,16 @@ from django.db.models.functions import Lower
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import Product, Category
 from .forms import ProductForm
+
+
+def superuser_required(view_func):
+    @wraps(view_func)
+    def wrapper(request, *args, **kwargs):
+        if not request.user.is_superuser:
+            messages.error(request, 'You do not have permission to do that.')
+            return redirect(reverse('home'))
+        return view_func(request, *args, **kwargs)
+    return wrapper
 
 
 def all_products(request):
@@ -91,12 +102,9 @@ def product_detail(request, product_id):
 
 
 @login_required
+@superuser_required
 def add_product(request):
     """ Add a product to the store. """
-
-    if not request.user.is_superuser:
-        messages.error(request, 'You do not have permission to do that.')
-        return redirect(reverse('home'))
 
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
@@ -121,12 +129,9 @@ def add_product(request):
 
 
 @login_required
+@superuser_required
 def edit_product(request, product_id):
     """ Edit a product in the store. """
-
-    if not request.user.is_superuser:
-        messages.error(request, 'You do not have permission to do that.')
-        return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
 
@@ -156,12 +161,9 @@ def edit_product(request, product_id):
 
 
 @login_required
+@superuser_required
 def delete_product(request, product_id):
     """ Delete a product from the store. """
-
-    if not request.user.is_superuser:
-        messages.error(request, 'You do not have permission to do that.')
-        return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
