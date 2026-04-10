@@ -92,8 +92,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (newValue !== value) {
             quantityInput.setAttribute('value', newValue);
             form.submit();
-        } else {
-            console.log("Value hasn't changed, not submitting the form.");
         }
     };
 
