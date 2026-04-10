@@ -36,6 +36,9 @@ host = os.environ.get("HOST")
 if host:
     ALLOWED_HOSTS.append(host)
     CSRF_TRUSTED_ORIGINS.append(f"https://{host}")
+localhost = os.environ.get("LOCALHOST")
+if localhost:
+    ALLOWED_HOSTS.append(localhost)
 
 # Application definition
 

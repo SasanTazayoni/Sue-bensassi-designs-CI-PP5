@@ -35,10 +35,17 @@
             </div>
             <div class="row">
                 <div class="col text-center mt-2">
-                    <a href="{% url 'view_cart' %}" class="button btn-secondary px-2 button-long">
-                        <i></i><i></i>
-                        <span>Secure Checkout</span>
-                    </a>
+                    {% if request.path == '/cart/' %}
+                        <a href="{% url 'checkout' %}" class="button btn-secondary px-2 button-long">
+                            <i></i><i></i>
+                            <span>Secure Checkout</span>
+                        </a>
+                    {% else %}
+                        <a href="{% url 'view_cart' %}" class="button btn-secondary px-2 button-long">
+                            <i></i><i></i>
+                            <span>Go To Cart</span>
+                        </a>
+                    {% endif %}
                 </div>
             </div>
         {% endif %}
