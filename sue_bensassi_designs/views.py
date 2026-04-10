@@ -2,7 +2,7 @@ from django.shortcuts import render
 from products.models import FakeItem
 
 
-def handler404(request, exception):
+def handler404(request, exception):  # pragma: no cover
     """ Custom view to handle 404 errors. """
 
     random_fake_item = FakeItem.objects.order_by('?').first()
@@ -12,7 +12,7 @@ def handler404(request, exception):
     return render(request, 'errors/404.html', context=context)
 
 
-def handler500(request):
+def handler500(request):  # pragma: no cover
     """ Error Handler 500 - Internal server error. """
 
     return render(request, "errors/500.html", status=500)

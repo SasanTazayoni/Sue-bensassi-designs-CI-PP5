@@ -5,8 +5,34 @@ from django.core.paginator import Page
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import User
 from django.contrib.messages import get_messages
-from products.models import Product, Category
+from products.models import Product, Category, FakeItem
 from products.forms import ProductForm
+
+
+class TestProductModels(TestCase):
+    """ Test the Product and Category models. """
+
+    def test_category_str(self):
+        """ Test Category __str__ returns name. """
+        category = Category.objects.create(name='TestCat', display_name='Test Cat')
+        self.assertEqual(str(category), 'TestCat')
+
+    def test_category_get_display_name(self):
+        """ Test Category get_display_name returns display_name. """
+        category = Category.objects.create(name='TestCat', display_name='Test Cat Display')
+        self.assertEqual(category.get_display_name(), 'Test Cat Display')
+
+    def test_product_str(self):
+        """ Test Product __str__ returns name. """
+        product = Product.objects.create(
+            name='My Product', description='Desc', price=5.00, stock=1
+        )
+        self.assertEqual(str(product), 'My Product')
+
+    def test_fakeitem_str(self):
+        """ Test FakeItem __str__ returns name. """
+        item = FakeItem.objects.create(name='Fake Thing')
+        self.assertEqual(str(item), 'Fake Thing')
 
 
 class TestProductsViewWithPagination(TestCase):
@@ -82,6 +108,46 @@ class TestProductsViewWithPagination(TestCase):
         # Assert template used
         self.assertTemplateUsed(response, 'products/products.html')
 
+    def test_sort_by_name_ascending(self):
+        """ Test sorting products by name ascending. """
+        response = self.client.get(self.products_list_url + '?sort=name&direction=asc')
+        self.assertEqual(response.status_code, 200)
+
+    def test_sort_by_name_descending(self):
+        """ Test sorting products by name descending. """
+        response = self.client.get(self.products_list_url + '?sort=name&direction=desc')
+        self.assertEqual(response.status_code, 200)
+
+    def test_sort_by_price(self):
+        """ Test sorting products by price. """
+        response = self.client.get(self.products_list_url + '?sort=price&direction=asc')
+        self.assertEqual(response.status_code, 200)
+
+    def test_filter_by_category(self):
+        """ Test filtering products by category. """
+        response = self.client.get(self.products_list_url + '?category=Photo+Albums')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('current_categories', response.context)
+
+    def test_search_query(self):
+        """ Test searching products by keyword. """
+        response = self.client.get(self.products_list_url + '?q=Test+Product+0')
+        self.assertEqual(response.status_code, 200)
+        products = response.context['products']
+        self.assertGreater(len(products), 0)
+
+    def test_empty_search_redirects(self):
+        """ Test that an empty search redirects back to products. """
+        response = self.client.get(self.products_list_url + '?q=')
+        self.assertRedirects(response, reverse('products'))
+
+    def test_empty_page_returns_last_page(self):
+        """ Test that requesting a page beyond range returns the last page. """
+        response = self.client.get(self.products_list_url + '?page=999')
+        self.assertEqual(response.status_code, 200)
+        products = response.context['products']
+        self.assertIsInstance(products, Page)
+
 
 class TestProductDetailView(TestCase):
     """
@@ -154,16 +220,17 @@ class TestAddProductView(TestCase):
         # Issue a POST request to add_product view
         response = self.client.post(reverse('add_product'), post_data)
 
+        # Check that the product was added to the database
+        self.assertEqual(Product.objects.count(), 1)
+        product = Product.objects.first()
+
         # Check that the response is a redirect (successful form submission)
-        self.assertRedirects(response, reverse('product_detail', args=[1]))  # Adjust the args as per your product id
+        self.assertRedirects(response, reverse('product_detail', args=[product.id]))
 
         # Check success message in messages
         messages = list(get_messages(response.wsgi_request))
         self.assertEqual(len(messages), 1)
         self.assertEqual(str(messages[0]), 'Successfully added the product!')
-
-        # Check that the product was added to the database
-        self.assertEqual(Product.objects.count(), 1)
 
     def test_add_product_view_post_fail_invalid_form(self):
         """
@@ -437,3 +504,75 @@ class TestDeleteProductView(TestCase):
 
         # Ensure that the product is not deleted
         self.assertTrue(Product.objects.filter(pk=self.product.id).exists())
+
+
+class TestProductForm(TestCase):
+    """ Test the ProductForm. """
+
+    def setUp(self):
+        self.category = Category.objects.create(
+            name='Test Category',
+            display_name='Test Category Display'
+        )
+
+    def test_valid_form(self):
+        """ Test that a form with required fields is valid. """
+        form = ProductForm({
+            'name': 'Test Product',
+            'description': 'Test description',
+            'price': '9.99',
+            'stock': 10,
+        })
+        self.assertTrue(form.is_valid())
+
+    def test_name_required(self):
+        """ Test that name is required. """
+        form = ProductForm({
+            'name': '',
+            'description': 'Test description',
+            'price': '9.99',
+            'stock': 10,
+        })
+        self.assertFalse(form.is_valid())
+        self.assertIn('name', form.errors)
+
+    def test_description_required(self):
+        """ Test that description is required. """
+        form = ProductForm({
+            'name': 'Test Product',
+            'description': '',
+            'price': '9.99',
+            'stock': 10,
+        })
+        self.assertFalse(form.is_valid())
+        self.assertIn('description', form.errors)
+
+    def test_price_required(self):
+        """ Test that price is required. """
+        form = ProductForm({
+            'name': 'Test Product',
+            'description': 'Test description',
+            'price': '',
+            'stock': 10,
+        })
+        self.assertFalse(form.is_valid())
+        self.assertIn('price', form.errors)
+
+    def test_category_optional(self):
+        """ Test that category is optional. """
+        form = ProductForm({
+            'name': 'Test Product',
+            'description': 'Test description',
+            'price': '9.99',
+            'stock': 10,
+        })
+        self.assertTrue(form.is_valid())
+
+    def test_fields_have_css_class(self):
+        """ Test that all fields have the rounded-5 CSS class. """
+        form = ProductForm()
+        for field in form.fields:
+            self.assertIn(
+                'rounded-5',
+                form.fields[field].widget.attrs.get('class', '')
+            )

@@ -8,6 +8,15 @@ from django.core.mail import send_mail
 from newsletter.models import NewsletterSubscription
 
 
+class TestNewsletterSubscriptionModel(TestCase):
+    """ Test the NewsletterSubscription model. """
+
+    def test_str(self):
+        """ Test the string representation returns the email. """
+        sub = NewsletterSubscription.objects.create(email='model@example.com')
+        self.assertEqual(str(sub), 'model@example.com')
+
+
 class TestNewsletterSubscribeView(TestCase):
     """
     Test case for the newsletter subscribe view.

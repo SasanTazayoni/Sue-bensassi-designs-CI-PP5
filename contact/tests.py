@@ -8,6 +8,83 @@ from django.contrib.auth import get_user_model
 from contact.models import Enquiry
 
 
+class TestEnquiryModel(TestCase):
+    """ Test the Enquiry model. """
+
+    def test_str(self):
+        """ Test the string representation of an enquiry. """
+        enquiry = Enquiry.objects.create(
+            name='Test User',
+            email='test@example.com',
+            message='Hello',
+        )
+        self.assertIn('Test User', str(enquiry))
+        self.assertIn('test@example.com', str(enquiry))
+
+
+class TestContactForm(TestCase):
+    """ Test the ContactForm. """
+
+    def test_valid_form(self):
+        """ Test that a fully populated form is valid. """
+        form = ContactForm({
+            'name': 'Test User',
+            'email': 'test@example.com',
+            'message': 'This is a test message.',
+        })
+        self.assertTrue(form.is_valid())
+
+    def test_name_required(self):
+        """ Test that name is required. """
+        form = ContactForm({
+            'name': '',
+            'email': 'test@example.com',
+            'message': 'Test message',
+        })
+        self.assertFalse(form.is_valid())
+        self.assertIn('name', form.errors)
+
+    def test_email_required(self):
+        """ Test that email is required. """
+        form = ContactForm({
+            'name': 'Test User',
+            'email': '',
+            'message': 'Test message',
+        })
+        self.assertFalse(form.is_valid())
+        self.assertIn('email', form.errors)
+
+    def test_message_required(self):
+        """ Test that message is required. """
+        form = ContactForm({
+            'name': 'Test User',
+            'email': 'test@example.com',
+            'message': '',
+        })
+        self.assertFalse(form.is_valid())
+        self.assertIn('message', form.errors)
+
+    def test_invalid_email_format(self):
+        """ Test that an invalid email format is rejected. """
+        form = ContactForm({
+            'name': 'Test User',
+            'email': 'not-a-valid-email',
+            'message': 'Test message',
+        })
+        self.assertFalse(form.is_valid())
+        self.assertIn('email', form.errors)
+
+    def test_message_max_length(self):
+        """ Test that message exceeding 1000 characters is rejected. """
+        form = ContactForm({
+            'name': 'Test User',
+            'email': 'test@example.com',
+            'message': 'x' * 1001,
+        })
+        self.assertFalse(form.is_valid())
+        self.assertIn('message', form.errors)
+
+
 class TestContactView(TestCase):
     """
     Test case for the contact view.
@@ -75,6 +152,28 @@ class TestContactView(TestCase):
         self.assertEqual(Enquiry.objects.count(), 0)
 
         self.assertEqual(len(mail.outbox), 0)
+
+
+    def test_valid_form_submission_authenticated_user(self):
+        """
+        Test valid form submission by an authenticated user links enquiry to profile.
+        """
+        user = get_user_model().objects.create_user(
+            username='authuser', password='testpass'
+        )
+        self.client.login(username='authuser', password='testpass')
+
+        form_data = {
+            'name': 'Auth User',
+            'email': 'auth@example.com',
+            'message': 'Authenticated enquiry.'
+        }
+        response = self.client.post(reverse('contact'), form_data)
+        self.assertRedirects(response, reverse('contact_success'))
+
+        enquiry = Enquiry.objects.first()
+        self.assertIsNotNone(enquiry.user_profile)
+        self.assertEqual(enquiry.user_profile.user, user)
 
 
 class TestContactSuccessView(TestCase):
@@ -189,6 +288,12 @@ class DeleteEnquiryViewTests(TestCase):
             replied_to=False,
             user_profile=self.user.userprofile
         )
+
+    def test_get_delete_enquiry_renders_confirmation(self):
+        """ Test GET request to delete enquiry renders confirmation page. """
+        response = self.client.get(reverse('delete_enquiry', args=[self.enquiry.id]))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'contact/delete_enquiry.html')
 
     def test_delete_enquiry_success(self):
         """ Test POST request to delete an existing enquiry. """

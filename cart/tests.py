@@ -5,6 +5,19 @@ from django.contrib.messages import get_messages
 from products.models import Product, Category
 from urllib.parse import urlencode
 from django.contrib import messages
+from cart.templatetags.cart_tools import calc_subtotal
+
+
+class TestCalcSubtotal(TestCase):
+    """ Test the calc_subtotal template filter. """
+
+    def test_calc_subtotal(self):
+        """ Test that calc_subtotal returns price * quantity. """
+        self.assertEqual(calc_subtotal(10.00, 3), 30.00)
+
+    def test_calc_subtotal_zero_quantity(self):
+        """ Test that calc_subtotal returns 0 for zero quantity. """
+        self.assertEqual(calc_subtotal(10.00, 0), 0.00)
 
 
 class ViewCartTest(TestCase):
@@ -255,7 +268,55 @@ class RemoveFromCartViewTest(TestCase):
 
         # Check if the correct message was added
         messages = list(get_messages(response.wsgi_request))
-        if f'{self.product.name} removed from your cart.' in [str(message) for message in messages]:
-            self.assertEqual(str(messages[0]), f'{self.product.name} removed from your cart.')
-        else:
-            self.assertEqual(str(messages[0]), f'{self.product.name} is not in your cart.')
+        self.assertEqual(str(messages[0]), f'{self.product.name} removed from your cart.')
+
+    def test_remove_item_not_in_cart(self):
+        """
+        Test removing a product that is not in the cart.
+        """
+        # Clear the cart
+        session = self.client.session
+        session['cart'] = {}
+        session.save()
+
+        response = self.client.post(reverse('remove_from_cart', args=[self.product.id]))
+        self.assertEqual(response.status_code, 200)
+        messages = list(get_messages(response.wsgi_request))
+        self.assertEqual(str(messages[0]), f'{self.product.name} is not in your cart.')
+
+
+class AddToCartWithQueryParamsTest(TestCase):
+    def setUp(self):
+        self.product = Product.objects.create(
+            name='Test Product',
+            description='Test description',
+            price=10.00,
+            stock=50,
+        )
+
+    def test_add_to_cart_preserves_query_params(self):
+        """
+        Test that redirect URL preserves GET query parameters.
+        """
+        response = self.client.post(
+            reverse('add_to_cart', args=[self.product.id]) + '?page=2',
+            {'quantity': 1, 'redirect_url': reverse('products')}
+        )
+        self.assertEqual(response.status_code, 302)
+        self.assertIn('page=2', response['Location'])
+
+    def test_add_to_cart_existing_item_exceeds_stock(self):
+        """
+        Test adding to existing cart item when total would exceed stock.
+        """
+        session = self.client.session
+        session['cart'] = {str(self.product.id): 48}
+        session.save()
+
+        response = self.client.post(reverse('add_to_cart', args=[self.product.id]), {
+            'quantity': 5,
+            'redirect_url': reverse('products')
+        })
+
+        messages = list(get_messages(response.wsgi_request))
+        self.assertIn('only', str(messages[0]))
