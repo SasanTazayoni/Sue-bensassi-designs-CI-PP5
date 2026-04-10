@@ -144,8 +144,8 @@ def edit_product(request, product_id):
         else:
             messages.error(
                 request,
-                f'Failed to update the product details. Please ensure the'
-                f'form is valid.'
+                'Failed to update the product details. Please ensure the '
+                'form is valid.'
             )
     else:
         form = ProductForm(instance=product)
