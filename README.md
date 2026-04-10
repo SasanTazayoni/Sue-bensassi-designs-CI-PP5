@@ -1,4 +1,4 @@
-# SUE BENSASSI DESIGNS CI PP5
+# SUE BENSASSI DESIGNS
 
 ![HTML](tech/html.png) ![CSS](tech/css.png) ![Javascript](tech/javascript.png) ![JQuery](tech/jquery.png) ![Bootstrap](tech/bootstrap.png) ![Python](tech/python.png) ![Django](tech/django.png) ![Heroku](tech/heroku.png) ![Postgressql](tech/postgresql.png) ![Cloudinary](tech/cloudinary.png) ![Neon](tech/neon.png) ![Gitpod](tech/gitpod.png) ![ChatGPT](tech/chatgpt.png)
 
@@ -133,7 +133,7 @@ Together, these fonts create a harmonious balance between striking headings and 
 
 To guide the development of Sue Bensassi Designs, user stories were created to outline the essential tasks needed to build the website to a high standard. These user stories were further categorised into epics to facilitate an agile development approach.
 
-View a full list of user stories [here](https://github.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/issues?q=is%3Aissue+label%3A%22User+Story%22).
+View a full list of user stories [here](https://github.com/SasanTazayoni/Sue-bensassi-designs/issues?q=is%3Aissue+label%3A%22User+Story%22).
 
 EPIC 1: User Account Management
 
@@ -735,7 +735,7 @@ erDiagram
 
 ### GitHub Projects
 
-[GitHub Projects](https://github.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/projects) served as an Agile tool for this project.
+[GitHub Projects](https://github.com/SasanTazayoni/Sue-bensassi-designs/projects) served as an Agile tool for this project.
 It isn't a specialised tool, but with the right tags and project creation/issue assignments, it can be made to work.
 
 Through it, user stories, issues, and milestone tasks were planned, then tracked on a weekly basis using the basic Kanban board.
@@ -744,14 +744,14 @@ Through it, user stories, issues, and milestone tasks were planned, then tracked
 
 ### GitHub Issues
 
-[GitHub Issues](https://github.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/issues) served as an another Agile tool.
+[GitHub Issues](https://github.com/SasanTazayoni/Sue-bensassi-designs/issues) served as an another Agile tool.
 There, I used my own **User Story Template** to manage user stories.
 
-- [Open Issues](https://github.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/issues)
+- [Open Issues](https://github.com/SasanTazayoni/Sue-bensassi-designs/issues)
 
 ![screenshot](documentation/issues-open.png)
 
-- [Closed Issues](https://github.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5/issues?q=is%3Aissue+is%3Aclosed)
+- [Closed Issues](https://github.com/SasanTazayoni/Sue-bensassi-designs/issues?q=is%3Aissue+is%3Aclosed)
 
 ![screenshot](documentation/issues-closed.png)
 ![screenshot](documentation/issues-closed2.png)
@@ -862,7 +862,7 @@ This project uses a [Neon Database](http://neon.tech/).
 
 To obtain your own Postgres Database, sign-up with your GitHub account, then follow these steps:
 
-- Decide a project name (this is commonly the name of the project: Sue-bensassi-designs-CI-PP5) and a database name and fill in the fields.
+- Decide a project name (this is commonly the name of the project: Sue-bensassi-designs) and a database name and fill in the fields.
 - Pick the version of Postgres that you would like from the drop-down menu.
 - Pick the region that is closest to you from the drop-down menu.
 - Click **Create Project**.
@@ -916,7 +916,7 @@ Once you've created a Gmail (Google) account and logged-in, follow these series 
 - This might prompt you once again to confirm your password and account.
 - Select **Mail** for the app type.
 - Select **Other (Custom name)** for the device type.
-	- Any custom name, such as "Django" or Sue-bensassi-designs-CI-PP5
+	- Any custom name, such as "Django" or Sue-bensassi-designs
 - You'll be provided with a 16-character password (API key).
 	- Save this somewhere locally, as you cannot access this key again later!
 	- `EMAIL_HOST_PASS` = user's 16-character API key
@@ -1041,18 +1041,18 @@ If you'd like to backup your database models, use the following command for each
 
 You can clone the repository by following these steps:
 
-1. Go to the [GitHub repository](https://github.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5) 
+1. Go to the [GitHub repository](https://github.com/SasanTazayoni/Sue-bensassi-designs) 
 2. Locate the Code button above the list of files and click it 
 3. Select if you prefer to clone using HTTPS, SSH, or GitHub CLI and click the copy button to copy the URL to your clipboard
 4. Open Git Bash or Terminal
 5. Change the current working directory to the one where you want the cloned directory
 6. In your IDE Terminal, type the following command to clone my repository:
-	- `git clone https://github.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5.git`
+	- `git clone https://github.com/SasanTazayoni/Sue-bensassi-designs.git`
 7. Press Enter to create your local clone.
 
 Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/SasanTazayoni/Sue-bensassi-designs)
 
 Please note that in order to directly open the project in Gitpod, you need to have the browser extension installed.
 A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/configure/user-settings/browser-extension).
@@ -1062,7 +1062,7 @@ A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/conf
 By forking the GitHub Repository, we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original owner's repository.
 You can fork this repository by using the following steps:
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/SasanTazayoni/Sue-bensassi-designs-CI-PP5)
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/SasanTazayoni/Sue-bensassi-designs)
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
 
@@ -1101,5 +1101,4 @@ On Heroku:
 
 ### Acknowledgements
 
-- I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for his support throughout the development of this project.
-- I would like to thank the [Code Institute](https://codeinstitute.net) tutor team, particularly Sean Murphy and Oisin Tohak, for their assistance with troubleshooting and debugging some project issues.
+- I would like to thank [Tim Nelson](https://github.com/TravelTimN) for his support throughout the development of this project.
