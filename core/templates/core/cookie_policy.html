@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}- Cookie Policy{% endblock %}
+
+{% block content %}
+<main class="plain-background">
+    <div class="container top-container" data-top-block>
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h1 class="mb-4 text-center">Cookie Policy</h1>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12 col-md-10 offset-md-1">
+
+                <section class="mb-5">
+                    <h2 class="h4 mb-3">1. What Are Cookies?</h2>
+                    <p>Cookies are small text files placed on your device by a website when you visit it. They are
+                        widely used to make websites work, improve user experience, and provide information to site
+                        owners.</p>
+                </section>
+
+                <section class="mb-5">
+                    <h2 class="h4 mb-3">2. How We Use Cookies</h2>
+                    <p>Sue Bensassi Designs uses a small number of cookies that are strictly necessary for the
+                        website to function. We do not use cookies for advertising, tracking, or analytics
+                        purposes.</p>
+                </section>
+
+                <section class="mb-5">
+                    <h2 class="h4 mb-3">3. Cookies We Set</h2>
+                    <p>The following cookies are set directly by this website:</p>
+                    <div class="table-responsive">
+                        <table class="table table-bordered mt-3">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Cookie</th>
+                                    <th>Purpose</th>
+                                    <th>Duration</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>sessionid</code></td>
+                                    <td>Maintains your session — keeps you logged in and preserves your shopping
+                                        cart between pages.</td>
+                                    <td>Session / 2 weeks if "remember me" is used</td>
+                                </tr>
+                                <tr>
+                                    <td><code>csrftoken</code></td>
+                                    <td>A security cookie that protects forms on this site against cross-site
+                                        request forgery attacks.</td>
+                                    <td>1 year</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="mb-5">
+                    <h2 class="h4 mb-3">4. Third-Party Cookies</h2>
+                    <p>Some third-party services used on this website may set their own cookies. We do not control
+                        these cookies.</p>
+
+                    <h3 class="h5 mt-4 mb-2">Stripe</h3>
+                    <p>We use Stripe to process payments securely. When you proceed to checkout, Stripe may set
+                        cookies on your device for fraud prevention and to ensure the security of your
+                        transaction. These cookies are governed by
+                        <a href="https://stripe.com/gb/privacy" target="_blank" rel="noopener noreferrer">
+                            Stripe's Privacy Policy</a>.</p>
+
+                    <h3 class="h5 mt-4 mb-2">Font Awesome</h3>
+                    <p>This website uses Font Awesome to display icons. The Font Awesome kit script may set
+                        functional cookies to track kit usage. No personal data is collected. For more
+                        information, see the
+                        <a href="https://fontawesome.com/privacy" target="_blank" rel="noopener noreferrer">
+                            Font Awesome Privacy Policy</a>.</p>
+                </section>
+
+                <section class="mb-5">
+                    <h2 class="h4 mb-3">5. Managing Cookies</h2>
+                    <p>You can control and delete cookies through your browser settings. Please note that
+                        disabling strictly necessary cookies (such as <code>sessionid</code> and
+                        <code>csrftoken</code>) will affect the functionality of this website — you may not be
+                        able to log in or complete a purchase.</p>
+                    <p>For guidance on managing cookies in your browser, visit
+                        <a href="https://www.aboutcookies.org" target="_blank" rel="noopener noreferrer">
+                            www.aboutcookies.org</a>.</p>
+                </section>
+
+                <section class="mb-5">
+                    <h2 class="h4 mb-3">6. Changes to This Policy</h2>
+                    <p>We may update this Cookie Policy from time to time. Any changes will be posted on this
+                        page. We encourage you to review this page periodically.</p>
+                </section>
+
+                <section class="mb-5">
+                    <h2 class="h4 mb-3">7. Contact Us</h2>
+                    <p>If you have any questions about our use of cookies, please contact us via our
+                        <a href="{% url 'contact' %}">contact page</a>.</p>
+                </section>
+
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

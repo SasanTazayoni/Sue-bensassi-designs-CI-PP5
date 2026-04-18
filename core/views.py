@@ -23,3 +23,9 @@ def terms(request):
     """ Renders the terms & conditions page. """
 
     return render(request, 'core/terms.html')
+
+
+def cookie_policy(request):
+    """ Renders the cookie policy page. """
+
+    return render(request, 'core/cookie_policy.html')
