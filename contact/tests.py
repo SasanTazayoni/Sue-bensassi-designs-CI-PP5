@@ -156,6 +156,18 @@ class TestContactView(TestCase):
         self.assertEqual(len(mail.outbox), 0)
 
 
+    def test_authenticated_user_email_prepopulated_and_readonly(self):
+        """ Test GET contact page prepopulates and locks email for authenticated user. """
+        user = get_user_model().objects.create_user(
+            username='emailuser', password='testpass', email='prefill@example.com'
+        )
+        self.client.login(username='emailuser', password='testpass')
+        response = self.client.get(reverse('contact'))
+        self.assertEqual(response.status_code, 200)
+        form = response.context['form']
+        self.assertEqual(form.initial.get('email'), 'prefill@example.com')
+        self.assertTrue(form.fields['email'].widget.attrs.get('readonly'))
+
     def test_valid_form_submission_authenticated_user(self):
         """
         Test valid form submission by an authenticated user links enquiry to profile.
@@ -270,6 +282,13 @@ class EditEnquiryViewTests(TestCase):
         self.assertNotEqual(self.enquiry.name, invalid_data['name'])
         self.assertNotEqual(self.enquiry.message, invalid_data['message'])
 
+
+    def test_get_edit_enquiry_email_readonly(self):
+        """ Test GET edit enquiry page has email field set to readonly. """
+        response = self.client.get(reverse('edit_enquiry', args=[self.enquiry.id]))
+        self.assertEqual(response.status_code, 200)
+        form = response.context['form']
+        self.assertTrue(form.fields['email'].widget.attrs.get('readonly'))
 
     def test_unauthenticated_user_redirects(self):
         """ Test that an unauthenticated request is redirected to login. """

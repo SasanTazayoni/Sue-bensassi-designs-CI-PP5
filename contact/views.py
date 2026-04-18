@@ -61,7 +61,13 @@ def contact(request):
                 f'Please check the form and try again.'
             )
     else:
-        form = ContactForm()
+        initial = {}
+        if request.user.is_authenticated:
+            initial['email'] = request.user.email
+        form = ContactForm(initial=initial)
+        if request.user.is_authenticated:
+            form.fields['email'].widget.attrs['readonly'] = True
+            form.fields['email'].widget.attrs['class'] = 'form-control text-muted'
 
     context = {
         'form': form,
@@ -98,6 +104,8 @@ def edit_enquiry(request, enquiry_id):
             'email': enquiry.email,
             'message': enquiry.message,
         })
+        form.fields['email'].widget.attrs['readonly'] = True
+        form.fields['email'].widget.attrs['class'] = 'form-control text-muted'
 
     return render(
         request,
