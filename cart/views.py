@@ -34,7 +34,7 @@ def add_to_cart(request, item_id):
         else:
             messages.error(
                 request, f'Error: {product.name} has only {product.stock} '
-                         f'units left. You currently have {cart[item_id]}'
+                         f'units left. You currently have {cart[item_id]} '
                          f'in your cart.'
             )
     else:

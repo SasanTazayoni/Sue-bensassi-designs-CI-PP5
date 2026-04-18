@@ -47,13 +47,13 @@ def contact(request):
             except Exception as e:
                 messages.error(
                     request,
-                    f'There was an error sending your enquiry.'
+                    f'There was an error sending your enquiry. '
                     f'Please try again later.'
                 )
         else:
             messages.error(
                 request,
-                f'The form data you entered was invalid.'
+                f'The form data you entered was invalid. '
                 f'Please check the form and try again.'
             )
     else:
