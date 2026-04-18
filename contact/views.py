@@ -71,10 +71,13 @@ def contact_success(request):
     return render(request, 'contact/contact_success.html')
 
 
+@login_required
 def edit_enquiry(request, enquiry_id):
     """ Edit an existing enquiry. """
 
-    enquiry = get_object_or_404(Enquiry, pk=enquiry_id)
+    enquiry = get_object_or_404(
+        Enquiry, pk=enquiry_id, user_profile__user=request.user
+    )
 
     if request.method == 'POST':
         form = ContactForm(request.POST)
