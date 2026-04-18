@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404
+from django.http import Http404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import UserProfile
@@ -43,9 +44,9 @@ def profile(request):
 def order_history(request, order_number):
     """ Generate order history. """
 
-    order = get_object_or_404(
-        Order, order_number=order_number, user_profile__user=request.user
-    )
+    order = get_object_or_404(Order, order_number=order_number)
+    if not order.user_profile or order.user_profile.user != request.user:
+        raise Http404
 
     messages.warning(request, (
         f'This is a past confirmation for order number {order_number}. '

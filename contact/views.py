@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.http import Http404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.core.mail import send_mail
@@ -78,9 +79,9 @@ def contact_success(request):
 def edit_enquiry(request, enquiry_id):
     """ Edit an existing enquiry. """
 
-    enquiry = get_object_or_404(
-        Enquiry, pk=enquiry_id, user_profile__user=request.user
-    )
+    enquiry = get_object_or_404(Enquiry, pk=enquiry_id)
+    if not enquiry.user_profile or enquiry.user_profile.user != request.user:
+        raise Http404
 
     if request.method == 'POST':
         form = ContactForm(request.POST)
