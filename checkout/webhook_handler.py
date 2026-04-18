@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from django.db import transaction
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.conf import settings
@@ -155,13 +156,18 @@ class StripeWH_Handler:
                     stripe_pid=pid,
                 )
                 for item_id, item_data in json.loads(cart).items():
-                    product = Product.objects.get(id=item_id)
-                    order_line_item = OrderLineItem(
-                        order=order,
-                        product=product,
-                        quantity=item_data,
-                    )
-                    order_line_item.save()
+                    with transaction.atomic():
+                        product = Product.objects.select_for_update().get(
+                            id=item_id
+                        )
+                        product.stock -= item_data
+                        product.save()
+                        order_line_item = OrderLineItem(
+                            order=order,
+                            product=product,
+                            quantity=item_data,
+                        )
+                        order_line_item.save()
             except Exception as e:
                 if order:
                     order.delete()
