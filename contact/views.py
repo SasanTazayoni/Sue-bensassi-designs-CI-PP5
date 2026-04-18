@@ -18,7 +18,10 @@ def contact(request):
             message = form.cleaned_data['message']
 
             if request.user.is_authenticated:
-                user_profile = UserProfile.objects.get(user=request.user)
+                try:
+                    user_profile = UserProfile.objects.get(user=request.user)
+                except UserProfile.DoesNotExist:
+                    user_profile = None
                 Enquiry.objects.create(
                     name=name,
                     email=email,
