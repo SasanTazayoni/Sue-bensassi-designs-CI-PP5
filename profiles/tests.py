@@ -138,26 +138,37 @@ class TestProfileView(TestCase):
         self.assertTrue(any('error' in str(m).lower() or 'There was an error' in str(m) for m in messages))
 
     def test_order_history_view(self):
-        """
-        Test order history view.
-        """
-        # Create an Order instance
-        order = Order.objects.create(order_number='12345')  # Replace with your Order creation logic
-
-        # URL for order history view
+        """ Test that a logged-in owner can view their own order history. """
+        order = Order.objects.create(
+            order_number='12345', user_profile=self.user_profile
+        )
+        self.client.force_login(self.user)
         url = reverse('order_history', args=[order.order_number])
-
-        # GET request
         response = self.client.get(url)
-
-        # Check that the response is successful
         self.assertEqual(response.status_code, 200)
-
-        # Check that the correct template is used
         self.assertTemplateUsed(response, 'checkout/checkout_success.html')
-
-        # Check context data
         self.assertIn('order', response.context)
         self.assertEqual(response.context['order'], order)
         self.assertIn('from_profile', response.context)
         self.assertTrue(response.context['from_profile'])
+
+    def test_order_history_unauthenticated_redirects(self):
+        """ Test that an unauthenticated request is redirected to login. """
+        order = Order.objects.create(
+            order_number='12346', user_profile=self.user_profile
+        )
+        url = reverse('order_history', args=[order.order_number])
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 302)
+        self.assertIn(reverse('account_login'), response['Location'])
+
+    def test_order_history_different_user_gets_404(self):
+        """ Test that a different logged-in user cannot view another user's order. """
+        order = Order.objects.create(
+            order_number='12347', user_profile=self.user_profile
+        )
+        other_user = User.objects.create_user('otheruser', 'other@example.com', 'pass')
+        self.client.force_login(other_user)
+        url = reverse('order_history', args=[order.order_number])
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 404)
