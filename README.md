@@ -1007,8 +1007,7 @@ Sample `env.py` file:
 ```python
 import os
 
-os.environ.setdefault("AWS_ACCESS_KEY_ID", "user's own value")
-os.environ.setdefault("AWS_SECRET_ACCESS_KEY", "user's own value")
+os.environ.setdefault("CLOUDINARY_URL", "user's own value")
 os.environ.setdefault("DATABASE_URL", "user's own value")
 os.environ.setdefault("EMAIL_HOST_PASS", "user's own value")
 os.environ.setdefault("EMAIL_HOST_USER", "user's own value")
