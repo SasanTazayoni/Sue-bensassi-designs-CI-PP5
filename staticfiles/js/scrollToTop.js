@@ -3,7 +3,7 @@
 const navbar = document.querySelector('[data-navbar]');
 const scrollToTop = document.querySelector('[data-scroll-up]');
 
-if (scrollToTop) {
+if (scrollToTop && navbar) {
     window.addEventListener('scroll', () => {
         const scrollHeight = window.scrollY;
         const navHeight = navbar.getBoundingClientRect().height;
