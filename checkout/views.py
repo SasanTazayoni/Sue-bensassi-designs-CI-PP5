@@ -100,6 +100,7 @@ def checkout(request):
                 'There was an error with your form. Please double check '
                 'your information.'
             )
+            return redirect(reverse('checkout'))
 
     else:
         cart = request.session.get('cart', {})
