@@ -159,6 +159,29 @@ class TestCacheCheckoutData(TestCase):
         self.assertEqual(response.status_code, 400)
 
 
+class TestCheckoutView(TestCase):
+    """ Test the checkout view. """
+
+    def setUp(self):
+        self.product = Product.objects.create(
+            name='Test Product',
+            description='Test',
+            price=10.00,
+            stock=5,
+        )
+        session = self.client.session
+        session['cart'] = {str(self.product.id): 1}
+        session.save()
+
+    def test_invalid_form_post_redirects_not_500(self):
+        """ Test that a POST with an invalid form redirects to checkout rather than crashing. """
+        response = self.client.post(reverse('checkout'), {
+            'full_name': '',
+            'client_secret': 'pi_test_secret_key',
+        })
+        self.assertRedirects(response, reverse('checkout'))
+
+
 class TestOrderModel(TestCase):
     """ Test the Order model. """
 
