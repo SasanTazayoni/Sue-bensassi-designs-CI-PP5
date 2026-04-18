@@ -148,6 +148,11 @@ class TestProductsViewWithPagination(TestCase):
         products = response.context['products']
         self.assertIsInstance(products, Page)
 
+    def test_invalid_sort_param_returns_200(self):
+        """ Test that an unrecognised sort parameter returns 200 rather than a 500. """
+        response = self.client.get(self.products_list_url + '?sort=invalid_field')
+        self.assertEqual(response.status_code, 200)
+
 
 class TestProductDetailView(TestCase):
     """

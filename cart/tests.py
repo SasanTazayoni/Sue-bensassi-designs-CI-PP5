@@ -129,6 +129,31 @@ class AddToCartViewTest(TestCase):
         self.assertEqual(str(messages[1]), f'{additional_quantity} {self.product.name} added to your cart.')
 
 
+class AddToCartInvalidQuantityTest(TestCase):
+    def setUp(self):
+        self.product = Product.objects.create(
+            name='Test Product',
+            description='Test description',
+            price=10.00,
+            stock=50,
+        )
+
+    def test_non_numeric_quantity_redirects(self):
+        """ Test that a non-numeric quantity redirects rather than raising a 500. """
+        response = self.client.post(reverse('add_to_cart', args=[self.product.id]), {
+            'quantity': 'abc',
+            'redirect_url': reverse('products'),
+        })
+        self.assertEqual(response.status_code, 302)
+
+    def test_missing_quantity_redirects(self):
+        """ Test that a missing quantity field redirects rather than raising a 500. """
+        response = self.client.post(reverse('add_to_cart', args=[self.product.id]), {
+            'redirect_url': reverse('products'),
+        })
+        self.assertEqual(response.status_code, 302)
+
+
 class AdjustCartViewTest(TestCase):
     def setUp(self):
         """
@@ -232,6 +257,31 @@ class AdjustCartViewTest(TestCase):
         messages = list(get_messages(response.wsgi_request))
         self.assertEqual(len(messages), 1)
         self.assertEqual(str(messages[0]), 'Quantity must be greater than zero.')
+
+
+class AdjustCartInvalidQuantityTest(TestCase):
+    def setUp(self):
+        self.product = Product.objects.create(
+            name='Test Product',
+            description='Test description',
+            price=10.00,
+            stock=50,
+        )
+        session = self.client.session
+        session['cart'] = {str(self.product.id): 1}
+        session.save()
+
+    def test_non_numeric_quantity_redirects(self):
+        """ Test that a non-numeric quantity redirects rather than raising a 500. """
+        response = self.client.post(reverse('adjust_cart', args=[self.product.id]), {
+            'quantity': 'abc',
+        })
+        self.assertEqual(response.status_code, 302)
+
+    def test_missing_quantity_redirects(self):
+        """ Test that a missing quantity field redirects rather than raising a 500. """
+        response = self.client.post(reverse('adjust_cart', args=[self.product.id]), {})
+        self.assertEqual(response.status_code, 302)
 
 
 class RemoveFromCartViewTest(TestCase):
