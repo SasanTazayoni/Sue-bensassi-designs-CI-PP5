@@ -76,10 +76,11 @@ class StripeWH_Handler:
         cart = intent.metadata.cart
         save_info = intent.metadata.save_info
 
-        # Get the Charge object
-        stripe_charge = stripe.Charge.retrieve(
-            intent.latest_charge
+        # Get the Charge object via PaymentIntent expansion
+        payment_intent = stripe.PaymentIntent.retrieve(
+            pid, expand=['latest_charge']
         )
+        stripe_charge = payment_intent.latest_charge
 
         billing_details = stripe_charge.billing_details
         shipping_details = intent.shipping
