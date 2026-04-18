@@ -29,3 +29,9 @@ def cookie_policy(request):
     """ Renders the cookie policy page. """
 
     return render(request, 'core/cookie_policy.html')
+
+
+def privacy_policy(request):
+    """ Renders the privacy policy page. """
+
+    return render(request, 'core/privacy_policy.html')

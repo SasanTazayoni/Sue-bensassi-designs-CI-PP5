@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}- Privacy Policy{% endblock %}
+
+{% block content %}
+<main class="plain-background">
+    <div class="container top-container" data-top-block>
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h1 class="mb-4 text-center">Privacy Policy</h1>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12 col-md-10 offset-md-1">
+
+                <p>This privacy notice tells you what to expect us to do with your personal information.</p>
+
+                <section class="mb-5">
+                    <h2 class="h4 mb-3">Contact Details</h2>
+                    <p><strong>Telephone:</strong> 07951775204</p>
+                    <p>You can also reach us via our <a href="{% url 'contact' %}">contact page</a>.</p>
+                </section>
+
+                <section class="mb-5">
+                    <h2 class="h4 mb-3">What Information We Collect, Use, and Why</h2>
+
+                    <h3 class="h5 mt-4 mb-2">To provide services and goods, including delivery</h3>
+                    <ul>
+                        <li>Names and contact details</li>
+                        <li>Addresses</li>
+                        <li>Purchase or account history</li>
+                        <li>Payment details (processed securely via Stripe)</li>
+                        <li>Information relating to compliments or complaints</li>
+                    </ul>
+
+                    <h3 class="h5 mt-4 mb-2">For the operation of customer accounts</h3>
+                    <ul>
+                        <li>Names and contact details</li>
+                        <li>Addresses</li>
+                        <li>Purchase history</li>
+                        <li>Account information, including registration details</li>
+                    </ul>
+
+                    <h3 class="h5 mt-4 mb-2">To comply with legal requirements</h3>
+                    <ul>
+                        <li>Name</li>
+                        <li>Contact information</li>
+                        <li>Financial transaction information</li>
+                    </ul>
+
+                    <h3 class="h5 mt-4 mb-2">For dealing with queries, complaints or claims</h3>
+                    <ul>
+                        <li>Names and contact details</li>
+                        <li>Account information</li>
+                        <li>Purchase or service history</li>
+                        <li>Correspondence</li>
+                    </ul>
+                </section>
+
+                <section class="mb-5">
+                    <h2 class="h4 mb-3">Lawful Bases and Data Protection Rights</h2>
+                    <p>Under UK data protection law, we must have a "lawful basis" for collecting and using your
+                        personal information. You can find out more about lawful bases on the
+                        <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/a-guide-to-lawful-basis/" target="_blank" rel="noopener noreferrer">ICO's website</a>.</p>
+
+                    <p>Your data protection rights include:</p>
+                    <ul>
+                        <li><strong>Right of access</strong> — you can ask us for copies of your personal information.</li>
+                        <li><strong>Right to rectification</strong> — you can ask us to correct or delete inaccurate or incomplete information.</li>
+                        <li><strong>Right to erasure</strong> — you can ask us to delete your personal information.</li>
+                        <li><strong>Right to restriction of processing</strong> — you can ask us to limit how we use your information.</li>
+                        <li><strong>Right to object</strong> — you can object to the processing of your personal data.</li>
+                        <li><strong>Right to data portability</strong> — you can ask us to transfer your information to another organisation or to you.</li>
+                        <li><strong>Right to withdraw consent</strong> — where we rely on consent, you can withdraw it at any time.</li>
+                    </ul>
+                    <p>We must respond to any request within one month. To make a request, please contact us using
+                        the details at the top of this notice.</p>
+
+                    <h3 class="h5 mt-4 mb-2">Our lawful bases</h3>
+
+                    <p><strong>Providing services and goods:</strong> Contract — we collect information to enter
+                        into and carry out a contract with you.</p>
+
+                    <p><strong>Operation of customer accounts:</strong> Contract — account information is
+                        necessary to manage your relationship with us.</p>
+
+                    <p><strong>Complying with legal requirements:</strong> Legal obligation — we are required by
+                        law to retain certain financial and transaction records.</p>
+
+                    <p><strong>Dealing with queries, complaints or claims:</strong> Legitimate interests — we
+                        collect and use your information to handle customer queries, complaints, and claims in
+                        order to resolve issues and improve our service, without causing undue risk of harm to
+                        anyone.</p>
+                </section>
+
+                <section class="mb-5">
+                    <h2 class="h4 mb-3">Where We Get Personal Information From</h2>
+                    <p>Directly from you — when you create an account, place an order, or contact us.</p>
+                </section>
+
+                <section class="mb-5">
+                    <h2 class="h4 mb-3">How Long We Keep Information</h2>
+                    <ul>
+                        <li><strong>Order and financial records:</strong> 6 years, as required by HMRC.</li>
+                        <li><strong>Account and profile data:</strong> kept for as long as your account is
+                            active, and deleted within 12 months of account closure upon request.</li>
+                        <li><strong>Enquiries and correspondence:</strong> 2 years from the date of last
+                            contact.</li>
+                    </ul>
+                </section>
+
+                <section class="mb-5">
+                    <h2 class="h4 mb-3">Who We Share Information With</h2>
+                    <h3 class="h5 mt-3 mb-2">Data Processors</h3>
+                    <p><strong>Stripe</strong> — Stripe processes payment card information on our behalf to
+                        handle secure online transactions and prevent fraud. Stripe's privacy policy is
+                        available at
+                        <a href="https://stripe.com/gb/privacy" target="_blank" rel="noopener noreferrer">
+                            stripe.com/gb/privacy</a>.</p>
+                </section>
+
+                <section class="mb-5">
+                    <h2 class="h4 mb-3">How to Complain</h2>
+                    <p>If you have any concerns about our use of your personal data, please contact us using
+                        the details at the top of this notice.</p>
+                    <p>If you remain unhappy after raising a complaint with us, you can also complain to the
+                        Information Commissioner's Office (ICO):</p>
+                    <address class="ms-3 mb-3">
+                        Information Commissioner's Office<br>
+                        Wycliffe House<br>
+                        Water Lane<br>
+                        Wilmslow<br>
+                        Cheshire<br>
+                        SK9 5AF
+                    </address>
+                    <p>Helpline: 0303 123 1113</p>
+                    <p>Website:
+                        <a href="https://www.ico.org.uk/make-a-complaint" target="_blank" rel="noopener noreferrer">
+                            ico.org.uk/make-a-complaint</a>
+                    </p>
+                </section>
+
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
