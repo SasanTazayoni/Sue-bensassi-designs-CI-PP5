@@ -20,7 +20,11 @@ def add_to_cart(request, item_id):
     """ Add a quantity of the specified product to the shopping cart. """
 
     product = get_object_or_404(Product, pk=item_id)
-    quantity = int(request.POST.get('quantity'))
+    try:
+        quantity = int(request.POST.get('quantity'))
+    except (TypeError, ValueError):
+        messages.error(request, 'Invalid quantity.')
+        return redirect(reverse('products'))
     redirect_url = request.POST.get('redirect_url') or reverse('products')
 
     cart = request.session.get('cart', {})
@@ -64,7 +68,11 @@ def adjust_cart(request, item_id):
     """
 
     product = get_object_or_404(Product, pk=item_id)
-    quantity = int(request.POST.get('quantity'))
+    try:
+        quantity = int(request.POST.get('quantity'))
+    except (TypeError, ValueError):
+        messages.error(request, 'Invalid quantity.')
+        return redirect(reverse('view_cart'))
     cart = request.session.get('cart', {})
 
     if quantity > 0:
