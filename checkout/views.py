@@ -6,6 +6,7 @@ from django.shortcuts import (
     HttpResponse
 )
 from django.views.decorators.http import require_POST
+from django.db import transaction
 from django.contrib import messages
 from django.conf import settings
 from .forms import OrderForm
@@ -73,15 +74,18 @@ def checkout(request):
             order.save()
             for item_id, item_data in cart.items():
                 try:
-                    product = Product.objects.get(id=item_id)
-                    product.stock -= item_data
-                    product.save()
-                    order_line_item = OrderLineItem(
-                        order=order,
-                        product=product,
-                        quantity=item_data,
-                    )
-                    order_line_item.save()
+                    with transaction.atomic():
+                        product = Product.objects.select_for_update().get(
+                            id=item_id
+                        )
+                        product.stock -= item_data
+                        product.save()
+                        order_line_item = OrderLineItem(
+                            order=order,
+                            product=product,
+                            quantity=item_data,
+                        )
+                        order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(
                         request,
