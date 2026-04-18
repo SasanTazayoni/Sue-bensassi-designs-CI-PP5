@@ -7,6 +7,7 @@ from django.shortcuts import (
 )
 from django.views.decorators.http import require_POST
 from django.db import transaction
+from django.db.models import F
 from django.contrib import messages
 from django.conf import settings
 from .forms import OrderForm
@@ -50,14 +51,14 @@ def checkout(request):
         cart = request.session.get('cart', {})
 
         form_data = {
-            'full_name': request.POST['full_name'],
-            'email': request.POST['email'],
-            'phone_number': request.POST['phone_number'],
-            'postcode': request.POST['postcode'],
-            'town_or_city': request.POST['town_or_city'],
-            'street_address1': request.POST['street_address1'],
-            'street_address2': request.POST['street_address2'],
-            'county': request.POST['county'],
+            'full_name': request.POST.get('full_name', ''),
+            'email': request.POST.get('email', ''),
+            'phone_number': request.POST.get('phone_number', ''),
+            'postcode': request.POST.get('postcode', ''),
+            'town_or_city': request.POST.get('town_or_city', ''),
+            'street_address1': request.POST.get('street_address1', ''),
+            'street_address2': request.POST.get('street_address2', ''),
+            'county': request.POST.get('county', ''),
         }
 
         order_form = OrderForm(form_data)
@@ -74,18 +75,16 @@ def checkout(request):
             order.save()
             for item_id, item_data in cart.items():
                 try:
-                    with transaction.atomic():
-                        product = Product.objects.select_for_update().get(
-                            id=item_id
-                        )
-                        product.stock -= item_data
-                        product.save()
-                        order_line_item = OrderLineItem(
-                            order=order,
-                            product=product,
-                            quantity=item_data,
-                        )
-                        order_line_item.save()
+                    product = Product.objects.get(id=item_id)
+                    Product.objects.filter(id=item_id).update(
+                        stock=F('stock') - item_data
+                    )
+                    order_line_item = OrderLineItem(
+                        order=order,
+                        product=product,
+                        quantity=item_data,
+                    )
+                    order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(
                         request,
