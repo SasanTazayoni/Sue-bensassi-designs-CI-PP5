@@ -1,8 +1,9 @@
-from django.test import TestCase, Client
+from django.test import TestCase, Client, RequestFactory
 from django.urls import reverse
 from django.contrib.auth.models import User
 from django.contrib.messages import get_messages
 from django.shortcuts import get_object_or_404
+from django.http import Http404
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 from checkout.models import Order
@@ -164,11 +165,16 @@ class TestProfileView(TestCase):
 
     def test_order_history_different_user_gets_404(self):
         """ Test that a different logged-in user cannot view another user's order. """
+        from profiles.views import order_history
         order = Order.objects.create(
             order_number='12347', user_profile=self.user_profile
         )
-        other_user = User.objects.create_user('otheruser', 'other@example.com', 'pass')
-        self.client.force_login(other_user)
-        url = reverse('order_history', args=[order.order_number])
-        response = self.client.get(url)
-        self.assertEqual(response.status_code, 404)
+        other_user = User.objects.create_user(
+            'otheruser', 'other@example.com', 'otherpass'
+        )
+        request = RequestFactory().get(
+            reverse('order_history', args=[order.order_number])
+        )
+        request.user = other_user
+        with self.assertRaises(Http404):
+            order_history(request, order.order_number)

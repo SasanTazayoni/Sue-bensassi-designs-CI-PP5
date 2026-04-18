@@ -1,4 +1,5 @@
-from django.test import TestCase, Client
+from django.test import TestCase, Client, RequestFactory
+from django.http import Http404
 from django.urls import reverse
 from django.core import mail
 from django.contrib.messages import get_messages
@@ -280,11 +281,12 @@ class EditEnquiryViewTests(TestCase):
 
     def test_different_user_gets_404(self):
         """ Test that a different logged-in user cannot edit another user's enquiry. """
+        from contact.views import edit_enquiry
         other_user = get_user_model().objects.create_user(username='otheruser', password='otherpassword')
-        self.client.force_login(other_user)
-        url = reverse('edit_enquiry', args=[self.enquiry.id])
-        response = self.client.get(url)
-        self.assertEqual(response.status_code, 404)
+        request = RequestFactory().get(reverse('edit_enquiry', args=[self.enquiry.id]))
+        request.user = other_user
+        with self.assertRaises(Http404):
+            edit_enquiry(request, self.enquiry.id)
 
 
 class DeleteEnquiryViewTests(TestCase):
