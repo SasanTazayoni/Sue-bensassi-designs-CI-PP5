@@ -44,3 +44,25 @@ class TestTermsView(TestCase):
         response = self.client.get(reverse('terms'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'core/terms.html')
+
+
+class TestCookiePolicyView(TestCase):
+
+    def test_cookie_policy_view(self):
+        """
+        Test the cookie policy view.
+        """
+        response = self.client.get(reverse('cookie_policy'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'core/cookie_policy.html')
+
+
+class TestPrivacyPolicyView(TestCase):
+
+    def test_privacy_policy_view(self):
+        """
+        Test the privacy policy view.
+        """
+        response = self.client.get(reverse('privacy_policy'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'core/privacy_policy.html')
