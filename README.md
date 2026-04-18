@@ -894,7 +894,7 @@ As a backup, in case users prematurely close the purchase-order page during paym
 
 - From your Stripe dashboard, click **Developers**, and select **Webhooks**.
 - From there, click **Add Endpoint**.
-	- `https://sue-bensassi-designs-beea48c7d401.herokuapp.com/checkout/wh/`
+	- `https://<your-app-name>.herokuapp.com/checkout/wh/` *(replace `<your-app-name>` with your own Heroku app name)*
 - Click **receive all events**.
 - Click **Add Endpoint** to complete the process.
 - You'll have a new key here:
