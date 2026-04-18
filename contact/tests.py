@@ -6,6 +6,7 @@ from contact.forms import ContactForm
 from django.utils import timezone
 from django.contrib.auth import get_user_model
 from contact.models import Enquiry
+from profiles.models import UserProfile
 
 
 class TestEnquiryModel(TestCase):
@@ -196,18 +197,17 @@ class EditEnquiryViewTests(TestCase):
 
     def setUp(self):
         """ Set up test data before each test method execution. """
-        # Create a test user and log them in
         self.user = get_user_model().objects.create_user(username='testuser', password='testpassword')
+        self.user_profile = UserProfile.objects.get(user=self.user)
         self.client.login(username='testuser', password='testpassword')
 
-        # Create a sample enquiry associated with the logged-in user
         self.enquiry = Enquiry.objects.create(
             name='Test Enquiry',
             email='test@example.com',
             message='This is a test enquiry.',
             date_sent=timezone.now(),
             replied_to=False,
-            user_profile=None  # Assuming user_profile is optional in your model
+            user_profile=self.user_profile,
         )
 
     def test_get_edit_enquiry(self):
@@ -268,6 +268,23 @@ class EditEnquiryViewTests(TestCase):
         self.enquiry.refresh_from_db()
         self.assertNotEqual(self.enquiry.name, invalid_data['name'])
         self.assertNotEqual(self.enquiry.message, invalid_data['message'])
+
+
+    def test_unauthenticated_user_redirects(self):
+        """ Test that an unauthenticated request is redirected to login. """
+        self.client.logout()
+        url = reverse('edit_enquiry', args=[self.enquiry.id])
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 302)
+        self.assertIn(reverse('account_login'), response['Location'])
+
+    def test_different_user_gets_404(self):
+        """ Test that a different logged-in user cannot edit another user's enquiry. """
+        other_user = get_user_model().objects.create_user(username='otheruser', password='otherpassword')
+        self.client.force_login(other_user)
+        url = reverse('edit_enquiry', args=[self.enquiry.id])
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 404)
 
 
 class DeleteEnquiryViewTests(TestCase):
