@@ -900,9 +900,9 @@ As a backup, in case users prematurely close the purchase-order page during paym
 - You'll have a new key here:
 	- `STRIPE_WH_SECRET` = Signing Secret (Wehbook) Key (starts with **wh**)
 
-### Gmail API
+### Gmail (SMTP with App Password)
 
-This project uses [Gmail](https://mail.google.com) to handle sending emails to users for account verification and purchase order confirmations.
+This project uses [Gmail](https://mail.google.com) via Django's SMTP email backend to handle sending emails to users for account verification and purchase order confirmations.
 
 Once you've created a Gmail (Google) account and logged-in, follow these series of steps to get your project connected.
 
