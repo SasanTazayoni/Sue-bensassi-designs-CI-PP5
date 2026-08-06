@@ -5,6 +5,7 @@ from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.conf import settings
 from .models import Order, OrderLineItem
+from .exceptions import InsufficientStock
 from products.models import Product
 from profiles.models import UserProfile
 import stripe
@@ -142,35 +143,38 @@ class StripeWH_Handler:
                 | SUCCESS: Verified order already in database',
                 status=200)
         else:
-            order = None
             try:
-                order = Order.objects.create(
-                    full_name=shipping_details.name,
-                    user_profile=profile,
-                    email=billing_details.email,
-                    phone_number=shipping_details.phone,
-                    postcode=shipping_details.address.postal_code,
-                    town_or_city=shipping_details.address.city,
-                    street_address1=shipping_details.address.line1,
-                    street_address2=shipping_details.address.line2,
-                    county=shipping_details.address.state,
-                    original_cart=cart,
-                    stripe_pid=pid,
-                )
-                for item_id, item_data in json.loads(cart).items():
-                    product = Product.objects.get(id=item_id)
-                    Product.objects.filter(id=item_id).update(
-                        stock=F('stock') - item_data
+                with transaction.atomic():
+                    order = Order.objects.create(
+                        full_name=shipping_details.name,
+                        user_profile=profile,
+                        email=billing_details.email,
+                        phone_number=shipping_details.phone,
+                        postcode=shipping_details.address.postal_code,
+                        town_or_city=shipping_details.address.city,
+                        street_address1=shipping_details.address.line1,
+                        street_address2=shipping_details.address.line2,
+                        county=shipping_details.address.state,
+                        original_cart=cart,
+                        stripe_pid=pid,
                     )
-                    order_line_item = OrderLineItem(
-                        order=order,
-                        product=product,
-                        quantity=item_data,
-                    )
-                    order_line_item.save()
-            except Exception as e:
-                if order:
-                    order.delete()
+                    for item_id, item_data in json.loads(cart).items():
+                        product = Product.objects.get(id=item_id)
+                        updated = Product.objects.filter(
+                            id=item_id, stock__gte=item_data
+                        ).update(stock=F('stock') - item_data)
+                        if not updated:
+                            raise InsufficientStock(product)
+                        OrderLineItem.objects.create(
+                            order=order,
+                            product=product,
+                            quantity=item_data,
+                        )
+            except InsufficientStock:
+                return HttpResponse(
+                    content=f'Webhook received: {event["type"]} | ERROR: Insufficient stock',
+                    status=500)
+            except Exception:
                 return HttpResponse(
                     content=f'Webhook received: {event["type"]} | ERROR: Order creation failed',
                     status=500)

@@ -182,6 +182,88 @@ class TestCheckoutView(TestCase):
         self.assertRedirects(response, reverse('checkout'))
 
 
+class TestCheckoutStockHandling(TestCase):
+    """ Test race-safe stock decrement and oversell protection in checkout. """
+
+    def _valid_form_data(self, client_secret='pi_test_secret_key'):
+        """ Return a complete, valid OrderForm payload plus client_secret. """
+        return {
+            'full_name': 'Test User',
+            'email': 'test@example.com',
+            'phone_number': '1234567890',
+            'street_address1': '123 Test Street',
+            'street_address2': '',
+            'town_or_city': 'Test City',
+            'postcode': 'TE1 1ST',
+            'county': '',
+            'client_secret': client_secret,
+        }
+
+    def _set_cart(self, cart):
+        """ Seed the session cart. """
+        session = self.client.session
+        session['cart'] = cart
+        session.save()
+
+    def test_successful_checkout_decrements_stock(self):
+        """ A valid order reduces stock by the purchased quantity. """
+        product = Product.objects.create(
+            name='In Stock', description='x', price=10.00, stock=5,
+        )
+        self._set_cart({str(product.id): 2})
+
+        response = self.client.post(
+            reverse('checkout'), self._valid_form_data()
+        )
+
+        order = Order.objects.get()
+        self.assertRedirects(
+            response, reverse('checkout_success', args=[order.order_number])
+        )
+        product.refresh_from_db()
+        self.assertEqual(product.stock, 3)
+        self.assertEqual(order.lineitems.count(), 1)
+
+    def test_oversell_is_blocked_and_stock_unchanged(self):
+        """ Ordering more than available stock creates no order and leaves
+        stock intact. """
+        product = Product.objects.create(
+            name='Low Stock', description='x', price=10.00, stock=2,
+        )
+        self._set_cart({str(product.id): 5})
+
+        response = self.client.post(
+            reverse('checkout'), self._valid_form_data()
+        )
+
+        self.assertRedirects(response, reverse('view_cart'))
+        self.assertEqual(Order.objects.count(), 0)
+        product.refresh_from_db()
+        self.assertEqual(product.stock, 2)
+
+    def test_oversell_rolls_back_earlier_decrements(self):
+        """ If a later item oversells, an earlier item's stock decrement is
+        rolled back atomically. """
+        available = Product.objects.create(
+            name='Available', description='x', price=10.00, stock=10,
+        )
+        short = Product.objects.create(
+            name='Short', description='x', price=10.00, stock=1,
+        )
+        self._set_cart({str(available.id): 3, str(short.id): 5})
+
+        response = self.client.post(
+            reverse('checkout'), self._valid_form_data()
+        )
+
+        self.assertRedirects(response, reverse('view_cart'))
+        self.assertEqual(Order.objects.count(), 0)
+        available.refresh_from_db()
+        short.refresh_from_db()
+        self.assertEqual(available.stock, 10)
+        self.assertEqual(short.stock, 1)
+
+
 class TestOrderModel(TestCase):
     """ Test the Order model. """
 

@@ -12,6 +12,7 @@ from django.contrib import messages
 from django.conf import settings
 from .forms import OrderForm
 from .models import Order, OrderLineItem
+from .exceptions import InsufficientStock
 from products.models import Product
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
@@ -72,27 +73,38 @@ def checkout(request):
             pid = client_secret.split('_secret')[0]
             order.stripe_pid = pid
             order.original_cart = json.dumps(cart)
-            order.save()
-            for item_id, item_data in cart.items():
-                try:
-                    product = Product.objects.get(id=item_id)
-                    Product.objects.filter(id=item_id).update(
-                        stock=F('stock') - item_data
-                    )
-                    order_line_item = OrderLineItem(
-                        order=order,
-                        product=product,
-                        quantity=item_data,
-                    )
-                    order_line_item.save()
-                except Product.DoesNotExist:
-                    messages.error(
-                        request,
-                        'One of the products in your cart was not found '
-                        'in our database. Please call us for assistance!'
-                    )
-                    order.delete()
-                    return redirect(reverse('view_cart'))
+
+            try:
+                with transaction.atomic():
+                    order.save()
+                    for item_id, item_data in cart.items():
+                        product = Product.objects.get(id=item_id)
+                        updated = Product.objects.filter(
+                            id=item_id, stock__gte=item_data
+                        ).update(stock=F('stock') - item_data)
+                        if not updated:
+                            raise InsufficientStock(product)
+                        OrderLineItem.objects.create(
+                            order=order,
+                            product=product,
+                            quantity=item_data,
+                        )
+            except Product.DoesNotExist:
+                messages.error(
+                    request,
+                    'One of the products in your cart was not found '
+                    'in our database. Please call us for assistance!'
+                )
+                return redirect(reverse('view_cart'))
+            except InsufficientStock as stock_error:
+                messages.error(
+                    request,
+                    f'Sorry, {stock_error.product.name} no longer has enough '
+                    'units in stock to fulfil your order. Your cart has not '
+                    'been charged for this order. Please adjust the quantity '
+                    'and try again.'
+                )
+                return redirect(reverse('view_cart'))
 
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse(
